@@ -5,6 +5,6 @@ Program bi u pozadini generisao latex fajl, kao i korisniku nudio razumljiv graf
 isporučivao pdf fajl.
 
 # Članovi tima
-Bojana Ristanović 
-Lea Petković
-Nikola Stamenić
+- [Bojana Ristanović](https://github.com/BokalinaR) 
+- [Lea Petković](https://github.com/leic25)
+- [Nikola Stamenić](https://github.com/leic25)
