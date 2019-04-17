@@ -135,15 +135,15 @@ class CV1 < FXMainWindow
   end
 
   def file_edit(filename, regexp, replacement)
-    Tempfile.open(".#{File.basename(filename)}", File.dirname(filename)) do |tempfile|
-      File.open(filename).each do |line|
-        tempfile.puts line.gsub(regexp, replacement)
-      end
-      tempfile.close
-      FileUtils.mv tempfile.path, filename
-    end
     @mutex = Mutex.new
     @mutex.synchronize do
+      Tempfile.open(".#{File.basename(filename)}", File.dirname(filename)) do |tempfile|
+        File.open(filename).each do |line|
+          tempfile.puts line.gsub(regexp, replacement)
+        end
+        tempfile.close
+        FileUtils.mv tempfile.path, filename
+      end
       retVal = system('pdflatex main.tex')
       puts(retVal)
     end
