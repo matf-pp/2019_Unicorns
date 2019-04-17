@@ -9,14 +9,23 @@ class CV1 < FXMainWindow
     $app.exit(0)
   end
 
+  # Ucitava sliku iz fajla
+  def loadIcon(filename)
+    filename = File.expand_path("../#{filename}", __FILE__)
+    File.open(filename, "rb") do |f|
+      FXPNGIcon.new(getApp(), f.read)
+    end
+  end
+
   def initialize()
-    super($app, "CV express", :opts => DECOR_ALL, :width => 580, :height => 600)
+    super($app, "CV express", :opts => DECOR_ALL, :width => 570, :height => 600)
     self.connect(SEL_CLOSE, method(:onClose))
 
     @scroll = FXScrollWindow.new(self, :width=>500, :height => 600, :opts => LAYOUT_FILL )
 
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
+
 
     infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     lblInfo = FXLabel.new(infoFrame, "Information:", :opts => LAYOUT_CENTER_X)
@@ -75,13 +84,13 @@ class CV1 < FXMainWindow
     matrixComSkills = FXMatrix.new(comHFrame, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
 
     lblNS =  FXLabel.new(matrixComSkills, "Native speaker: ")
-    @tfNS = FXTextField.new(matrixComSkills, 30)
+    @tfNS = FXTextField.new(matrixComSkills, 35)
 
     lblGood =  FXLabel.new(matrixComSkills, "Oral and written - good: ")
-    @tfGood = FXTextField.new(matrixComSkills, 30)
+    @tfGood = FXTextField.new(matrixComSkills, 35)
 
     lblFair =  FXLabel.new(matrixComSkills, "Oral and written - fair: ")
-    @tfFair = FXTextField.new(matrixComSkills, 30)
+    @tfFair = FXTextField.new(matrixComSkills, 35)
 
 
     # Nova celina, profesionalne vestine
@@ -114,14 +123,22 @@ class CV1 < FXMainWindow
 
 
     # Frame za dugmice
-    btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_FILL_X)
+    btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
     #FXButton.new(exitFrame, "  Exit  ",
     #                         nil, $app,FXApp::ID_QUIT,
     #                         :opts => BUTTON_NORMAL|LAYOUT_LEFT)
 
-    FXButton.new(btnFrame, " Submit ",
-                 nil, $app,
-                 :opts => BUTTON_NORMAL|LAYOUT_RIGHT)
+    dekor = loadIcon("plavo.png")
+    @btnSubmit = FXButton.new(btnFrame,
+                           "Submit",
+                           dekor,
+                           :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_RIGHT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
+                           :width => 65, :height => 25)
+    @btnSubmit.font = FXFont.new(app, "Geneva", 9)
+    @btnSubmit.textColor = Fox.FXRGB(250, 250, 250)
+    #@btnSubmit = FXButton.new(btnFrame, "Submit",
+    #             nil, $app,
+    #             :opts => BUTTON_NORMAL|LAYOUT_RIGHT, :width => 100, :height => 100)
 
   end
 

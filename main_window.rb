@@ -16,8 +16,11 @@ class MainWindow < FXMainWindow
   }
   $mainFrame, @cVframe, @frame = nil
 
+
+
   def initialize()
-    super($app, "CV Express", :opts => DECOR_ALL, :width => 580, :height => 600)
+    super($app, "CV Express", :opts => DECOR_ALL, :width => 570, :height => 600)
+
 
     $mainFrame = FXVerticalFrame.new(self, :opts => LAYOUT_FILL)
     @frame = FXVerticalFrame.new($mainFrame, :opts => LAYOUT_FILL)
