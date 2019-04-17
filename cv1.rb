@@ -27,16 +27,16 @@ class CV1 < FXMainWindow
     matrixInfo = FXMatrix.new(info, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
 
     lblName = FXLabel.new(matrixInfo, "First and last name:  ")
-    @tfName = FXTextField.new(matrixInfo, 40)
+    @tfName = FXTextField.new(matrixInfo, 39)
 
     lblAddress = FXLabel.new(matrixInfo, "Address:  ")
-    @tfAddress = FXTextField.new(matrixInfo, 40)
+    @tfAddress = FXTextField.new(matrixInfo, 39)
 
     lblPhone = FXLabel.new(matrixInfo, "Phone number:  ")
-    @tfPhone = FXTextField.new(matrixInfo, 40)
+    @tfPhone = FXTextField.new(matrixInfo, 39)
 
     lblMail = FXLabel.new(matrixInfo, "E-mail:  ")
-    @tfMail = FXTextField.new(matrixInfo, 40)
+    @tfMail = FXTextField.new(matrixInfo, 39)
 
 
     # Nova celina, steceno obrazovanje, eduFrame
@@ -49,19 +49,19 @@ class CV1 < FXMainWindow
     @tfStartPrimarySchool = FXTextField.new(yearAndEduFrame,  6)
     lblLine = FXLabel.new(yearAndEduFrame, " - ")
     @tfEndPrimarySchool = FXTextField.new(yearAndEduFrame, 6)
-    @tfEduPrimarySchool = FXTextField.new(yearAndEduFrame, 40)
+    @tfEduPrimarySchool = FXTextField.new(yearAndEduFrame, 39)
 
     yearAndEdu1 = FXHorizontalFrame.new(eduFrame, :opts => PACK_UNIFORM_HEIGHT)
     @tfStartHighSchool = FXTextField.new(yearAndEdu1,  6)
     lblLine = FXLabel.new(yearAndEdu1, " - ")
     @tfEndHighSchool = FXTextField.new(yearAndEdu1, 6)
-    @tfEduHighSchool = FXTextField.new(yearAndEdu1, 40)
+    @tfEduHighSchool = FXTextField.new(yearAndEdu1, 39)
 
     yearAndEdu2 = FXHorizontalFrame.new(eduFrame, :opts => PACK_UNIFORM_HEIGHT)
     @tfStartCollege = FXTextField.new(yearAndEdu2,  6)
     lblLine = FXLabel.new(yearAndEdu2, " - ")
     @tfEndCollege = FXTextField.new(yearAndEdu2, 6)
-    @tfEduCollege = FXTextField.new(yearAndEdu2, 40)
+    @tfEduCollege = FXTextField.new(yearAndEdu2, 39)
 
 
     # Nova celina, vestine za komunikaciju
@@ -76,7 +76,7 @@ class CV1 < FXMainWindow
     lblNS =  FXLabel.new(matrixComSkills, "Native speaker: ")
     @tfNS = FXTextField.new(matrixComSkills, 35)
 
-    lblGood =  FXLabel.new(matrixComSkills, "Oral and written - good: ")
+    lblGood =  FXLabel.new(matrixComSkills, "Oral and written - good:  ")
     @tfGood = FXTextField.new(matrixComSkills, 35)
 
     lblFair =  FXLabel.new(matrixComSkills, "Oral and written - fair: ")
