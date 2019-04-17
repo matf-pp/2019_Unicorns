@@ -1,21 +1,11 @@
 #!/usr/bin/env ruby
 # GUI za prvi CV
 require 'fox16'
+require 'tempfile'
+require 'thread'
 include Fox
 
 class CV1 < FXMainWindow
-  # Metod za gasenje aplikacije pomocu iksica
-  def onClose(sender, sel, event)
-    $app.exit(0)
-  end
-
-  # Ucitava sliku iz fajla
-  def loadIcon(filename)
-    filename = File.expand_path("../#{filename}", __FILE__)
-    File.open(filename, "rb") do |f|
-      FXPNGIcon.new(getApp(), f.read)
-    end
-  end
 
   def initialize()
     super($app, "CV express", :opts => DECOR_ALL, :width => 570, :height => 600)
@@ -124,9 +114,7 @@ class CV1 < FXMainWindow
 
     # Frame za dugmice
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
-    #FXButton.new(exitFrame, "  Exit  ",
-    #                         nil, $app,FXApp::ID_QUIT,
-    #                         :opts => BUTTON_NORMAL|LAYOUT_LEFT)
+
 
     dekor = loadIcon("plavo.png")
     @btnSubmit = FXButton.new(btnFrame,
@@ -136,10 +124,42 @@ class CV1 < FXMainWindow
                            :width => 65, :height => 25)
     @btnSubmit.font = FXFont.new(app, "Geneva", 9)
     @btnSubmit.textColor = Fox.FXRGB(250, 250, 250)
-    #@btnSubmit = FXButton.new(btnFrame, "Submit",
-    #             nil, $app,
-    #             :opts => BUTTON_NORMAL|LAYOUT_RIGHT, :width => 100, :height => 100)
+    @btnSubmit.connect(SEL_COMMAND, method(:onSubmit))
 
+  end
+
+  def onSubmit(sender, sel, event)
+      #TODO
+      system("pdflatex main.tex")
+
+  end
+
+  def file_edit(filename, regexp, replacement)
+    Tempfile.open(".#{File.basename(filename)}", File.dirname(filename)) do |tempfile|
+      File.open(filename).each do |line|
+        tempfile.puts line.gsub(regexp, replacement)
+      end
+      tempfile.close
+      FileUtils.mv tempfile.path, filename
+    end
+    @mutex = Mutex.new
+    @mutex.synchronize do
+      retVal = system('pdflatex main.tex')
+      puts(retVal)
+    end
+  end
+
+  # Metod za gasenje aplikacije pomocu iksica
+  def onClose(sender, sel, event)
+    $app.exit(0)
+  end
+
+  # Ucitava sliku iz fajla
+  def loadIcon(filename)
+    filename = File.expand_path("../#{filename}", __FILE__)
+    File.open(filename, "rb") do |f|
+      FXPNGIcon.new(getApp(), f.read)
+    end
   end
 
   def create
