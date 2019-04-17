@@ -130,7 +130,7 @@ class CV1 < FXMainWindow
 
   def onSubmit(sender, sel, event)
       #TODO
-      system("pdflatex main.tex")
+      #system("pdflatex main.tex")
 
   end
 
