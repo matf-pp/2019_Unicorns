@@ -2,6 +2,11 @@
 require 'fox16'
 include Fox
 require File.dirname(__FILE__) +'/cv1'
+require File.dirname(__FILE__) + '/photo'
+require File.dirname(__FILE__) + '/photo_view'
+require File.dirname(__FILE__) + '/album'
+require File.dirname(__FILE__) + '/album_view'
+
 
 class MainWindow < FXMainWindow
 
@@ -29,9 +34,16 @@ class MainWindow < FXMainWindow
     #okvir za "cv templates"
     title = FXLabel.new(titleFrame,"CV templates", :opts => LAYOUT_FILL_X)
     #cv templates labela, ubacena u titleFrame
-    album = FXLabel.new(@frame,"", :opts=>LAYOUT_FILL_Y)
+    #album = FXLabel.new(@frame,"", :opts=>LAYOUT_FILL_Y)
     #postavljena labela kao "placeholder" koja ce kasnije postati album, sa slikama cv template-a
-    #TODO
+    image_frame = FXHorizontalFrame.new(@frame, LAYOUT_FILL_X|LAYOUT_FILL_Y)
+    @album = Album.new("CV Templates")
+    @album.add_photo(Photo.new("/home/unicorns/Desktop/Unicorns/13698_1.jpg"))
+    @album.add_photo(Photo.new("/home/unicorns/Desktop/Unicorns/forest-unicorn-family-jan-patrik-krasny.jpg"))
+    @album.add_photo(Photo.new("/home/unicorns/Desktop/Unicorns/waaterfall-glade-unicorns-jan-patrik-krasny.jpg"))
+    @album.add_photo(Photo.new("/home/unicorns/Desktop/Unicorns/CEACO-1652-03.jpg"))
+    @album.add_photo(Photo.new("/home/unicorns/Desktop/Unicorns/81j5RZdJ+2L._SL1400_.jpg"))
+    @album_view = AlbumView.new(image_frame, @album)
 
     choseFrame = FXHorizontalFrame.new(@frame)
     #horizontalni frame za "chose template" labelu
