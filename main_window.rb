@@ -43,7 +43,7 @@ class MainWindow < FXMainWindow
     image_frame = FXHorizontalFrame.new(@frame, LAYOUT_FILL_X|LAYOUT_FILL_Y)
     @album = Album.new("CV Templates")
     @album.add_photo(Photo.new("./slike/cv1.jpg"))
-    @album.add_photo(Photo.new("./cv2.jpg"))
+    @album.add_photo(Photo.new("./slike/cv2.jpg"))
     @album.add_photo(Photo.new("./slike/cv3.jpg"))
     @album.add_photo(Photo.new("./slike/cv4.jpg"))
     @album.add_photo(Photo.new("./slike/cv5.jpg"))
