@@ -25,7 +25,11 @@ class MainWindow < FXMainWindow
 
   def initialize()
     super($app, "CV Express", :opts => DECOR_ALL, :width => 570, :height => 600)
-
+    $app.backColor = Fox.FXRGB(255, 255, 255)
+    # Plava
+    #$app.baseColor = Fox.FXRGB(176, 196, 225)
+    # Lavanda
+    $app.baseColor = Fox.FXRGB(238, 224, 229)
 
     $mainFrame = FXVerticalFrame.new(self, :opts => LAYOUT_FILL)
     @frame = FXVerticalFrame.new($mainFrame, :opts => LAYOUT_FILL)

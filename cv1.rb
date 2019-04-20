@@ -19,7 +19,8 @@ class CV1 < FXMainWindow
 
     infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     lblInfo = FXLabel.new(infoFrame, "Information:", :opts => LAYOUT_CENTER_X)
-    lblInfo.textColor = Fox.FXRGB(255, 0, 5)
+    #lblInfo.textColor = Fox.FXRGB(255, 0, 5)
+    lblInfo.textColor = Fox.FXRGB(120, 5, 120)
     lblInfo.font = FXFont.new(app, "Geneva", 12)
 
     # Osnovne informacije o korisniku
@@ -42,7 +43,8 @@ class CV1 < FXMainWindow
     # Nova celina, steceno obrazovanje, eduFrame
     eduFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     lblEdu = FXLabel.new(eduFrame, "Education: ", :opts => LAYOUT_CENTER_X)
-    lblEdu.textColor = Fox.FXRGB(235, 85, 0)
+    #lblEdu.textColor = Fox.FXRGB(235, 85, 0)
+    lblEdu.textColor = Fox.FXRGB(0, 80, 150)
     lblEdu.font = FXFont.new(app, "Geneva", 12)
 
     yearAndEduFrame = FXHorizontalFrame.new(eduFrame, :opts => PACK_UNIFORM_HEIGHT)
@@ -67,7 +69,8 @@ class CV1 < FXMainWindow
     # Nova celina, vestine za komunikaciju
     comSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     @lblComSkills = FXLabel.new(comSkillsFrame, "Communication skills: ", :opts => LAYOUT_CENTER_X)
-    @lblComSkills.textColor = Fox.FXRGB(45, 150, 0)
+    #@lblComSkills.textColor = Fox.FXRGB(45, 150, 0)
+    @lblComSkills.textColor = Fox.FXRGB(120, 5, 120)
     @lblComSkills.font = FXFont.new(app, "Geneva", 12)
 
     comHFrame = FXHorizontalFrame.new(comSkillsFrame, :opts => LAYOUT_FILL_X)
@@ -114,7 +117,6 @@ class CV1 < FXMainWindow
 
     # Frame za dugmice
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
-
 
     dekor = loadIcon("plavo.png")
     @btnSubmit = FXButton.new(btnFrame,
