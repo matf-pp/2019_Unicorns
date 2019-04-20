@@ -161,10 +161,28 @@ class CV1 < FXMainWindow
 
   def onSubmit(sender, sel, event)
       system("cp cv1.tex '#{@tfName}.tex'")
+      file_edit("#{@tfName}.tex", 'Ime', @tfName.text)
+      file_edit("#{@tfName}.tex", 'Adresa', @tfAddress.text)
+      file_edit("#{@tfName}.tex", 'Telefon', @tfPhone.text)
+      file_edit("#{@tfName}.tex", 'Mejl', @tfMail.text)
 
+      file_edit("#{@tfName}.tex", 'pocetakS', @tfStartHighSchool.text)
+      file_edit("#{@tfName}.tex", 'krajS', @tfEndHighSchool.text)
+      file_edit("#{@tfName}.tex", 'opisS', @tfEduHighSchool.text)
+      file_edit("#{@tfName}.tex", 'pocetakC', @tfStartCollege.text)
+      file_edit("#{@tfName}.tex", 'krajC', @tfEndCollege.text)
+      file_edit("#{@tfName}.tex", 'opisC', @tfEduCollege.text)
 
-      system("mv '#{@tfName}.pdf ~/Desktop'")
-      system("rm '#{@tfName}.tex'")
+      file_edit("#{@tfName}.tex", 'listaJedinicaNS', @tfNS.text)
+      file_edit("#{@tfName}.tex", 'listaJedinicaOG', @tfGood.text)
+      file_edit("#{@tfName}.tex", 'listaJedinicaOF', @tfFair.text)
+
+      file_edit("#{@tfName}.tex", 'dobarUTome', @taGoodLvl.text)
+      file_edit("#{@tfName}.tex", 'mozeDaProdje', @taIntermediateLvl.text)
+      file_edit("#{@tfName}.tex", 'ideNekako', @taBasicLvl.text)
+
+      system("mv '#{@tfName}.pdf' ~/Desktop")
+      system("rm '#{@tfName}.tex' ~/Desktop")
   end
 
   def file_edit(filename, regexp, replacement)

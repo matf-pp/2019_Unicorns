@@ -10,7 +10,6 @@ class AlbumView < FXScrollWindow
     @album = album
     FXMatrix.new(self, :opts => LAYOUT_FILL)
     @album.each_photo { |photo| add_photo(photo) }
-    # ...
   end
 
   def layout
@@ -22,7 +21,6 @@ class AlbumView < FXScrollWindow
     PhotoView.new(contentWindow, photo)
   end
 
-  # ...
 end
 
 
