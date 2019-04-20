@@ -95,7 +95,6 @@ class CV1 < FXMainWindow
     profSkillsHFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_FILL_X)
     matrixSkills = FXMatrix.new(profSkillsHFrame, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
 
-    # TODO
     lblGoodLvl =  FXLabel.new(matrixSkills, "Good level: ")
     pomocniFrame1 = FXHorizontalFrame.new(matrixSkills, :opts => LAYOUT_FILL_X|FRAME_THICK)
     @taGoodLvl = FXText.new(pomocniFrame1, :opts => TEXT_WORDWRAP|LAYOUT_FILL_X)
@@ -132,11 +131,6 @@ class CV1 < FXMainWindow
       @expSpace.recalc # mark parent layout as dirty
     end
 
-
-
-
-
-
     # Frame za dugmice
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
 
@@ -165,10 +159,10 @@ class CV1 < FXMainWindow
     @position.insert(-1, FXTextField.new(positionFrame, 37))
     FXLabel.new(bigFrame, "Company", :opts => LAYOUT_CENTER_X)
     @company.insert(-1, FXTextField.new(bigFrame, 56, :opts=>LAYOUT_CENTER_X))
-    FXLabel.new(bigFrame, "Describe", :opts => LAYOUT_CENTER_X)
+    FXLabel.new(bigFrame, "Description", :opts => LAYOUT_CENTER_X)
     describeFrame = FXHorizontalFrame.new(bigFrame, :opts => LAYOUT_FILL_X|FRAME_THICK)
     @describe.insert(-1, FXText.new(describeFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
-    @describe[-1].width = 350
+    @describe[-1].width = 500
   end
 
   def onSubmit(sender, sel, event)
@@ -187,8 +181,7 @@ class CV1 < FXMainWindow
         tempfile.close
         FileUtils.mv tempfile.path, filename
       end
-      retVal = system('pdflatex main.tex')
-      puts(retVal)
+
     end
   end
 
@@ -199,7 +192,7 @@ class CV1 < FXMainWindow
 
   # Ucitava sliku iz fajla
   def loadIcon(filename)
-    filename = File.expand_path("../#{filename}", __FILE__)
+    filename = File.expand_path("../slike/#{filename}", __FILE__)
     File.open(filename, "rb") do |f|
       FXPNGIcon.new(getApp(), f.read)
     end
