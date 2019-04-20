@@ -47,12 +47,6 @@ class CV1 < FXMainWindow
     lblEdu.textColor = Fox.FXRGB(0, 80, 150)
     lblEdu.font = FXFont.new(app, "Geneva", 12)
 
-    yearAndEduFrame = FXHorizontalFrame.new(eduFrame, :opts => PACK_UNIFORM_HEIGHT)
-    @tfStartPrimarySchool = FXTextField.new(yearAndEduFrame,  6)
-    lblLine = FXLabel.new(yearAndEduFrame, " - ")
-    @tfEndPrimarySchool = FXTextField.new(yearAndEduFrame, 6)
-    @tfEduPrimarySchool = FXTextField.new(yearAndEduFrame, 39)
-
     yearAndEdu1 = FXHorizontalFrame.new(eduFrame, :opts => PACK_UNIFORM_HEIGHT)
     @tfStartHighSchool = FXTextField.new(yearAndEdu1,  6)
     lblLine = FXLabel.new(yearAndEdu1, " - ")
@@ -166,9 +160,11 @@ class CV1 < FXMainWindow
   end
 
   def onSubmit(sender, sel, event)
-      #TODO
-      #system("pdflatex main.tex")
+      system("cp cv1.tex '#{@tfName}.tex'")
 
+
+      system("mv '#{@tfName}.pdf ~/Desktop'")
+      system("rm '#{@tfName}.tex'")
   end
 
   def file_edit(filename, regexp, replacement)
