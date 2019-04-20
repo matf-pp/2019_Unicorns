@@ -115,6 +115,28 @@ class CV1 < FXMainWindow
     @taBasicLvl.text = ""
 
 
+    expFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL_X)
+    expLabel = FXLabel.new(expFrame, "Experience:", :opts => LAYOUT_FILL_X)
+    expLabel.textColor = Fox.FXRGB(0, 150, 80)
+    expLabel.font = FXFont.new(app, "Geneva", 12)
+    expButton = FXButton.new(expFrame, "Add row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    @expSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_FILL|MATRIX_BY_COLUMNS)
+    @startYear = []
+    @endYear = []
+    @position = []
+    @company = []
+    @describe = []
+    expButton.connect(SEL_COMMAND) do
+      makeLayout()
+      @expSpace.create # create server-side resources
+      @expSpace.recalc # mark parent layout as dirty
+    end
+
+
+
+
+
+
     # Frame za dugmice
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
 
@@ -128,6 +150,25 @@ class CV1 < FXMainWindow
     @btnSubmit.textColor = Fox.FXRGB(250, 250, 250)
     @btnSubmit.connect(SEL_COMMAND, method(:onSubmit))
 
+  end
+
+  def makeLayout()
+    bigFrame = FXVerticalFrame.new(@expSpace, :opts => LAYOUT_FILL)
+    matrica = FXMatrix.new(bigFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
+    FXLabel.new(matrica, "Period", :opts => LAYOUT_CENTER_X)
+    FXLabel.new(matrica, "Position", :opts=> LAYOUT_CENTER_X)
+    yearFrame = FXHorizontalFrame.new(matrica, LAYOUT_FILL_X)
+    positionFrame = FXHorizontalFrame.new(matrica, LAYOUT_FILL_X)
+    @startYear.insert(-1, FXTextField.new(yearFrame,  6))
+    FXLabel.new(yearFrame, " - ")
+    @endYear.insert(-1, FXTextField.new(yearFrame, 6))
+    @position.insert(-1, FXTextField.new(positionFrame, 37))
+    FXLabel.new(bigFrame, "Company", :opts => LAYOUT_CENTER_X)
+    @company.insert(-1, FXTextField.new(bigFrame, 56, :opts=>LAYOUT_CENTER_X))
+    FXLabel.new(bigFrame, "Describe", :opts => LAYOUT_CENTER_X)
+    describeFrame = FXHorizontalFrame.new(bigFrame, :opts => LAYOUT_FILL_X|FRAME_THICK)
+    @describe.insert(-1, FXText.new(describeFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
+    @describe[-1].width = 350
   end
 
   def onSubmit(sender, sel, event)
