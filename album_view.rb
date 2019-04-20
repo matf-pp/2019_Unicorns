@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require File.dirname(__FILE__) + '/photo_view'
 
-class AlbumView <   # FXScrollWindow
+class AlbumView <   FXScrollWindow
 
   attr_reader :album
 

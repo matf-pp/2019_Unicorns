@@ -181,8 +181,15 @@ class CV1 < FXMainWindow
       file_edit("#{@tfName}.tex", 'mozeDaProdje', @taIntermediateLvl.text)
       file_edit("#{@tfName}.tex", 'ideNekako', @taBasicLvl.text)
 
+      Catch()
+
+      file_edit("#{@tfName}.tex", 'NestoStoTrazimo', @str1)
+
+      system("pdflatex '#{@tfName}.tex'")
+      system("pdflatex '#{@tfName}.tex'")
+
       system("mv '#{@tfName}.pdf' ~/Desktop")
-      system("rm '#{@tfName}.tex' ~/Desktop")
+      system("rm '#{@tfName}.tex' ")
   end
 
   def file_edit(filename, regexp, replacement)
@@ -197,6 +204,43 @@ class CV1 < FXMainWindow
       end
 
     end
+  end
+
+  def Catch()
+    @str1 = "\\section{Work experience}
+            \\begin{eventlist}
+                "
+    @str2 = "\\item{July 2007 -- Present}
+                  {eNTiDi software, Travagliato}
+                  {Management and development}
+            "
+    #TODO
+    @count = 0
+    @nesto = 0
+    puts @startYear.length
+    while @count < @startYear.length
+      if @startYear[@count].text.length > 0 &&
+          @endYear[@count].text.length > 0 &&
+          @describe[@count].text.length > 0 &&
+          @company[@count].text.length > 0 &&
+          @position[@count].text.length > 0
+
+        @str1 << " \\item{ #{@startYear[@count]} -- #{@endYear[@count]}}
+                   {#{@company[@count]}}
+                   {#{@position[@count]}}
+                   #{@describe[@count]} "
+
+        @nesto += 1
+      end
+      @count += 1
+    end
+
+    @str1 << "
+    \\end{eventlist}"
+    if @nesto == 0
+      @str1 = ""
+    end
+
   end
 
   # Metod za gasenje aplikacije pomocu iksica
