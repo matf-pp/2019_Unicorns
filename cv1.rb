@@ -8,10 +8,10 @@ include Fox
 class CV1 < FXMainWindow
 
   def initialize()
-    super($app, "CV express", :opts => DECOR_ALL, :width => 570, :height => 600)
+    super($app, "CV express", :opts => DECOR_ALL , :width => 570, :height => 600)
     self.connect(SEL_CLOSE, method(:onClose))
 
-    @scroll = FXScrollWindow.new(self, :width=>500, :height => 600, :opts => LAYOUT_FILL )
+    @scroll = FXScrollWindow.new(self, :width=>570, :height => 600, :opts => LAYOUT_FILL | LAYOUT_FIX_HEIGHT | LAYOUT_FIX_WIDTH )
 
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
