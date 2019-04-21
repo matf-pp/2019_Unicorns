@@ -86,11 +86,12 @@ class MainWindow < FXMainWindow
       CV1.new().create
       self.destroy()
     elsif (@cvlist.to_s == 'CV2')
-           puts("Nema jos uvek\n")
+      puts("Nema jos uvek\n")
     elsif (@cvlist.to_s == 'CV3')
       puts("Takodje, nema nista\n")
     elsif (@cvlist.to_s == 'CV4')
-      puts("Takodje, nema nista\n")
+      CV4.new().create
+      self.destroy()
     elsif (@cvlist.to_s == 'CV5')
       puts("Takodje, nema nista\n")
     elsif (@cvlist.to_s == 'CV6')

@@ -8,12 +8,10 @@ include Fox
 class CV1 < FXMainWindow
 
   def initialize()
-    super($app, "CV express", :opts => DECOR_ALL , :width => 570, :height => 600)
+    super($app, "CV express", :opts => DECOR_ALL, :width => 570, :height => 600)
     self.connect(SEL_CLOSE, method(:onClose))
 
-    @scroll = FXScrollWindow.new(self, :width=>570, :height => 600, :opts => LAYOUT_FILL |
-                                                                                         LAYOUT_FIX_HEIGHT |
-                                                                                         LAYOUT_FIX_WIDTH )
+    @scroll = FXScrollWindow.new(self, :width=>500, :height => 600, :opts => LAYOUT_FILL )
 
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
@@ -114,6 +112,7 @@ class CV1 < FXMainWindow
     expLabel = FXLabel.new(expFrame, "Experience:", :opts => LAYOUT_FILL_X)
     expLabel.textColor = Fox.FXRGB(0, 150, 80)
     expLabel.font = FXFont.new(app, "Geneva", 12)
+
     expButton = FXButton.new(expFrame, "Add row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
     @expSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_FILL|MATRIX_BY_COLUMNS)
     @startYear = []
@@ -145,20 +144,25 @@ class CV1 < FXMainWindow
   def makeLayout()
     bigFrame = FXVerticalFrame.new(@expSpace, :opts => LAYOUT_FILL)
     matrica = FXMatrix.new(bigFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
-    FXLabel.new(matrica, "Period", :opts => LAYOUT_CENTER_X)
-    FXLabel.new(matrica, "Position", :opts=> LAYOUT_CENTER_X)
+
+    FXLabel.new(matrica, "Period:", :opts => LAYOUT_CENTER_X)
+    FXLabel.new(matrica, "Position:", :opts=> LAYOUT_CENTER_X)
+
     yearFrame = FXHorizontalFrame.new(matrica, LAYOUT_FILL_X)
     positionFrame = FXHorizontalFrame.new(matrica, LAYOUT_FILL_X)
     @startYear.insert(-1, FXTextField.new(yearFrame,  6))
+
     FXLabel.new(yearFrame, " - ")
     @endYear.insert(-1, FXTextField.new(yearFrame, 6))
-    @position.insert(-1, FXTextField.new(positionFrame, 37))
-    FXLabel.new(bigFrame, "Company", :opts => LAYOUT_CENTER_X)
-    @company.insert(-1, FXTextField.new(bigFrame, 56, :opts=>LAYOUT_CENTER_X))
+    @position.insert(-1, FXTextField.new(positionFrame, 45))
+
+    FXLabel.new(bigFrame, "Company:", :opts => LAYOUT_CENTER_X)
+    @company.insert(-1, FXTextField.new(bigFrame, 65, :opts=>LAYOUT_CENTER_X|TEXTFIELD_NORMAL))
+
     FXLabel.new(bigFrame, "Description", :opts => LAYOUT_CENTER_X)
     describeFrame = FXHorizontalFrame.new(bigFrame, :opts => LAYOUT_FILL_X|FRAME_THICK)
     @describe.insert(-1, FXText.new(describeFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
-    @describe[-1].width = 500
+    @describe[-1].width = 520
   end
 
   def onSubmit(sender, sel, event)
@@ -191,7 +195,7 @@ class CV1 < FXMainWindow
       system("pdflatex '#{@tfName}.tex'")
 
       system("mv '#{@tfName}.pdf' ~/Desktop")
-      system("rm '#{@tfName}.tex' ")
+      system("rm '#{@tfName}'.* ")
   end
 
   def file_edit(filename, regexp, replacement)
@@ -212,31 +216,34 @@ class CV1 < FXMainWindow
     @str1 = "\\section{Work experience}
             \\begin{eventlist}
                 "
+    @str2 = "\\item{July 2007 -- Present}
+                  {eNTiDi software, Travagliato}
+                  {Management and development}
+            "
 
-    #TODO
-    @count = 0
-    @nesto = 0
+    @count1 = 0
+    @count2 = 0
     puts @startYear.length
-    while @count < @startYear.length
-      if @startYear[@count].text.length > 0 &&
-          @endYear[@count].text.length > 0 &&
-          @describe[@count].text.length > 0 &&
-          @company[@count].text.length > 0 &&
-          @position[@count].text.length > 0
+    while @count1 < @startYear.length
+      if @startYear[@count1].text.length > 0 &&
+          @endYear[@count1].text.length > 0 &&
+          @describe[@count1].text.length > 0 &&
+          @company[@count1].text.length > 0 &&
+          @position[@count1].text.length > 0
 
-        @str1 << " \\item{ #{@startYear[@count]} -- #{@endYear[@count]}}
-                   {#{@company[@count]}}
-                   {#{@position[@count]}}
-                   #{@describe[@count]} "
+        @str1 << " \\item{ #{@startYear[@count1]} -- #{@endYear[@count1]}}
+                   {#{@company[@count1]}}
+                   {#{@position[@count1]}}
+                   #{@describe[@count1]} "
 
-        @nesto += 1
+        @count2 += 1
       end
-      @count += 1
+      @count1 += 1
     end
 
     @str1 << "
     \\end{eventlist}"
-    if @nesto == 0
+    if @count2 == 0
       @str1 = ""
     end
 
@@ -249,7 +256,7 @@ class CV1 < FXMainWindow
 
   # Ucitava sliku iz fajla
   def loadIcon(filename)
-    filename = File.expand_path("../../slike/#{filename}", __FILE__)
+    filename = File.expand_path("../slike/#{filename}", __FILE__)
     File.open(filename, "rb") do |f|
       FXPNGIcon.new(getApp(), f.read)
     end
