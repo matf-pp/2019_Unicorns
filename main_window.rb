@@ -2,6 +2,7 @@
 require 'fox16'
 include Fox
 require File.dirname(__FILE__) +'/cv1'
+require File.dirname(__FILE__) +'/cv4'
 require File.dirname(__FILE__) + '/photo'
 require File.dirname(__FILE__) + '/photo_view'
 require File.dirname(__FILE__) + '/album'
