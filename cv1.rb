@@ -109,11 +109,11 @@ class CV1 < FXMainWindow
 
 
     expFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL_X)
-    expLabel = FXLabel.new(expFrame, "Experience:", :opts => LAYOUT_FILL_X)
+    expLabel = FXLabel.new(expFrame, "Work experience:", :opts => LAYOUT_FILL_X)
     expLabel.textColor = Fox.FXRGB(0, 150, 80)
     expLabel.font = FXFont.new(app, "Geneva", 12)
 
-    expButton = FXButton.new(expFrame, "Add row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    expButton = FXButton.new(expFrame, "Add new row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
     @expSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_FILL|MATRIX_BY_COLUMNS)
     @startYear = []
     @endYear = []
