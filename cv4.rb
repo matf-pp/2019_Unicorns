@@ -16,10 +16,8 @@ class CV4 < FXMainWindow
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
 
-
     infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     lblInfo = FXLabel.new(infoFrame, "About:", :opts => LAYOUT_CENTER_X)
-    #lblInfo.textColor = Fox.FXRGB(255, 0, 5)
     lblInfo.textColor = Fox.FXRGB(120, 5, 120)
     lblInfo.font = FXFont.new(app, "Geneva", 12)
 
@@ -42,21 +40,11 @@ class CV4 < FXMainWindow
     # Nova celina, vestine za komunikaciju
     comSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     @lblComSkills = FXLabel.new(comSkillsFrame, "Languages: ", :opts => LAYOUT_CENTER_X)
-    #@lblComSkills.textColor = Fox.FXRGB(45, 150, 0)
     @lblComSkills.textColor = Fox.FXRGB(120, 5, 120)
     @lblComSkills.font = FXFont.new(app, "Geneva", 12)
 
-    comHFrame = FXHorizontalFrame.new(comSkillsFrame, :opts => LAYOUT_FILL_X)
-    matrixComSkills = FXMatrix.new(comHFrame, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
-
-    lblNS =  FXLabel.new(matrixComSkills, "Native speaker: ")
-    @tfNS = FXTextField.new(matrixComSkills, 35)
-
-    lblGood =  FXLabel.new(matrixComSkills, "Oral and written - good:  ")
-    @tfGood = FXTextField.new(matrixComSkills, 35)
-
-    lblFair =  FXLabel.new(matrixComSkills, "Oral and written - fair: ")
-    @tfFair = FXTextField.new(matrixComSkills, 35)
+    comHFrame = FXHorizontalFrame.new(comSkillsFrame, :opts => LAYOUT_CENTER_X)
+    @tfLang = FXTextField.new(comHFrame, 50)
 
     # Nova celina, profesionalne vestine
     proSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
@@ -64,7 +52,7 @@ class CV4 < FXMainWindow
     lblProSkills.textColor = Fox.FXRGB(120, 5, 120)
     lblProSkills.font = FXFont.new(app, "Geneva", 12)
 
-    pomocniFrame = FXHorizontalFrame.new(proSkillsFrame, :opts => LAYOUT_LEFT|FRAME_THICK)
+    pomocniFrame = FXHorizontalFrame.new(proSkillsFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
     @taDesc = FXText.new(pomocniFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH)
     @taDesc.width = 450
     @taDesc.text = ""
@@ -72,32 +60,38 @@ class CV4 < FXMainWindow
     #TODO
     # Nova celina, interesovanja
     intFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
-    lblInt = FXLabel.new(intFrame, "Interests:", :opts => LAYOUT_CENTER_X)
-    lblInt.textColor = Fox.FXRGB(0, 70, 190)
-    lblInt.font = FXFont.new(app, "Geneva", 12)
-    pomocniIntFrame = FXHorizontalFrame.new(intFrame, :opts => LAYOUT_LEFT|FRAME_THICK)
-    taInt = FXText.new(pomocniIntFrame, :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH)
-    taInt.width = 450
-    taInt.text = ""
+    @lblInt = FXLabel.new(intFrame, "Interests:", :opts => LAYOUT_CENTER_X)
+    @lblInt.textColor = Fox.FXRGB(0, 70, 190)
+    @lblInt.font = FXFont.new(app, "Geneva", 12)
+    pomocniIntFrame = FXHorizontalFrame.new(intFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
+    @taInt = FXText.new(pomocniIntFrame, :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH)
+    @taInt.width = 450
+    @taInt.text = ""
 
     # Nova celina, steceno obrazovanje
-    eduFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
+    eduFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     lblEdu = FXLabel.new(eduFrame, "Education: ", :opts => LAYOUT_CENTER_X)
     lblEdu.textColor = Fox.FXRGB(215, 5, 20)
     #lblEdu.textColor = Fox.FXRGB(0, 80, 150)
     lblEdu.font = FXFont.new(app, "Geneva", 12)
 
-    yearAndEdu1 = FXHorizontalFrame.new(eduFrame, :opts => PACK_UNIFORM_HEIGHT)
+    ye1 = FXVerticalFrame.new(eduFrame)
+    yearAndEdu1 = FXHorizontalFrame.new(ye1, :opts => PACK_UNIFORM_HEIGHT)
     @tfStartHighSchool = FXTextField.new(yearAndEdu1,  6)
-    lblLine = FXLabel.new(yearAndEdu1, " - ")
+    lblLine1 = FXLabel.new(yearAndEdu1, " - ")
     @tfEndHighSchool = FXTextField.new(yearAndEdu1, 6)
-    @tfEduHighSchool = FXTextField.new(yearAndEdu1, 39)
+    @tfDiplomaHS = FXTextField.new(yearAndEdu1, 39)
+    yearEdu1 = FXHorizontalFrame.new(ye1, :opts => PACK_UNIFORM_HEIGHT|LAYOUT_RIGHT)
+    @tfEduHighSchool = FXTextField.new(yearEdu1, 39, :opts => TEXTFIELD_NORMAL)
 
-    yearAndEdu2 = FXHorizontalFrame.new(eduFrame, :opts => PACK_UNIFORM_HEIGHT)
-    @tfStartCollege = FXTextField.new(yearAndEdu2,  6)
-    lblLine = FXLabel.new(yearAndEdu2, " - ")
-    @tfEndCollege = FXTextField.new(yearAndEdu2, 6)
-    @tfEduCollege = FXTextField.new(yearAndEdu2, 39)
+    ye2 = FXVerticalFrame.new(eduFrame)
+    yearAndEdu2 = FXHorizontalFrame.new(ye2, :opts => PACK_UNIFORM_HEIGHT)
+    @tfStartUniv = FXTextField.new(yearAndEdu2,  6)
+    lblLine2 = FXLabel.new(yearAndEdu2, " - ")
+    @tfEndUniv = FXTextField.new(yearAndEdu2, 6)
+    @tfDiplomaUniv = FXTextField.new(yearAndEdu2, 39)
+    yearEdu2 = FXHorizontalFrame.new(ye2, :opts => PACK_UNIFORM_HEIGHT|LAYOUT_RIGHT)
+    @tfEduUniv = FXTextField.new(yearEdu2, 39, :opts => TEXTFIELD_NORMAL)
 
     # Nova celina, radno iskustvo
     expFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL_X)
@@ -200,30 +194,34 @@ class CV4 < FXMainWindow
     system("cp cv4.tex '#{@tfName}.tex'")
     file_edit("#{@tfName}.tex", 'Ime', @tfName.text)
     file_edit("#{@tfName}.tex", 'Adresa', @tfAddress.text)
-    file_edit("#{@tfName}.tex", 'Telefon', @tfPhone.text)
-    file_edit("#{@tfName}.tex", 'Mejl', @tfMail.text)
+    file_edit("#{@tfName}.tex", 'telefon', @tfPhone.text)
+    file_edit("#{@tfName}.tex", 'mejl', @tfMail.text)
+    file_edit("#{@tfName}.tex", 'Jezici', @tfLang.text)
+    file_edit("#{@tfName}.tex", 'progJez', @taDesc.text)
+    file_edit("#{@tfName}.tex", 'interesovanja', @taInt.text)
 
-    file_edit("#{@tfName}.tex", 'pocetakS', @tfStartHighSchool.text)
-    file_edit("#{@tfName}.tex", 'krajS', @tfEndHighSchool.text)
-    file_edit("#{@tfName}.tex", 'opisS', @tfEduHighSchool.text)
-    file_edit("#{@tfName}.tex", 'pocetakC', @tfStartCollege.text)
-    file_edit("#{@tfName}.tex", 'krajC', @tfEndCollege.text)
-    file_edit("#{@tfName}.tex", 'opisC', @tfEduCollege.text)
+    file_edit("#{@tfName}.tex", 'Jezici', @tfLang.text)
+    file_edit("#{@tfName}.tex", 'progJez', @taDesc.text)
+    file_edit("#{@tfName}.tex", 'interesovanja', @taInt.text)
 
-    file_edit("#{@tfName}.tex", 'listaJedinicaNS', @tfNS.text)
-    file_edit("#{@tfName}.tex", 'listaJedinicaOG', @tfGood.text)
-    file_edit("#{@tfName}.tex", 'listaJedinicaOF', @tfFair.text)
+    file_edit("#{@tfName}.tex", 'pocetak1', @tfStartHighSchool.text)
+    file_edit("#{@tfName}.tex", 'kraj1', @tfEndHighSchool.text)
+    #TODO
+    file_edit("#{@tfName}.tex", 'nivoStudija1', @tfDiplomaHS.text)
+    file_edit("#{@tfName}.tex", 'ObrazovnaUstanova1', @tfEduHighSchool.text)
 
-    file_edit("#{@tfName}.tex", 'dobarUTome', @taGoodLvl.text)
-    file_edit("#{@tfName}.tex", 'mozeDaProdje', @taIntermediateLvl.text)
-    file_edit("#{@tfName}.tex", 'ideNekako', @taBasicLvl.text)
+    file_edit("#{@tfName}.tex", 'pocetak2', @tfStartUniv.text)
+    file_edit("#{@tfName}.tex", 'kraj2', @tfEndUniv.text)
+    file_edit("#{@tfName}.tex", 'nivoStudija2', @tfDiplomaUniv.text)
+    file_edit("#{@tfName}.tex", 'ObrazovnaUstanova2', @tfEduUniv.text)
 
-    Catch()
 
-    file_edit("#{@tfName}.tex", 'NestoStoTrazimo', @str1)
 
-    system("pdflatex '#{@tfName}.tex'")
-    system("pdflatex '#{@tfName}.tex'")
+    #Catch()
+    #file_edit("#{@tfName}.tex", 'NestoStoTrazimo', @str1)
+
+    system("xelatex '#{@tfName}.tex'")
+    system("xelatex '#{@tfName}.tex'")
 
     system("mv '#{@tfName}.pdf' ~/Desktop")
     system("rm '#{@tfName}'.* ")
