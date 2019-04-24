@@ -188,7 +188,6 @@ class CV1 < FXMainWindow
       file_edit("#{@tfName}.tex", 'ideNekako', @taBasicLvl.text)
 
       Catch()
-
       file_edit("#{@tfName}.tex", 'NestoStoTrazimo', @str1)
 
       system("pdflatex '#{@tfName}.tex'")

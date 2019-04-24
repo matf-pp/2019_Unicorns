@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5479d56e-b065-48c8-a863-300bd72bae48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cv1.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv1.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cv4.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv4.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cv4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/cv4.tex" afterDir="false" />
     </list>
@@ -13,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Unicorns@main.rcov" NAME="main Coverage Results" MODIFIED="1555795272101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
-    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556116178904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
+    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556140311580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -35,20 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cv4.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="192" column="30" lean-forward="true" selection-start-line="192" selection-start-column="30" selection-end-line="192" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cv4.tex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+            <state relative-caret-position="281">
+              <caret line="187" column="82" selection-start-line="187" selection-start-column="82" selection-end-line="187" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -57,7 +49,16 @@
         <entry file="file://$PROJECT_DIR$/cv1.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="127">
-              <caret line="174" column="6" lean-forward="true" selection-start-line="174" selection-start-column="6" selection-end-line="179" selection-end-column="62" />
+              <caret line="191" selection-start-line="191" selection-end-line="191" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cv4.tex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -74,8 +75,8 @@
         <option value="$PROJECT_DIR$/src/main_window.rb" />
         <option value="$PROJECT_DIR$/src/cv1.rb" />
         <option value="$PROJECT_DIR$/cv1.rb" />
-        <option value="$PROJECT_DIR$/cv4.rb" />
         <option value="$PROJECT_DIR$/cv4.tex" />
+        <option value="$PROJECT_DIR$/cv4.rb" />
       </list>
     </option>
   </component>
@@ -203,7 +204,7 @@
       <workItem from="1555794599681" duration="1000000" />
       <workItem from="1555854852418" duration="38000" />
       <workItem from="1555860221965" duration="5615000" />
-      <workItem from="1556110924230" duration="5199000" />
+      <workItem from="1556110924230" duration="9587000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1555791842120</created>
@@ -223,10 +224,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16638000" />
+    <option name="totallyTimeSpent" value="21026000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-2" width="1364" height="740" extended-state="7" />
+    <frame x="-2" y="-2" width="1364" height="740" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21656536" />
@@ -282,13 +283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cv1.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="174" column="6" lean-forward="true" selection-start-line="174" selection-start-column="6" selection-end-line="179" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_window.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-725">
@@ -296,17 +290,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cv4.rb">
+    <entry file="file://$PROJECT_DIR$/cv1.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="192" column="30" lean-forward="true" selection-start-line="192" selection-start-column="30" selection-end-line="192" selection-end-column="30" />
+        <state relative-caret-position="127">
+          <caret line="191" selection-start-line="191" selection-end-line="191" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cv4.tex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="87">
+          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv4.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="187" column="82" selection-start-line="187" selection-start-column="82" selection-end-line="187" selection-end-column="82" />
         </state>
       </provider>
     </entry>

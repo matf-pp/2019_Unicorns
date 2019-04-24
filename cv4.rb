@@ -44,7 +44,7 @@ class CV4 < FXMainWindow
     @lblComSkills.font = FXFont.new(app, "Geneva", 12)
 
     comHFrame = FXHorizontalFrame.new(comSkillsFrame, :opts => LAYOUT_CENTER_X)
-    @tfLang = FXTextField.new(comHFrame, 50)
+    @tfLang = FXTextField.new(comHFrame, 55)
 
     # Nova celina, profesionalne vestine
     proSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
@@ -101,7 +101,7 @@ class CV4 < FXMainWindow
 
     # Frame za dugmice
     expButton = FXButton.new(expFrame, "Add new row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
-    @expSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_FILL|MATRIX_BY_COLUMNS)
+    @expSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
     @startYear = []
     @endYear = []
     @position = []
@@ -121,7 +121,7 @@ class CV4 < FXMainWindow
 
     # Frame za dugmice
     appButton = FXButton.new(appFrame, "Add new row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
-    @appSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_FILL|MATRIX_BY_COLUMNS)
+    @appSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
     @year = []
     @name = []
     @description = []
@@ -160,32 +160,32 @@ class CV4 < FXMainWindow
 
     FXLabel.new(yearFrame, " - ")
     @endYear.insert(-1, FXTextField.new(yearFrame, 6))
-    @position.insert(-1, FXTextField.new(positionFrame, 45))
+    @position.insert(-1, FXTextField.new(positionFrame, 40))
 
     FXLabel.new(bigFrame, "Company:", :opts => LAYOUT_CENTER_X)
-    @company.insert(-1, FXTextField.new(bigFrame, 65, :opts=>LAYOUT_CENTER_X|TEXTFIELD_NORMAL))
+    @company.insert(-1, FXTextField.new(bigFrame, 60, :opts=>LAYOUT_CENTER_X|TEXTFIELD_NORMAL))
 
-    FXLabel.new(bigFrame, "Description", :opts => LAYOUT_CENTER_X)
-    describeFrame = FXHorizontalFrame.new(bigFrame, :opts => LAYOUT_FILL_X|FRAME_THICK)
-    @describe.insert(-1, FXText.new(describeFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
-    @describe[-1].width = 520
+    #FXLabel.new(bigFrame, "Description", :opts => LAYOUT_CENTER_X)
+    #describeFrame = FXHorizontalFrame.new(bigFrame, :opts => LAYOUT_FILL_X|FRAME_THICK)
+    #@describe.insert(-1, FXText.new(describeFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
+    #@describe[-1].width = 520
   end
 
   # Projekti, polja
   def makeLayoutApp()
-    parentFrame = FXVerticalFrame.new(@appSpace, :opts => LAYOUT_FILL)
-    matrix = FXMatrix.new(parentFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
+    parentFrame = FXVerticalFrame.new(@appSpace, :opts => LAYOUT_CENTER_X)
+    matrix = FXMatrix.new(parentFrame, n=2, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
 
     FXLabel.new(matrix, "Year:", :opts => LAYOUT_CENTER_X)
     FXLabel.new(matrix, "Name of the project:", :opts=> LAYOUT_CENTER_X)
 
-    yearFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
-    appNameFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+    yearFrame = FXHorizontalFrame.new(matrix, LAYOUT_CENTER_X)
+    appNameFrame = FXHorizontalFrame.new(matrix, LAYOUT_CENTER_X)
     @year.insert(-1, FXTextField.new(yearFrame,  7))
     @name.insert(-1, FXTextField.new(appNameFrame, 47))
 
     FXLabel.new(parentFrame, "Description", :opts => LAYOUT_CENTER_X)
-    descriptionFrame = FXHorizontalFrame.new(parentFrame, :opts => LAYOUT_LEFT|FRAME_THICK)
+    descriptionFrame = FXHorizontalFrame.new(parentFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
     @description.insert(-1, FXText.new(descriptionFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
     @description[-1].width = 460
   end
@@ -206,7 +206,6 @@ class CV4 < FXMainWindow
 
     file_edit("#{@tfName}.tex", 'pocetak1', @tfStartHighSchool.text)
     file_edit("#{@tfName}.tex", 'kraj1', @tfEndHighSchool.text)
-    #TODO
     file_edit("#{@tfName}.tex", 'nivoStudija1', @tfDiplomaHS.text)
     file_edit("#{@tfName}.tex", 'ObrazovnaUstanova1', @tfEduHighSchool.text)
 
@@ -215,10 +214,10 @@ class CV4 < FXMainWindow
     file_edit("#{@tfName}.tex", 'nivoStudija2', @tfDiplomaUniv.text)
     file_edit("#{@tfName}.tex", 'ObrazovnaUstanova2', @tfEduUniv.text)
 
-
-
-    #Catch()
-    #file_edit("#{@tfName}.tex", 'NestoStoTrazimo', @str1)
+    Catch1()
+    file_edit("#{@tfName}.tex", 'NestoStoTrazimo', @str1)
+    Catch2()
+    file_edit("#{@tfName}.tex", 'ProjektiIAplikacije', @str2)
 
     system("xelatex '#{@tfName}.tex'")
     system("xelatex '#{@tfName}.tex'")
@@ -241,14 +240,10 @@ class CV4 < FXMainWindow
     end
   end
 
-  def Catch()
-    @str1 = "\\section{Work experience}
-            \\begin{eventlist}
+  def Catch1()
+    @str1 = "\\section{experience}
+            \\begin{entrylist}
                 "
-    @str2 = "\\item{July 2007 -- Present}
-                  {eNTiDi software, Travagliato}
-                  {Management and development}
-            "
 
     @count1 = 0
     @count2 = 0
@@ -256,26 +251,53 @@ class CV4 < FXMainWindow
     while @count1 < @startYear.length
       if @startYear[@count1].text.length > 0 &&
           @endYear[@count1].text.length > 0 &&
-          @describe[@count1].text.length > 0 &&
           @company[@count1].text.length > 0 &&
           @position[@count1].text.length > 0
 
-        @str1 << " \\item{ #{@startYear[@count1]} -- #{@endYear[@count1]}}
+        @str1 << " \\entry{ #{@startYear[@count1]} -- #{@endYear[@count1]}}
                    {#{@company[@count1]}}
-                   {#{@position[@count1]}}
-                   #{@describe[@count1]} "
-
+                   {}
+                   {\\emph{#{@position[@count1]}}}
+                   "
         @count2 += 1
       end
       @count1 += 1
     end
-
     @str1 << "
-    \\end{eventlist}"
+    \\end{entrylist}"
     if @count2 == 0
       @str1 = ""
     end
+  end
 
+  def Catch2()
+    @str2 = " \\section{projects}
+            \\begin{entrylist}
+                "
+    @count3 = 0
+    @count4 = 0
+
+    puts @startYear.length
+    while @count3 < @year.length
+      if @year[@count3].text.length > 0 &&
+          @name[@count3].text.length > 0 &&
+          @description[@count3].text.length > 0
+
+        @str2 << " \\entry
+                        {#{@year[@count3]}}
+                        {#{@name[@count3]}}
+                        {\\href{}{}}
+                        {#{@description[@count3]}}
+                   "
+        @count4 += 1
+      end
+      @count3 += 1
+    end
+    @str2 << "
+    \\end{entrylist}"
+    if @count4 == 0
+      @str2 = ""
+    end
   end
 
   # Metod za gasenje aplikacije pomocu iksica
