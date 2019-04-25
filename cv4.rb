@@ -191,7 +191,7 @@ class CV4 < FXMainWindow
   end
 
   def onSubmit(sender, sel, event)
-    system("cp cv4.tex '#{@tfName}.tex'")
+    system("cp ./CV4/cv4.tex '#{@tfName}.tex'")
     file_edit("#{@tfName}.tex", 'Ime', @tfName.text)
     file_edit("#{@tfName}.tex", 'Adresa', @tfAddress.text)
     file_edit("#{@tfName}.tex", 'telefon', @tfPhone.text)
