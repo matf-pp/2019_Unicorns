@@ -12,17 +12,16 @@ class CV4 < FXMainWindow
     self.connect(SEL_CLOSE, method(:onClose))
 
     @scroll = FXScrollWindow.new(self, :width=>500, :height => 600, :opts => LAYOUT_FILL )
-
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
 
-    infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
+    infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     lblInfo = FXLabel.new(infoFrame, "About:", :opts => LAYOUT_CENTER_X)
     lblInfo.textColor = Fox.FXRGB(120, 5, 120)
     lblInfo.font = FXFont.new(app, "Geneva", 12)
 
     # Osnovne informacije o korisniku
-    info = FXHorizontalFrame.new(frame, :opts => LAYOUT_FILL_X)
+    info = FXHorizontalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     matrixInfo = FXMatrix.new(info, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
 
     lblName = FXLabel.new(matrixInfo, "First and last name:  ")
@@ -36,6 +35,9 @@ class CV4 < FXMainWindow
 
     lblMail = FXLabel.new(matrixInfo, "E-mail:  ")
     @tfMail = FXTextField.new(matrixInfo, 39)
+
+    lblPosition = FXLabel.new(matrixInfo, "Position:  ")
+    @tfPosition = FXTextField.new(matrixInfo, 39)
 
     # Nova celina, vestine za komunikaciju
     comSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
@@ -57,7 +59,6 @@ class CV4 < FXMainWindow
     @taDesc.width = 450
     @taDesc.text = ""
 
-    #TODO
     # Nova celina, interesovanja
     intFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     @lblInt = FXLabel.new(intFrame, "Interests:", :opts => LAYOUT_CENTER_X)
@@ -165,10 +166,6 @@ class CV4 < FXMainWindow
     FXLabel.new(bigFrame, "Company:", :opts => LAYOUT_CENTER_X)
     @company.insert(-1, FXTextField.new(bigFrame, 60, :opts=>LAYOUT_CENTER_X|TEXTFIELD_NORMAL))
 
-    #FXLabel.new(bigFrame, "Description", :opts => LAYOUT_CENTER_X)
-    #describeFrame = FXHorizontalFrame.new(bigFrame, :opts => LAYOUT_FILL_X|FRAME_THICK)
-    #@describe.insert(-1, FXText.new(describeFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
-    #@describe[-1].width = 520
   end
 
   # Projekti, polja
@@ -199,6 +196,7 @@ class CV4 < FXMainWindow
     file_edit("#{@tfName}.tex", 'Jezici', @tfLang.text)
     file_edit("#{@tfName}.tex", 'progJez', @taDesc.text)
     file_edit("#{@tfName}.tex", 'interesovanja', @taInt.text)
+    file_edit("#{@tfName}.tex", 'Zanimanje', @tfPosition.text)
 
     file_edit("#{@tfName}.tex", 'Jezici', @tfLang.text)
     file_edit("#{@tfName}.tex", 'progJez', @taDesc.text)
@@ -224,6 +222,12 @@ class CV4 < FXMainWindow
 
     system("mv '#{@tfName}.pdf' ~/Desktop")
     system("rm '#{@tfName}'.* ")
+
+    # Iskacuci prozorcic sa porukom
+    @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\n")
+    #@mess.width = 150
+    #@mess.height = 70
+
   end
 
   def file_edit(filename, regexp, replacement)

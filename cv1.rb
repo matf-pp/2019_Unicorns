@@ -16,7 +16,6 @@ class CV1 < FXMainWindow
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
 
-
     infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     lblInfo = FXLabel.new(infoFrame, "Information:", :opts => LAYOUT_CENTER_X)
     #lblInfo.textColor = Fox.FXRGB(255, 0, 5)
@@ -38,12 +37,11 @@ class CV1 < FXMainWindow
 
     lblMail = FXLabel.new(matrixInfo, "E-mail:  ")
     @tfMail = FXTextField.new(matrixInfo, 39)
-
+    # FXHorizontalSeparator.new(info)
 
     # Nova celina, steceno obrazovanje, eduFrame
     eduFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     lblEdu = FXLabel.new(eduFrame, "Education: ", :opts => LAYOUT_CENTER_X)
-    #lblEdu.textColor = Fox.FXRGB(235, 85, 0)
     lblEdu.textColor = Fox.FXRGB(0, 80, 150)
     lblEdu.font = FXFont.new(app, "Geneva", 12)
 
@@ -63,7 +61,6 @@ class CV1 < FXMainWindow
     # Nova celina, vestine za komunikaciju
     comSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
     @lblComSkills = FXLabel.new(comSkillsFrame, "Communication skills: ", :opts => LAYOUT_CENTER_X)
-    #@lblComSkills.textColor = Fox.FXRGB(45, 150, 0)
     @lblComSkills.textColor = Fox.FXRGB(120, 5, 120)
     @lblComSkills.font = FXFont.new(app, "Geneva", 12)
 
@@ -198,6 +195,9 @@ class CV1 < FXMainWindow
       system("mv '#{@tfName}.pdf' ~/Desktop")
       system("rm './CV1/#{@tfName}'.* ")
       system("rm '#{@tfName}'.* ")
+
+      # Iskacuci prozorcic sa porukom
+      @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\n")
   end
 
   def file_edit(filename, regexp, replacement)
