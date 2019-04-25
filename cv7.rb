@@ -129,8 +129,16 @@ class CV7 < FXMainWindow
     @expMatrix = FXMatrix.new(expFrame, 3, :opts =>MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
 
     @expButton = FXButton.new(expFrame, "Add Experience", :opts => LAYOUT_CENTER_X | BUTTON_NORMAL)
+    @done = false
 
     @expButton.connect(SEL_COMMAND) do
+      if (!@done)
+        FXLabel.new(@expMatrix, "Period", :opts => LAYOUT_CENTER_X)
+        FXLabel.new(@expMatrix, "Description and place", :opts => LAYOUT_CENTER_X)
+        FXLabel.new(@expMatrix, "Workplace", :opts => LAYOUT_CENTER_X)
+        @done = true
+      end
+
       makeLayoutExp()
       @expMatrix.create
       @expMatrix.recalc
