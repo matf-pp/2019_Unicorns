@@ -3,84 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5479d56e-b065-48c8-a863-300bd72bae48" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lato-Hairline.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lato-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pera Peric.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pera Peric.bcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pera Peric.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pera Peric.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pera Peric.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/alice.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/altacv.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliography.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv1.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv1.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv1.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv2.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv3.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv4.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv4.bcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv4.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv4.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv4.run.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv4.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv5.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv6.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv7.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/friggeri-cv.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/info_awards.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/info_contacts.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/info_education.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/info_experience.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/info_interests.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmayer-wikipedia-cc-by-2_0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncv.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvbodyi.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvbodyiii.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvbodyiv.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvbodyv.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcollection.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcolorblack.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcolorblue.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcolorburgundy.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcolorgreen.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcolorgrey.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcolororange.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcolorpurple.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcolorred.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvcompatibility.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvdebugtools.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvfooti.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvheadi.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvheadii.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvheadiii.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvheadiv.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvheadv.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvheadvi.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncviconsawesome.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncviconsletters.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncviconsmarvosym.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvstylebanking.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvstylecasual.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvstyleclassic.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvstyleempty.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvstylefancy.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderncvstyleoldstyle.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfoto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page1sidebar.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qrcode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tccv.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/texgyreheros-bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/texgyreheros-bolditalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/texgyreheros-italic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/texgyreheros-regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tweaklist.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/twentysecondcv.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV7/cv7.tex" beforeDir="false" afterPath="$PROJECT_DIR$/CV7/cv7.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_window.rb" beforeDir="false" afterPath="$PROJECT_DIR$/main_window.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +14,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Unicorns@main.rcov" NAME="main Coverage Results" MODIFIED="1555795272101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
-    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556199516493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
+    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556213257748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -106,17 +30,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+            <state relative-caret-position="138">
+              <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cv4.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="200" column="39" lean-forward="true" selection-start-line="200" selection-start-column="39" selection-end-line="200" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="368">
+                <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cv4.rb">
+        <entry file="file://$PROJECT_DIR$/cv7.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="217" column="14" lean-forward="true" selection-start-line="217" selection-start-column="14" selection-end-line="217" selection-end-column="14" />
+            <state relative-caret-position="380">
+              <caret line="175" column="5" lean-forward="true" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
+              <folding>
+                <element signature="e#9644#10029#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,13 +72,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv1.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
+            <state relative-caret-position="219">
+              <caret line="129" column="66" lean-forward="true" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Ruby Class Template" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>matr</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,16 +98,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main_window.rb" />
         <option value="$PROJECT_DIR$/src/main_window.rb" />
         <option value="$PROJECT_DIR$/src/cv1.rb" />
         <option value="$PROJECT_DIR$/cv4.tex" />
-        <option value="$PROJECT_DIR$/cv4.rb" />
         <option value="$PROJECT_DIR$/cv1.rb" />
+        <option value="$PROJECT_DIR$/cv4.rb" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/main_window.rb" />
+        <option value="$PROJECT_DIR$/cv7.rb" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="41" />
     <option name="width" value="1346" />
@@ -159,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,6 +132,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,7 +235,8 @@
       <workItem from="1555860221965" duration="5615000" />
       <workItem from="1556110924230" duration="9587000" />
       <workItem from="1556197497102" duration="877000" />
-      <workItem from="1556198675966" duration="1290000" />
+      <workItem from="1556198675966" duration="2327000" />
+      <workItem from="1556202945400" duration="8872000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1555791842120</created>
@@ -289,22 +252,36 @@
       <option name="project" value="LOCAL" />
       <updated>1555795021460</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="...">
+      <created>1556200603706</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556200603706</updated>
+    </task>
+    <task id="LOCAL-00004" summary="...">
+      <created>1556200980170</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556200980170</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23193000" />
+    <option name="totallyTimeSpent" value="33102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-2" width="1444" height="872" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22246066" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3287858" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2701228" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2701228" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -346,27 +323,6 @@
     <entry file="file://$PROJECT_DIR$/src/main_window.rb" />
     <entry file="file://$PROJECT_DIR$/src/cv1.rb" />
     <entry file="file://$PROJECT_DIR$/cv4.tex" />
-    <entry file="file://$PROJECT_DIR$/main.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_window.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cv1.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cv.run.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1552">
@@ -376,8 +332,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cv4.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="217" column="14" lean-forward="true" selection-start-line="217" selection-start-column="14" selection-end-line="217" selection-end-column="14" />
+        <state relative-caret-position="184">
+          <caret line="200" column="39" lean-forward="true" selection-start-line="200" selection-start-column="39" selection-end-line="200" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="368">
+            <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_window.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv1.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="129" column="66" lean-forward="true" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv7.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="175" column="5" lean-forward="true" selection-start-line="175" selection-start-column="5" selection-end-line="175" selection-end-column="5" />
+          <folding>
+            <element signature="e#9644#10029#0" />
+          </folding>
         </state>
       </provider>
     </entry>

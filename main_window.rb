@@ -3,6 +3,7 @@ require 'fox16'
 include Fox
 require File.dirname(__FILE__) +'/cv1'
 require File.dirname(__FILE__) +'/cv4'
+require File.dirname(__FILE__) +'/cv7'
 require File.dirname(__FILE__) + '/photo'
 require File.dirname(__FILE__) + '/photo_view'
 require File.dirname(__FILE__) + '/album'
@@ -98,7 +99,8 @@ class MainWindow < FXMainWindow
     elsif (@cvlist.to_s == 'CV6')
       puts("Takodje, nema nista\n")
     elsif (@cvlist.to_s == 'CV7')
-      puts("Takodje, nema nista\n")
+      CV7.new().create
+      self.destroy
     end
   end
 
