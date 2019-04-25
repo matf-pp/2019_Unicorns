@@ -166,7 +166,7 @@ class CV1 < FXMainWindow
   end
 
   def onSubmit(sender, sel, event)
-      system("cp cv1.tex '#{@tfName}.tex'")
+      system("cp ./CV1/cv1.tex '#{@tfName}.tex'")
       file_edit("#{@tfName}.tex", 'Ime', @tfName.text)
       file_edit("#{@tfName}.tex", 'Adresa', @tfAddress.text)
       file_edit("#{@tfName}.tex", 'Telefon', @tfPhone.text)
@@ -190,10 +190,13 @@ class CV1 < FXMainWindow
       Catch()
       file_edit("#{@tfName}.tex", 'NestoStoTrazimo', @str1)
 
-      system("pdflatex '#{@tfName}.tex'")
-      system("pdflatex '#{@tfName}.tex'")
+      system("mv '#{@tfName}.tex' CV1")
+
+      system("pdflatex './CV1/#{@tfName}.tex'")
+      system("pdflatex './CV1/#{@tfName}.tex'")
 
       system("mv '#{@tfName}.pdf' ~/Desktop")
+      system("rm './CV1/#{@tfName}'.* ")
       system("rm '#{@tfName}'.* ")
   end
 

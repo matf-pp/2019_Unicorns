@@ -2,9 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5479d56e-b065-48c8-a863-300bd72bae48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lato-Hairline.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lato-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pera Peric.aux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pera Peric.bcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pera Peric.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pera Peric.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pera Peric.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/alice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/altacv.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliography.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/collection.sty" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cv1.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv1.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv4.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv4.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/cv4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv1.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv2.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv3.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.aux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.bcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.run.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv5.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv6.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv7.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/friggeri-cv.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info_awards.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info_contacts.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info_education.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info_experience.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info_interests.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmayer-wikipedia-cc-by-2_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncv.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvbodyi.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvbodyiii.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvbodyiv.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvbodyv.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcollection.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcolorblack.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcolorblue.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcolorburgundy.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcolorgreen.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcolorgrey.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcolororange.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcolorpurple.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcolorred.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvcompatibility.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvdebugtools.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvfooti.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvheadi.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvheadii.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvheadiii.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvheadiv.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvheadv.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvheadvi.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncviconsawesome.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncviconsletters.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncviconsmarvosym.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvstylebanking.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvstylecasual.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvstyleclassic.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvstyleempty.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvstylefancy.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/moderncvstyleoldstyle.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myfoto.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/page1sidebar.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/qrcode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tccv.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/texgyreheros-bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/texgyreheros-bolditalic.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/texgyreheros-italic.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/texgyreheros-regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tweaklist.sty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/twentysecondcv.cls" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,14 +90,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Unicorns@main.rcov" NAME="main Coverage Results" MODIFIED="1555795272101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
-    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556140311580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
+    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556199516493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="115">
               <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
@@ -30,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-725">
-              <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+            <state relative-caret-position="966">
+              <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -39,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cv4.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="187" column="82" selection-start-line="187" selection-start-column="82" selection-end-line="187" selection-end-column="82" />
+            <state relative-caret-position="506">
+              <caret line="217" column="14" lean-forward="true" selection-start-line="217" selection-start-column="14" selection-end-line="217" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -48,17 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv1.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="191" selection-start-line="191" selection-end-line="191" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cv4.tex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+            <state relative-caret-position="311">
+              <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -74,9 +141,9 @@
         <option value="$PROJECT_DIR$/main_window.rb" />
         <option value="$PROJECT_DIR$/src/main_window.rb" />
         <option value="$PROJECT_DIR$/src/cv1.rb" />
-        <option value="$PROJECT_DIR$/cv1.rb" />
         <option value="$PROJECT_DIR$/cv4.tex" />
         <option value="$PROJECT_DIR$/cv4.rb" />
+        <option value="$PROJECT_DIR$/cv1.rb" />
       </list>
     </option>
   </component>
@@ -92,6 +159,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,7 +171,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,6 +272,8 @@
       <workItem from="1555854852418" duration="38000" />
       <workItem from="1555860221965" duration="5615000" />
       <workItem from="1556110924230" duration="9587000" />
+      <workItem from="1556197497102" duration="877000" />
+      <workItem from="1556198675966" duration="1290000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1555791842120</created>
@@ -224,18 +293,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21026000" />
+    <option name="totallyTimeSpent" value="23193000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-2" width="1364" height="740" extended-state="6" />
+    <frame x="-2" y="-2" width="1444" height="872" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21656536" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22246066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27166668" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287858" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2701228" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -276,38 +345,39 @@
     <entry file="file://$PROJECT_DIR$/src/album_view.rb" />
     <entry file="file://$PROJECT_DIR$/src/main_window.rb" />
     <entry file="file://$PROJECT_DIR$/src/cv1.rb" />
+    <entry file="file://$PROJECT_DIR$/cv4.tex" />
     <entry file="file://$PROJECT_DIR$/main.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="115">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-725">
-          <caret line="42" column="14" lean-forward="true" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+        <state relative-caret-position="966">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cv1.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="191" selection-start-line="191" selection-end-line="191" />
+        <state relative-caret-position="311">
+          <caret line="198" column="37" selection-start-line="198" selection-start-column="37" selection-end-line="198" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cv4.tex">
+    <entry file="file://$PROJECT_DIR$/cv.run.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        <state relative-caret-position="-1552">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cv4.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="187" column="82" selection-start-line="187" selection-start-column="82" selection-end-line="187" selection-end-column="82" />
+        <state relative-caret-position="506">
+          <caret line="217" column="14" lean-forward="true" selection-start-line="217" selection-start-column="14" selection-end-line="217" selection-end-column="14" />
         </state>
       </provider>
     </entry>
