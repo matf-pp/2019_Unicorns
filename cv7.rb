@@ -163,7 +163,7 @@ class CV7 < FXMainWindow
     buttonFrame = FXHorizontalFrame.new(frame, :opts=>LAYOUT_CENTER_X)
     @picButton = FXButton.new(buttonFrame, "Picture")
     @picButton.connect(SEL_COMMAND) do
-      dialog = FXFileDialog.new(self, "Open JPEG File")
+      dialog = FXFileDialog.new(self, "Pic must be NxN")
       dialog.patternList = [
           "JPEG Files (*.jpg, *.jpeg)"
       ]
