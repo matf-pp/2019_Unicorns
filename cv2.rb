@@ -102,6 +102,23 @@ class CV2 < FXMainWindow
 
     FXHorizontalSeparator.new(intFrame)
 
+    # Nova celina, nagrade
+    awardsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
+    lblAwards = FXLabel.new(awardsFrame, "Awards:", :opts => LAYOUT_CENTER_X)
+    lblAwards.textColor = Fox.FXRGB(170, 5, 170)
+    lblAwards.font = FXFont.new(app, "Geneva", 12)
+
+    btnAwards = FXButton.new(awardsFrame, "Add fields", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    @awardsSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
+    @year = []
+    @awards = []
+    @descriptionAwards = []
+    btnAwards.connect(SEL_COMMAND) do
+      makeLayoutAwards()
+      @awardsSpace.create
+      @awardsSpace.recalc
+    end
+
     # Nova celina, dugmici
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
     # TODO
@@ -117,6 +134,7 @@ class CV2 < FXMainWindow
 
   end
 
+  # Radno iskustvo, polja
   def makeLayoutExp()
     parentFrame = FXVerticalFrame.new(@expSpace, :opts => LAYOUT_FILL)
     matrix = FXMatrix.new(parentFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
@@ -164,12 +182,48 @@ class CV2 < FXMainWindow
     FXHorizontalSeparator.new(parentFrame)
   end
 
+  # Nagrade, polja
+  def makeLayoutAwards()
+    pFrame = FXVerticalFrame.new(@awardsSpace, :opts => LAYOUT_FILL)
+    matrix = FXMatrix.new(pFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
+
+    FXLabel.new(matrix, "Year:", :opts => LAYOUT_FILL_X)
+    FXLabel.new(matrix, "Name: ", :opts=> LAYOUT_FILL_X)
+
+    yearFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+    awFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+
+    @year.insert(-1, FXTextField.new(yearFrame,  5))
+    @awards.insert(-1, FXTextField.new(awFrame, 45))
+
+    FXLabel.new(pFrame, "Description:", :opts => LAYOUT_CENTER_X)
+    dFrame = FXHorizontalFrame.new(pFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
+    @descriptionAwards.insert(-1, FXText.new(dFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
+    @descriptionAwards[-1].width = 450
+
+    FXHorizontalSeparator.new(pFrame)
+  end
+
   #TODO
   def onSubmit(sender, sel, event)
     system("cp ./CV2/cv2.tex '#{@tfName}.tex'")
-    file_edit("#{@tfName}.tex", 'Ime', @tfName.text)
-    file_edit("#{@tfLastName}.tex", 'Prezime', @tfLastName.text)
+    file_edit("#{@tfName}.tex", 'ImeKorisnika', @tfName.text)
+    file_edit("#{@tfName}.tex", 'PrezimeKorisnika', @tfLastName.text)
 
+    file_edit("#{@tfName}.tex", 'brojTelefona', @tfPhone.text)
+    file_edit("#{@tfName}.tex", 'mejlKorisnika', @tfMail.text)
+    file_edit("#{@tfName}.tex", 'linkVebsajta', @tfWeb.text)
+    file_edit("#{@tfName}.tex", 'UlicaIBroj', @tfAddress.text)
+    file_edit("#{@tfName}.tex", 'mestoBoravka', @tfCity.text)
+    file_edit("#{@tfName}.tex", 'Drzava', @tfCountry.text)
+
+    Catch1()
+    Catch2()
+
+    file_edit("#{@tfName}.tex", 'profesionalnaInteresovanja', @taProf.text)
+    file_edit("#{@tfName}.tex", 'privatnaInteresovanja', @taPersonal.text)
+
+    Catch3()
 
     system("xelatex '#{@tfName}.tex'")
     system("xelatex '#{@tfName}.tex'")
@@ -197,7 +251,15 @@ class CV2 < FXMainWindow
   end
 
   #TODO
-  def Catch()
+  def Catch1()
+
+  end
+
+  def Catch2()
+
+  end
+
+  def Catch3()
 
   end
 
