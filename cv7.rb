@@ -160,6 +160,22 @@ class CV7 < FXMainWindow
     @otherText.text = ""
     FXHorizontalSeparator.new(otherFrame)
 
+    buttonFrame = FXHorizontalFrame.new(frame, :opts=>LAYOUT_CENTER_X)
+    @picButton = FXButton.new(buttonFrame, "Picture")
+    @picButton.connect(SEL_COMMAND) do
+      dialog = FXFileDialog.new(self, "Open JPEG File")
+      dialog.patternList = [
+          "JPEG Files (*.jpg, *.jpeg)"
+      ]
+      dialog.selectMode = SELECTFILE_EXISTING
+      if dialog.execute != 0
+        openJpgFile(dialog.filename)
+      end
+    end
+
+    @submitButton = FXButton.new(buttonFrame, "Submit")
+
+
   end
 
   def makeLayoutEdu()
@@ -204,6 +220,10 @@ class CV7 < FXMainWindow
       end
 
     end
+  end
+
+  def openJpgFile(filename)
+    @picPath = "#{filename}"
   end
 
   def Catch1()

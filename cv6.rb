@@ -16,7 +16,7 @@ class CV6 < FXMainWindow
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
 
-    infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
+    infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     infoLabel = FXLabel.new(infoFrame, "Personal Info: ", :opts => LAYOUT_FILL_X | LAYOUT_CENTER_X)
     infoLabel.textColor = Fox.FXRGB(233, 30, 90)
     infoLabel.font = FXFont.new(app, "Geneva", 12)
@@ -34,7 +34,7 @@ class CV6 < FXMainWindow
 
     FXHorizontalSeparator.new(infoFrame)
 
-    addFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
+    addFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     addLabel = FXLabel.new(addFrame, "Additional Info: ", :opts => LAYOUT_FILL_X | LAYOUT_CENTER_X)
     addLabel.textColor = Fox.FXRGB(233, 30, 90)
     addLabel.font = FXFont.new(app, "Geneva", 12)
@@ -50,7 +50,7 @@ class CV6 < FXMainWindow
 
     FXHorizontalSeparator.new(addFrame)
 
-    eduFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
+    eduFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     eduLabel = FXLabel.new(eduFrame, "Education: ", :opts=> LAYOUT_FILL_X|LAYOUT_CENTER_X)
     eduLabel.textColor = Fox.FXRGB(233, 30, 90)
     eduLabel.font = FXFont.new(app, "Geneva", 12)
@@ -80,6 +80,42 @@ class CV6 < FXMainWindow
       @eduMatrix.recalc
     end
 
+    expFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
+    expLabel = FXLabel.new(expFrame, "Experience: ", :opts=> LAYOUT_FILL_X|LAYOUT_CENTER_X)
+    expLabel.textColor = Fox.FXRGB(233, 30, 90)
+    expLabel.font = FXFont.new(app, "Geneva", 12)
+    @institutionTextExp = []
+    @periodTextExp = []
+    @avgGradeTextExp = []
+    @descrioptionTextExp = []
+    @schoolDegreeTextExp = []
+    @expDone = false
+    @expMatrix = FXMatrix.new(expFrame, 2, :opts => MATRIX_BY_COLUMNS)
+
+    @expButton = FXButton.new(expFrame, "Add experience", :opts=>LAYOUT_LEFT| BUTTON_NORMAL)
+    FXHorizontalSeparator.new(expFrame)
+    @expButton.connect(SEL_COMMAND) do
+      makeLayoutExp()
+      @expMatrix.create
+      @expMatrix.recalc
+    end
+
+
+    buttonFrame = FXHorizontalFrame.new(frame, :opts=>LAYOUT_CENTER_X)
+    @picButton = FXButton.new(buttonFrame, "Picture")
+    @picButton.connect(SEL_COMMAND) do
+      dialog = FXFileDialog.new(self, "Open JPEG File")
+      dialog.patternList = [
+          "JPEG Files (*.jpg, *.jpeg)"
+      ]
+      dialog.selectMode = SELECTFILE_EXISTING
+      if dialog.execute != 0
+        openJpgFile(dialog.filename)
+      end
+    end
+
+    @submitButton = FXButton.new(buttonFrame, "Submit")
+
 
 
   end
@@ -100,8 +136,22 @@ class CV6 < FXMainWindow
   end
 
   def makeLayoutExp()
+    FXLabel.new(@expMatrix, "")
+    FXLabel.new(@expMatrix, "")
+    FXLabel.new(@expMatrix, "Period")
+    @periodTextExp.insert(-1, FXTextField.new(@expMatrix, 15))
+    FXLabel.new(@expMatrix, "Position")
+    @schoolDegreeTextExp.insert(-1, FXTextField.new(@expMatrix, 35))
+    FXLabel.new(@expMatrix, "Institution")
+    @institutionTextExp.insert(-1, FXTextField.new(@expMatrix, 35))
+    FXLabel.new(@expMatrix, "Description                ")
+    @descrioptionTextExp.insert(-1, FXTextField.new(@expMatrix, 35))
+    FXLabel.new(@expMatrix, "Jobs")
+    @avgGradeTextExp.insert(-1, FXTextField.new(@expMatrix, 10))
+  end
 
-
+  def openJpgFile(filename)
+    @picPath = "#{filename}"
   end
 
   # Projekti, polja
