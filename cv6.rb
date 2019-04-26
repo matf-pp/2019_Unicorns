@@ -114,7 +114,11 @@ class CV6 < FXMainWindow
       end
     end
 
-    @submitButton = FXButton.new(buttonFrame, "Submit")
+    @submitButton = FXButton.new(buttonFrame,
+                                 "Submit",
+                                 :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_RIGHT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
+                                 :width => 65, :height => 25)
+    @submitButton.connect(SEL_COMMAND, method(:onSubmit))
 
 
 
@@ -155,13 +159,55 @@ class CV6 < FXMainWindow
   end
 
   # Projekti, polja
-  def makeLayoutApp()
 
-  end
 
   def onSubmit(sender, sel, event)
 
+    system("cp ./CV6/cv6.tex '#{@nameText}.tex'")
+    @expString = ""
+    @schoolString = ""
+    file_edit("#{@nameText}.tex", 'Profesn', @professionText.text)
+    file_edit("#{@nameText}.tex", 'AdreSSa', @adressText.text)
+    file_edit("#{@nameText}.tex", 'mejl', @emailText.text)
+    file_edit("#{@nameText}.tex", 'telefon', @phoneText.text)
+
+    file_edit("#{@nameText}.tex", 'ImePrezime', @nameText.text)
+
+    file_edit("#{@nameText}.tex", 'statusLista', @statusText.text)
+    file_edit("#{@nameText}.tex", 'sklsLista', @skillsText.text)
+    file_edit("#{@nameText}.tex", 'langsLista', @languagesText.text)
+    file_edit("#{@nameText}.tex", 'hobiesLista', @hobieText.text)
+
+
+    file_edit("#{@nameText}.tex", 'hajSkulNejm', @schoolDegreeText[0].text)
+    file_edit("#{@nameText}.tex", 'hajSkulInstitution', @institutionText[0].text)
+    file_edit("#{@nameText}.tex", 'hajSkulPeriod', @periodText[0].text)
+    file_edit("#{@nameText}.tex", 'avgOcenaSkul', @avgGradeText[0].text)
+    file_edit("#{@nameText}.tex", 'deskrajbSkul', @descrioptionText[0].text)
+
+    catchEdu()
+
+    catchExp()
+
+    file_edit("#{@nameText}.tex", 'EdukejsnLista', @expString)
+    file_edit("#{@nameText}.tex", 'SkulLista', @schoolString)
+
+    file_edit("#{@nameText}.tex", 'pokusajSlike', @picPath)
+
+
+    system("mv '#{@nameText}.tex' CV6")
+
+    system("pdflatex './CV6/#{@nameText}.tex'")
+    system("pdflatex './CV6/#{@nameText}.tex'")
+
+    system("mv '#{@nameText}.pdf' ~/Desktop")
+    system("rm './CV6/#{@nameText}'.* ")
+    system("rm '#{@nameText}'.* ")
+
+    # Iskacuci prozorcic sa porukom
+    @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\n")
   end
+
 
   def file_edit(filename, regexp, replacement)
     @mutex = Mutex.new
@@ -177,11 +223,26 @@ class CV6 < FXMainWindow
     end
   end
 
-  def Catch1()
+  def catchEdu()
 
-  end
+    if(@institutionText.size > 1)
+      i = 1
+      while(i < @institutionText.size) do
+        @schoolString << "\n \\cvevent{#{@periodText[i].text}}{#{@schoolDegreeText[i].text}}{#{@institutionText[i].text}}{#{@descrioptionText[i].text}}{#{@avgGradeText[i].text}}"
+        i+=1
+      end
+    end
+    end
 
-  def Catch2()
+  def catchExp()
+
+    if(@institutionText.size > 0)
+      i = 0
+      while(i < @institutionTextExp.size) do
+        @expString << "\n \\cvevent{#{@periodTextExp[i].text}}{#{@schoolDegreeTextExp[i].text}}{#{@institutionTextExp[i].text}}{#{@descrioptionTextExp[i].text}}{#{@avgGradeTextExp[i].text}}"
+        i+=1
+      end
+    end
   end
 
   # Metod za gasenje aplikacije pomocu iksica

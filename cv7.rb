@@ -16,17 +16,13 @@ class CV7 < FXMainWindow
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
 
-    infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL_X | LAYOUT_FILL_Y)
+    infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X | LAYOUT_FILL_Y)
     infoLabel = FXLabel.new(infoFrame, "Personal info:", :opts=>LAYOUT_FILL_X | LAYOUT_FILL_Y | LAYOUT_CENTER_X)
     infoLabel.textColor = Fox.FXRGB(0, 150, 80)
     infoLabel.font = FXFont.new(app, "Geneva", 12)
     matrica = FXMatrix.new(infoFrame, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL)
-    #nameFrame = FXHorizontalFrame.new(matrica, :opts=>LAYOUT_FILL_X)
-    #professionFrame = FXHorizontalFrame.new(matrica, :opts=> LAYOUT_FILL_X)
-    #birthFrame = FXHorizontalFrame.new(matrica, :opts=>LAYOUT_FILL_X)
-    #phoneFrame = FXHorizontalFrame.new(matrica, :opts=>LAYOUT_FILL_X)
-    #mailFrame = FXHorizontalFrame.new(matrica, :opts=>LAYOUT_FILL_X)
-    #siteFrame = FXHorizontalFrame.new(matrica, :opts=>LAYOUT_FILL_X)
+
+    @picPath = ""
 
     FXLabel.new(matrica, "First and last nema:")
     @tfName = FXTextField.new(matrica, 40)
@@ -34,13 +30,15 @@ class CV7 < FXMainWindow
     @tfProfession = FXTextField.new(matrica, 40)
     FXLabel.new(matrica, "Date of birth:")
     @tfBirth = FXTextField.new(matrica, 40)
+    FXLabel.new(matrica, "Adress:")
+    @tfAdress = FXTextField.new(matrica, 40)
     FXLabel.new(matrica, "Phone:")
     @tfPhone = FXTextField.new(matrica, 40)
     FXLabel.new(matrica, "Email:")
     @tfMail = FXTextField.new(matrica, 40)
     FXLabel.new(matrica, "Site:")
     @tfSite = FXTextField.new(matrica, 40)
-    @checkMail = FXCheckButton.new(matrica, "Have a site?")
+    @checkSite = FXCheckButton.new(matrica, "Have a site?")
     FXHorizontalSeparator.new(infoFrame)
 
     aboutMeFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL_X | LAYOUT_FILL_Y)
@@ -116,9 +114,9 @@ class CV7 < FXMainWindow
     FXLabel.new(skillsMatrix, "Verry Good")
     @verryGood = FXTextField.new(skillsMatrix, 40)
     FXLabel.new(skillsMatrix, "Good")
-    @verryGood = FXTextField.new(skillsMatrix, 40)
+    @good = FXTextField.new(skillsMatrix, 40)
     FXLabel.new(skillsMatrix, "Fair")
-    @verryGood = FXTextField.new(skillsMatrix, 40)
+    @fair = FXTextField.new(skillsMatrix, 40)
     FXHorizontalSeparator.new(skillsFrame)
 
 
@@ -173,7 +171,12 @@ class CV7 < FXMainWindow
       end
     end
 
-    @submitButton = FXButton.new(buttonFrame, "Submit")
+    @submitButton = FXButton.new(buttonFrame,
+                                 "Submit",
+                                 :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_RIGHT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
+                                 :width => 65, :height => 25)
+    @submitButton.connect(SEL_COMMAND, method(:onSubmit))
+
 
 
   end
@@ -206,6 +209,66 @@ class CV7 < FXMainWindow
 
   def onSubmit(sender, sel, event)
 
+    system("cp ./CV7/cv7.tex '#{@tfName}.tex'")
+
+    file_edit("#{@tfName}.tex", 'pokusajSlike', @picPath)
+
+
+    file_edit("#{@tfName}.tex", 'imePrezime', @tfName.text)
+    file_edit("#{@tfName}.tex", 'profesija', @tfProfession.text)
+    file_edit("#{@tfName}.tex", 'datumRodjenja', @tfBirth.text)
+    file_edit("#{@tfName}.tex", 'mejl', @tfMail.text)
+    file_edit("#{@tfName}.tex", 'adresaa', @tfAdress.text)
+    file_edit("#{@tfName}.tex", 'brojTelefona', @tfPhone.text)
+    if(@checkSite.unchecked?)
+      @tfSite.text = ""
+    end
+    file_edit("#{@tfName}.tex", 'sajt', @tfSite.text)
+
+
+    file_edit("#{@tfName}.tex", 'abautMi', @aboutMeText.text)
+    file_edit("#{@tfName}.tex", 'Interesovanja123', @interestsText.text)
+    file_edit("#{@tfName}.tex", 'SviJeziciKojePoznajem', @languagesText.text)
+
+    file_edit("#{@tfName}.tex", 'veriGud', @verryGood.text)
+    file_edit("#{@tfName}.tex", 'gUd', @good.text)
+    file_edit("#{@tfName}.tex", 'fAIr', @fair.text)
+
+    file_edit("#{@tfName}.tex", 'fAIr', @otherText.text)
+
+
+    file_edit("#{@tfName}.tex", 'periodSkole', @eduPeriod1.text)
+    file_edit("#{@tfName}.tex", 'stepenSkole', @eduTitle1.text)
+    file_edit("#{@tfName}.tex", 'mestoSkole', @eduPlace1.text)
+    file_edit("#{@tfName}.tex", 'opisSkole', @eduName1.text)
+
+    file_edit("#{@tfName}.tex", 'periodSKole', @eduPeriod2.text)
+    file_edit("#{@tfName}.tex", 'stepenSKole', @eduTitle2.text)
+    file_edit("#{@tfName}.tex", 'mestoSKole', @eduPlace2.text)
+    file_edit("#{@tfName}.tex", 'opisSKole', @eduName2.text)
+
+    @eduString = ""
+    @expString = ""
+
+    catchEdu()
+    catchExp()
+
+    file_edit("#{@tfName}.tex", 'listaSkolovanja', @eduString)
+    file_edit("#{@tfName}.tex", 'listaIskustava', @expString)
+
+    file_edit("#{@tfName}.tex", 'josNestoOMeni', @aboutMeText.text)
+
+    system("mv '#{@tfName}.tex' CV7")
+
+    system("pdflatex './CV7/#{@tfName}.tex'")
+    system("pdflatex './CV7/#{@tfName}.tex'")
+
+    system("mv '#{@tfName}.pdf' ~/Desktop")
+    system("rm './CV7/#{@tfName}'.* ")
+    system("rm '#{@tfName}'.* ")
+
+    # Iskacuci prozorcic sa porukom
+    @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\nIt's waiting for you on Desktop")
   end
 
   def file_edit(filename, regexp, replacement)
@@ -226,11 +289,20 @@ class CV7 < FXMainWindow
     @picPath = "#{filename}"
   end
 
-  def Catch1()
-
+  def catchEdu()
+    i = 0
+    while(i < @eduName.size)
+      @eduString << "\n \\twentyitem{#{@eduPeriod[i].text}}{#{@eduTitle[i].text}}{#{@eduPlace[i].text}}{\\emph{#{@eduName[i].text}}}"
+      i+=1
+    end
   end
 
-  def Catch2()
+  def catchExp()
+    i = 0
+    while(i < @expName.size)
+      @expString << "\n \\twentyitem{#{@expPeriod[i].text}}{#{@expPosition[i].text}}{#{@expPlace[i].text}}{\\emph{#{@expName[i].text}}}"
+      i+=1
+    end
   end
 
   # Metod za gasenje aplikacije pomocu iksica
