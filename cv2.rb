@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# GUI za cetvrti CV
+# GUI za drugi CV
 require 'fox16'
 require 'tempfile'
 require 'thread'
@@ -59,8 +59,8 @@ class CV2 < FXMainWindow
     @jobDesc = []
     btnExp.connect(SEL_COMMAND) do
       makeLayoutExp()
-      @expSpace.create # create server-side resources
-      @expSpace.recalc # mark parent layout as dirty
+      @expSpace.create
+      @expSpace.recalc
     end
 
     # Nova celina, obrazovanje
@@ -77,8 +77,8 @@ class CV2 < FXMainWindow
     @desc = []
     btnEdu.connect(SEL_COMMAND) do
       makeLayoutEdu()
-      @eduSpace.create # create server-side resources
-      @eduSpace.recalc # mark parent layout as dirty
+      @eduSpace.create
+      @eduSpace.recalc
     end
 
     # Nova celina, interesovanja
@@ -113,17 +113,6 @@ class CV2 < FXMainWindow
     @taDescription.width = 450
 
     FXHorizontalSeparator.new(skillsFrame)
-
-    #btnAwards = FXButton.new(awardsFrame, "Add fields", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
-    #@awardsSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
-    #@year = []
-    #@awards = []
-    #@descriptionAwards = []
-    #btnAwards.connect(SEL_COMMAND) do
-    #  makeLayoutAwards()
-    #  @awardsSpace.create
-    #  @awardsSpace.recalc
-    #end
 
     # Nova celina, dugmici
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
@@ -188,34 +177,12 @@ class CV2 < FXMainWindow
     FXHorizontalSeparator.new(parentFrame)
   end
 
-  # Nagrade, polja
-  #def makeLayoutAwards()
-  #  pFrame = FXVerticalFrame.new(@awardsSpace, :opts => LAYOUT_FILL)
-  #  matrix = FXMatrix.new(pFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
 
-  #  FXLabel.new(matrix, "Year:", :opts => LAYOUT_FILL_X)
-  #  FXLabel.new(matrix, "Name: ", :opts=> LAYOUT_FILL_X)
-
-  #  yearFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
-  #  awFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
-
-  #  @year.insert(-1, FXTextField.new(yearFrame,  5))
-  #  @awards.insert(-1, FXTextField.new(awFrame, 45))
-
-  #  FXLabel.new(pFrame, "Description:", :opts => LAYOUT_CENTER_X)
-  #  dFrame = FXHorizontalFrame.new(pFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
-  #  @descriptionAwards.insert(-1, FXText.new(dFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
-  #  @descriptionAwards[-1].width = 450
-
-  #  FXHorizontalSeparator.new(pFrame)
-  #end
-
-  #TODO
   def onSubmit(sender, sel, event)
     system("cp ./CV2/cv2.tex '#{@tfName}.tex'")
+
     file_edit("#{@tfName}.tex", 'ImeKorisnika', @tfName.text)
     file_edit("#{@tfName}.tex", 'PrezimeKorisnika', @tfLastName.text)
-
     file_edit("#{@tfName}.tex", 'brojTelefona', @tfPhone.text)
     file_edit("#{@tfName}.tex", 'mejlKorisnika', @tfMail.text)
     file_edit("#{@tfName}.tex", 'linkVebsajta', @tfWeb.text)
@@ -226,14 +193,12 @@ class CV2 < FXMainWindow
     # Fja koja obradjuje uneto iskustvo
     Catch1()
     file_edit("#{@tfName}.tex", 'RadnoIskustvoKorisnika', @str1)
-
     # Fja koja obradjuje uneto obrazovanje
     Catch2()
     file_edit("#{@tfName}.tex", 'ObrazovanjeKorisnika', @str3)
 
     file_edit("#{@tfName}.tex", 'profesionalnaInteresovanja', @taProf.text)
     file_edit("#{@tfName}.tex", 'privatnaInteresovanja', @taPersonal.text)
-
     file_edit("#{@tfName}.tex", 'Nagrade', @taDescription.text)
 
     system("xelatex '#{@tfName}.tex'")
@@ -243,7 +208,7 @@ class CV2 < FXMainWindow
     system("rm '#{@tfName}'.* ")
 
     # Iskacuci prozorcic sa porukom
-    @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\n")
+    @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\nIt's waiting for you on Desktop :)")
 
   end
 
@@ -316,31 +281,6 @@ class CV2 < FXMainWindow
     end
   end
 
-  #def Catch3()
-  #  @str2 = "  \\LARGE
-  #           \\noindent\\colorbox{materialPurple}
-  #            {\\parbox[c][25pt][c]{\\textwidth}{\\hspace{15pt}\\textcolor{white}{Awards}}}
-  #             \\large
-  #             \\vspace*{5pt}
-  #             "
-  #  @count3 = 0
-  #  @count4 = 0
-
-   # while @count3 < @year.length
-    #  if @year[@count3].text.length > 0 &&
-    #      @awards[@count3].text.length > 0 &&
-    #      @descriptionAwards[@count3].text.length > 0
-    #    @str2 << " \\AwardEntry{#{@year[@count3]}}{#{@awards[@count3]}}{#{@descriptionAwards[@count3]}}{}\\break"
-    #    @count4 += 1
-    #  end
-    #  @count3 += 1
-    #end
-    #@str2 << "
-    #\\vspace*{5pt}"
-    #if @count4 == 0
-    #  @str2 = ""
-    #end
-  #end
 
   # Metod za gasenje aplikacije pomocu iksica
   def onClose(sender, sel, event)

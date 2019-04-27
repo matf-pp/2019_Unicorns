@@ -192,6 +192,7 @@ class CV4 < FXMainWindow
 
   def onSubmit(sender, sel, event)
     system("cp ./CV4/cv4.tex '#{@tfName}.tex'")
+
     file_edit("#{@tfName}.tex", 'Ime', @tfName.text)
     file_edit("#{@tfName}.tex", 'Prezime', @tfLastName.text)
     file_edit("#{@tfName}.tex", 'Adresa', @tfAddress.text)
@@ -228,10 +229,7 @@ class CV4 < FXMainWindow
     system("rm '#{@tfName}'.* ")
 
     # Iskacuci prozorcic sa porukom
-    @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\n")
-    #@mess.width = 150
-    #@mess.height = 70
-
+    @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\nIt's waiting for you on Desktop :)")
   end
 
   def file_edit(filename, regexp, replacement)

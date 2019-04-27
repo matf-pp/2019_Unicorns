@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# GUI za sedmi CV
+# GUI za sesti CV
 require 'fox16'
 require 'tempfile'
 require 'thread'

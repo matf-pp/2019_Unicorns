@@ -119,8 +119,8 @@ class CV1 < FXMainWindow
     @describe = []
     expButton.connect(SEL_COMMAND) do
       makeLayout()
-      @expSpace.create # create server-side resources
-      @expSpace.recalc # mark parent layout as dirty
+      @expSpace.create
+      @expSpace.recalc
     end
 
     # Frame za dugmice
@@ -197,7 +197,7 @@ class CV1 < FXMainWindow
       system("rm '#{@tfName}'.* ")
 
       # Iskacuci prozorcic sa porukom
-      @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\n")
+      @mess = FXMessageBox.information(self, MBOX_OK, "Done", "Your CV is ready!\nIt's waiting for you on Desktop :)")
   end
 
   def file_edit(filename, regexp, replacement)
