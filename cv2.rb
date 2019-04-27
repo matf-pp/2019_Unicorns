@@ -217,13 +217,20 @@ class CV2 < FXMainWindow
     file_edit("#{@tfName}.tex", 'mestoBoravka', @tfCity.text)
     file_edit("#{@tfName}.tex", 'Drzava', @tfCountry.text)
 
+    # Fja koja obradjuje uneto iskustvo
     Catch1()
+    file_edit("#{@tfName}.tex", 'RadnoIskustvoKorisnika', @str1)
+
+    # Fja koja obradjuje uneto obrazovanje
     Catch2()
+    file_edit("#{@tfName}.tex", 'ObrazovanjeKorisnika', @str3)
 
     file_edit("#{@tfName}.tex", 'profesionalnaInteresovanja', @taProf.text)
     file_edit("#{@tfName}.tex", 'privatnaInteresovanja', @taPersonal.text)
 
+    # Fja koja obradjuje unete nagrade
     Catch3()
+    file_edit("#{@tfName}.tex", 'Nagrade', @str2)
 
     system("xelatex '#{@tfName}.tex'")
     system("xelatex '#{@tfName}.tex'")
@@ -250,17 +257,85 @@ class CV2 < FXMainWindow
     end
   end
 
-  #TODO
+  # Obrada radnog iskustva
   def Catch1()
+    @str1 = "    \\LARGE
+             \\noindent\\colorbox{materialRed}
+             {\\parbox[c][25pt][c]{\\textwidth}{\\hspace{15pt}\\textcolor{white}{Experience}}}
+             \\large
+             \\vspace*{10pt}
+             "
+    @count1 = 0
+    @count2 = 0
 
+    while @count1 < @start.length
+      if @start[@count1].text.length > 0 &&
+          @end[@count1].text.length > 0 &&
+          @position[@count1].text.length > 0 &&
+          @jobDesc[@count1].text.length > 0
+        @str1 << "\\ExperienceEntry{#{@start[@count1]}}{#{@end[@count1]}}{#{@position[@count1]}}{#{@jobDesc[@count1]}}{}\\break"
+        @count2 += 1
+      end
+      @count1 += 1
+    end
+    @str1 << "
+            \\vspace*{5pt}"
+    if @count2 == 0
+      @str1 = ""
+    end
   end
 
   def Catch2()
+    @str3 = "    \\LARGE
+             \\noindent\\colorbox{materialBlue}
+             {\\parbox[c][25pt][c]{\\textwidth}{\\hspace{15pt}\\textcolor{white}{Education}}}
+             \\large
+             \\vspace*{10pt}
+             "
+    @count5 = 0
+    @count6 = 0
 
+    while @count5 < @startYear.length
+      if @startYear[@count5].text.length > 0 &&
+          @endYear[@count5].text.length > 0 &&
+          @eduLvl[@count5].text.length > 0 &&
+          @desc[@count5].text.length > 0
+        @str3 << "\\EducationEntry{#{@startYear[@count5]}}{#{@endYear[@count5]}}{#{@eduLvl[@count5]}}{#{@desc[@count5]}}{}\\break"
+        @count6 += 1
+      end
+      @count5 += 1
+    end
+    @str3 << "
+    \\vspace*{5pt}"
+    if @count6 == 0
+      @str3 = ""
+    end
   end
 
   def Catch3()
+    @str2 = "  \\LARGE
+             \\noindent\\colorbox{materialPurple}
+              {\\parbox[c][25pt][c]{\\textwidth}{\\hspace{15pt}\\textcolor{white}{Awards}}}
+               \\large
+               \\vspace*{5pt}
+               "
+    @count3 = 0
+    @count4 = 0
 
+    while @count3 < @year.length
+      if @year[@count3].text.length > 0 &&
+          @awards[@count3].text.length > 0 &&
+          @descriptionAwards[@count3].text.length > 0
+        @str2 << " \\AwardEntry{#{@year[@count3]}}{#{@awards[@count3]}}{#{@descriptionAwards[@count3]}}{}\\break"
+        @count4 += 1
+      end
+      @count3 += 1
+    end
+    @str2 << "
+    \\vspace*{5pt}"
+    if @count4 == 0
+      @str2 = ""
+    end
   end
 
   # Metod za gasenje aplikacije pomocu iksica

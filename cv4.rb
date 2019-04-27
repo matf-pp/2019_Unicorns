@@ -281,7 +281,7 @@ class CV4 < FXMainWindow
     @count3 = 0
     @count4 = 0
 
-    puts @startYear.length
+    #puts @startYear.length
     while @count3 < @year.length
       if @year[@count3].text.length > 0 &&
           @name[@count3].text.length > 0 &&
