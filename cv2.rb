@@ -103,21 +103,27 @@ class CV2 < FXMainWindow
     FXHorizontalSeparator.new(intFrame)
 
     # Nova celina, nagrade
-    awardsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
-    lblAwards = FXLabel.new(awardsFrame, "Awards:", :opts => LAYOUT_CENTER_X)
-    lblAwards.textColor = Fox.FXRGB(170, 5, 170)
-    lblAwards.font = FXFont.new(app, "Geneva", 12)
+    skillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
+    lblSkills = FXLabel.new(skillsFrame, "Skills:", :opts => LAYOUT_CENTER_X)
+    lblSkills.textColor = Fox.FXRGB(170, 5, 170)
+    lblSkills.font = FXFont.new(app, "Geneva", 12)
 
-    btnAwards = FXButton.new(awardsFrame, "Add fields", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
-    @awardsSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
-    @year = []
-    @awards = []
-    @descriptionAwards = []
-    btnAwards.connect(SEL_COMMAND) do
-      makeLayoutAwards()
-      @awardsSpace.create
-      @awardsSpace.recalc
-    end
+    pomocni3 = FXHorizontalFrame.new(skillsFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
+    @taDescription = FXText.new(pomocni3, :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH)
+    @taDescription.width = 450
+
+    FXHorizontalSeparator.new(skillsFrame)
+
+    #btnAwards = FXButton.new(awardsFrame, "Add fields", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    #@awardsSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
+    #@year = []
+    #@awards = []
+    #@descriptionAwards = []
+    #btnAwards.connect(SEL_COMMAND) do
+    #  makeLayoutAwards()
+    #  @awardsSpace.create
+    #  @awardsSpace.recalc
+    #end
 
     # Nova celina, dugmici
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
@@ -183,26 +189,26 @@ class CV2 < FXMainWindow
   end
 
   # Nagrade, polja
-  def makeLayoutAwards()
-    pFrame = FXVerticalFrame.new(@awardsSpace, :opts => LAYOUT_FILL)
-    matrix = FXMatrix.new(pFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
+  #def makeLayoutAwards()
+  #  pFrame = FXVerticalFrame.new(@awardsSpace, :opts => LAYOUT_FILL)
+  #  matrix = FXMatrix.new(pFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
 
-    FXLabel.new(matrix, "Year:", :opts => LAYOUT_FILL_X)
-    FXLabel.new(matrix, "Name: ", :opts=> LAYOUT_FILL_X)
+  #  FXLabel.new(matrix, "Year:", :opts => LAYOUT_FILL_X)
+  #  FXLabel.new(matrix, "Name: ", :opts=> LAYOUT_FILL_X)
 
-    yearFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
-    awFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+  #  yearFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+  #  awFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
 
-    @year.insert(-1, FXTextField.new(yearFrame,  5))
-    @awards.insert(-1, FXTextField.new(awFrame, 45))
+  #  @year.insert(-1, FXTextField.new(yearFrame,  5))
+  #  @awards.insert(-1, FXTextField.new(awFrame, 45))
 
-    FXLabel.new(pFrame, "Description:", :opts => LAYOUT_CENTER_X)
-    dFrame = FXHorizontalFrame.new(pFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
-    @descriptionAwards.insert(-1, FXText.new(dFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
-    @descriptionAwards[-1].width = 450
+  #  FXLabel.new(pFrame, "Description:", :opts => LAYOUT_CENTER_X)
+  #  dFrame = FXHorizontalFrame.new(pFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
+  #  @descriptionAwards.insert(-1, FXText.new(dFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
+  #  @descriptionAwards[-1].width = 450
 
-    FXHorizontalSeparator.new(pFrame)
-  end
+  #  FXHorizontalSeparator.new(pFrame)
+  #end
 
   #TODO
   def onSubmit(sender, sel, event)
@@ -228,9 +234,7 @@ class CV2 < FXMainWindow
     file_edit("#{@tfName}.tex", 'profesionalnaInteresovanja', @taProf.text)
     file_edit("#{@tfName}.tex", 'privatnaInteresovanja', @taPersonal.text)
 
-    # Fja koja obradjuje unete nagrade
-    Catch3()
-    file_edit("#{@tfName}.tex", 'Nagrade', @str2)
+    file_edit("#{@tfName}.tex", 'Nagrade', @taDescription.text)
 
     system("xelatex '#{@tfName}.tex'")
     system("xelatex '#{@tfName}.tex'")
@@ -312,31 +316,31 @@ class CV2 < FXMainWindow
     end
   end
 
-  def Catch3()
-    @str2 = "  \\LARGE
-             \\noindent\\colorbox{materialPurple}
-              {\\parbox[c][25pt][c]{\\textwidth}{\\hspace{15pt}\\textcolor{white}{Awards}}}
-               \\large
-               \\vspace*{5pt}
-               "
-    @count3 = 0
-    @count4 = 0
+  #def Catch3()
+  #  @str2 = "  \\LARGE
+  #           \\noindent\\colorbox{materialPurple}
+  #            {\\parbox[c][25pt][c]{\\textwidth}{\\hspace{15pt}\\textcolor{white}{Awards}}}
+  #             \\large
+  #             \\vspace*{5pt}
+  #             "
+  #  @count3 = 0
+  #  @count4 = 0
 
-    while @count3 < @year.length
-      if @year[@count3].text.length > 0 &&
-          @awards[@count3].text.length > 0 &&
-          @descriptionAwards[@count3].text.length > 0
-        @str2 << " \\AwardEntry{#{@year[@count3]}}{#{@awards[@count3]}}{#{@descriptionAwards[@count3]}}{}\\break"
-        @count4 += 1
-      end
-      @count3 += 1
-    end
-    @str2 << "
-    \\vspace*{5pt}"
-    if @count4 == 0
-      @str2 = ""
-    end
-  end
+   # while @count3 < @year.length
+    #  if @year[@count3].text.length > 0 &&
+    #      @awards[@count3].text.length > 0 &&
+    #      @descriptionAwards[@count3].text.length > 0
+    #    @str2 << " \\AwardEntry{#{@year[@count3]}}{#{@awards[@count3]}}{#{@descriptionAwards[@count3]}}{}\\break"
+    #    @count4 += 1
+    #  end
+    #  @count3 += 1
+    #end
+    #@str2 << "
+    #\\vspace*{5pt}"
+    #if @count4 == 0
+    #  @str2 = ""
+    #end
+  #end
 
   # Metod za gasenje aplikacije pomocu iksica
   def onClose(sender, sel, event)

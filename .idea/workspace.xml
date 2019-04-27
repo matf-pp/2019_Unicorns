@@ -2,316 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5479d56e-b065-48c8-a863-300bd72bae48" name="Default Changelist" comment="Cv7 gui">
-      <change beforePath="$PROJECT_DIR$/.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV2/images/preview.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV2/info_awards.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV2/info_contacts.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV2/info_education.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV2/info_experience.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV2/info_interests.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV2/staraVerzija/cvStari.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV3/picture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV6/myfoto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV6/qrcode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV7/alice.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv.run.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/2x2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/3x3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/adjust2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/adjust3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/archive5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow103.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow105.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow106.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow61.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow68.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow69.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow71.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow74.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow75.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow83.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow84.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow85.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow86.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow87.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow88.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow89.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow90.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow91.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow93.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow94.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow97.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow98.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrow99.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/arrows6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/black33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/black64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/black66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/black67.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/black70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/black73.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/blocked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/blogger1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/blogger2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/book23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/box9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/camera19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/chat3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/check2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/chevron9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/circle10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/circle11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/circle8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/circular3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/circular4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/circular6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/circular7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/circular8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/circular9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/close11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/close9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/cloud26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/cogs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/comment2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/compass8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/condense.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/condensing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/cone1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/cone2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/contacts1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/cross8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/cursor7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/dark9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/delicious1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/desktop1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/document9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/documents.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/documents2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/double4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/double5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/double7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/down10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/down11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/down4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/download11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/download7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/drawer1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/dribble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/earphones1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/empty10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/error2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/error3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/error4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/error5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/error6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/exclamation1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/expand9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/facebook6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/facebook7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/film9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/fivepointed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/flickr1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/flickr4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/folder22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/full9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/genius.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/google15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/google16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/group2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/half3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/heart19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/high7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/house3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/house4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/icon2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/info9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/interface19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/key9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/laptop3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/left12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/lightbulb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/linkedin2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/linkedin5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/links1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/links2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/list14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/little9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/lock11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/lock12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/lock7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/logo3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/logo4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/low6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mail9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/map5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/map7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/menu7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/menu8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/menu9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/microphone9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mini9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/minus11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/minus6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/move8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mute2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/mute4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/myspace1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/myspace2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/myspace3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/new6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/outlined3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/outlined4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/paperclip3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/pause5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/pencil10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/pencil12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/pencil9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/picassa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/picassa2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/pinterest6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/pinterest8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/plus7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/present1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/profile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/prohibited1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/pushpin1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/question3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/quotations.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/quotations1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/quotations2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/refresh7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/right17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/screen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/screwdriver3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/search7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/selected.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/share16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/share6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/shopping9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/simple30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/simple31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/single.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small62.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small63.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small65.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small66.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small67.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small68.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small69.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small71.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small73.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small74.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small75.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/small77.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social67.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social68.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social69.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social70.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social71.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social77.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social78.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/social92.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/speech18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/spotify1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/spotify2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/square18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/stop5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/stop8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/stumbleupon3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/stumbleupon5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/tablet3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/tag10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/tags.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/target.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/telephone1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/thin3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/thin4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/thin5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/thin7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/thin8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/toolbox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/trash8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/triangular1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/tumblr4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/tumblr6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/tumblr7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/two23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/two24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/up11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/vimeo2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/volume10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/volume11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/wheel1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/wordpress2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/youtube4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/zoom14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/zoom16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/green/zoom17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/pic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/preview.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV2/cv2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/CV2/cv2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV4/cv4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/CV4/cv4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv2.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv2.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv4.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -321,14 +16,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Unicorns@main.rcov" NAME="main Coverage Results" MODIFIED="1555795272101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
-    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556359436839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
+    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556376147992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="165">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
@@ -337,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
+            <state relative-caret-position="315">
               <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
             </state>
           </provider>
@@ -346,8 +41,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv4.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6509">
-              <caret line="283" column="5" selection-start-line="283" selection-start-column="5" selection-end-line="283" selection-end-column="5" />
+            <state relative-caret-position="31">
+              <caret line="195" column="40" selection-start-line="195" selection-start-column="40" selection-end-line="195" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CV4/cv4.tex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -355,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv2.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6946">
-              <caret line="302" column="13" selection-start-line="302" selection-start-column="13" selection-end-line="302" selection-end-column="13" />
+            <state relative-caret-position="225">
+              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -364,16 +68,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CV2/cv2.tex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="126" column="7" lean-forward="true" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
+            <state relative-caret-position="61">
+              <caret line="172" column="70" selection-start-line="172" selection-start-column="70" selection-end-line="172" selection-end-column="70" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv7.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
+            <state relative-caret-position="1328">
               <caret line="230" column="5" selection-start-line="230" selection-start-column="5" selection-end-line="230" selection-end-column="5" />
             </state>
           </provider>
@@ -404,19 +108,19 @@
         <option value="$PROJECT_DIR$/src/cv1.rb" />
         <option value="$PROJECT_DIR$/cv4.tex" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/CV4/cv4.tex" />
         <option value="$PROJECT_DIR$/cv1.rb" />
         <option value="$PROJECT_DIR$/CV2/info_education.tex" />
         <option value="$PROJECT_DIR$/main_window.rb" />
         <option value="$PROJECT_DIR$/cv6.rb" />
         <option value="$PROJECT_DIR$/cv7.rb" />
-        <option value="$PROJECT_DIR$/cv4.rb" />
         <option value="$PROJECT_DIR$/CV2/cv2.tex" />
         <option value="$PROJECT_DIR$/cv2.rb" />
+        <option value="$PROJECT_DIR$/cv4.rb" />
+        <option value="$PROJECT_DIR$/CV4/cv4.tex" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="41" />
     <option name="width" value="1346" />
@@ -435,6 +139,11 @@
             <path>
               <item name="Unicorns" type="b2602c69:ProjectViewProjectNode" />
               <item name="Unicorns" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Unicorns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Unicorns" type="462c0819:PsiDirectoryNode" />
+              <item name="CV4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -552,6 +261,7 @@
       <workItem from="1556278068080" duration="5240000" />
       <workItem from="1556280757000" duration="10266000" />
       <workItem from="1556364237041" duration="308000" />
+      <workItem from="1556374241231" duration="2867000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1555791842120</created>
@@ -599,12 +309,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62641000" />
+    <option name="totallyTimeSpent" value="65508000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-2" width="1444" height="872" extended-state="6" />
+    <frame x="-2" y="-2" width="1364" height="740" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24821173" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25227964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -653,13 +364,7 @@
     <entry file="file://$PROJECT_DIR$/src/main_window.rb" />
     <entry file="file://$PROJECT_DIR$/src/cv1.rb" />
     <entry file="file://$PROJECT_DIR$/cv4.tex" />
-    <entry file="file://$PROJECT_DIR$/cv.run.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1552">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cv.run.xml" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -670,30 +375,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CV4/cv4.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="15" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CV2/info_awards.tex">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CV2/info_contacts.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CV2/info_education.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CV2/info_awards.tex" />
+    <entry file="file://$PROJECT_DIR$/CV2/info_contacts.tex" />
+    <entry file="file://$PROJECT_DIR$/CV2/info_education.tex" />
     <entry file="file://$PROJECT_DIR$/cv1.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1605">
@@ -710,43 +394,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="165">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
+        <state relative-caret-position="315">
           <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cv4.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6509">
-          <caret line="283" column="5" selection-start-line="283" selection-start-column="5" selection-end-line="283" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cv2.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6946">
-          <caret line="302" column="13" selection-start-line="302" selection-start-column="13" selection-end-line="302" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CV2/cv2.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="126" column="7" lean-forward="true" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cv7.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
+        <state relative-caret-position="1328">
           <caret line="230" column="5" selection-start-line="230" selection-start-column="5" selection-end-line="230" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CV2/cv2.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="172" column="70" selection-start-line="172" selection-start-column="70" selection-end-line="172" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv2.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv4.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="195" column="40" selection-start-line="195" selection-start-column="40" selection-end-line="195" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CV4/cv4.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>

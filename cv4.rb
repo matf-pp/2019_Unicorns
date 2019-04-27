@@ -24,8 +24,11 @@ class CV4 < FXMainWindow
     info = FXHorizontalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     matrixInfo = FXMatrix.new(info, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
 
-    lblName = FXLabel.new(matrixInfo, "First and last name:  ")
+    lblName = FXLabel.new(matrixInfo, "First name:  ")
     @tfName = FXTextField.new(matrixInfo, 39)
+
+    lblLastName = FXLabel.new(matrixInfo, "Last name:  ")
+    @tfLastName = FXTextField.new(matrixInfo, 39)
 
     lblAddress = FXLabel.new(matrixInfo, "Address:  ")
     @tfAddress = FXTextField.new(matrixInfo, 39)
@@ -190,6 +193,7 @@ class CV4 < FXMainWindow
   def onSubmit(sender, sel, event)
     system("cp ./CV4/cv4.tex '#{@tfName}.tex'")
     file_edit("#{@tfName}.tex", 'Ime', @tfName.text)
+    file_edit("#{@tfName}.tex", 'Prezime', @tfLastName.text)
     file_edit("#{@tfName}.tex", 'Adresa', @tfAddress.text)
     file_edit("#{@tfName}.tex", 'telefon', @tfPhone.text)
     file_edit("#{@tfName}.tex", 'mejl', @tfMail.text)
