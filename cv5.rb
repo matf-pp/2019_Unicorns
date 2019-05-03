@@ -87,7 +87,7 @@ class CV5 < FXMainWindow
     @yearS = []
     @name = []
     @description = []
-    btnEdu.connect(SEL_COMMAND) do
+    btnProj.connect(SEL_COMMAND) do
       makeLayoutProj()
       @projSpace.create
       @projSpace.recalc

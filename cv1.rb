@@ -5,6 +5,7 @@ require 'tempfile'
 require 'thread'
 include Fox
 
+
 class CV1 < FXMainWindow
 
   def initialize()
