@@ -137,6 +137,8 @@ class CV1 < FXMainWindow
     @btnSubmit.textColor = Fox.FXRGB(250, 250, 250)
     @btnSubmit.connect(SEL_COMMAND, method(:onSubmit))
 
+
+
   end
 
   def makeLayout()
