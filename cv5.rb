@@ -12,9 +12,9 @@ class CV5 < FXMainWindow
     self.connect(SEL_CLOSE, method(:onClose))
 
     @scroll = FXScrollWindow.new(self, :width=>500, :height => 600, :opts => LAYOUT_FILL )
-
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
+    @picturePath = ""
 
     infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     lblInfo = FXLabel.new(infoFrame, "About:", :opts => LAYOUT_CENTER_X)
@@ -93,8 +93,86 @@ class CV5 < FXMainWindow
       @projSpace.recalc
     end
 
+    # Nova celina, profesionalne i licne vestine
+    skillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
+    lblSkills = FXLabel.new(skillsFrame, "Skills and Background Knowledge ", :opts => LAYOUT_CENTER_X)
+    lblSkills.textColor = Fox.FXRGB(30, 75, 210)
+    lblSkills.font = FXFont.new(app, "Geneva", 12)
+
+    tmpFrame1 = FXHorizontalFrame.new(skillsFrame, :opts => LAYOUT_CENTER_X)
+    lblTech = FXLabel.new(tmpFrame1, "Technical skills: ", :opts => LAYOUT_FILL_X)
+    lblTech.textColor = Fox.FXRGB(195, 5, 180)
+    lblTech.font = FXFont.new(app, "Geneva", 10)
+    btnTechnical = FXButton.new(tmpFrame1, "Add technical skill", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    @techSpace = FXMatrix.new(skillsFrame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
+    @skills = []
+    @level = []
+    btnTechnical.connect(SEL_COMMAND) do
+      makeLayoutTech()
+      @techSpace.create
+      @techSpace.recalc
+    end
+
+    tmpFrame2 = FXHorizontalFrame.new(skillsFrame, :opts => LAYOUT_CENTER_X)
+    lblPers = FXLabel.new(tmpFrame2, "Personal skills: ", :opts => LAYOUT_FILL_X)
+    lblPers.textColor = Fox.FXRGB(195, 5, 180)
+    lblPers.font = FXFont.new(app, "Geneva", 10)
+    btnPersonal = FXButton.new(tmpFrame2, "Add personal skill", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    @persSpace = FXMatrix.new(skillsFrame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
+    @persSkills = []
+    btnPersonal.connect(SEL_COMMAND) do
+      makeLayoutPers()
+      @persSpace.create
+      @persSpace.recalc
+    end
+
+    # Nova celina, komunikacione vestine
+    comFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
+    lblLang = FXLabel.new(comFrame, "Languages: ", :opts => LAYOUT_FILL_X)
+    lblLang.textColor = Fox.FXRGB(30, 75, 210)
+    lblLang.font = FXFont.new(app, "Geneva", 12)
+    btnLanguage = FXButton.new(comFrame, "Add a language", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    @langSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
+    @languages = []
+    @lvl = []
+    btnLanguage.connect(SEL_COMMAND) do
+      makeLayoutLang()
+      @langSpace.create
+      @langSpace.recalc
+    end
+
+    @choice = FXDataTarget.new(0)
+    groupbox = FXGroupBox.new(frame, "Choose CV color:", :opts => GROUPBOX_NORMAL|FRAME_GROOVE|LAYOUT_FILL_X|LAYOUT_FILL_Y)
+    radio1 = FXRadioButton.new(groupbox, "Blue",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION)
+    radio2 = FXRadioButton.new(groupbox, "Orange",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+1)
+    radio3 = FXRadioButton.new(groupbox, "Green",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+2)
+    radio4 = FXRadioButton.new(groupbox, "Red",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+3)
+    radio5 = FXRadioButton.new(groupbox, "Purple",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+4)
+    radio6 = FXRadioButton.new(groupbox, "Grey",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+5)
+    radio7 = FXRadioButton.new(groupbox, "Black",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+6)
+
     # Nova celina, dugmici
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
+
+    @btnPicture = FXButton.new(btnFrame, "Picture")
+    @btnPicture.connect(SEL_COMMAND) do
+      dialog = FXFileDialog.new(self, "Chose picture")
+      dialog.patternList = [
+          "JPEG Files (*.jpg, *.jpeg)"
+      ]
+      dialog.selectMode = SELECTFILE_EXISTING
+      if dialog.execute != 0
+        openJpgFile(dialog.filename)
+      end
+    end
+
     # TODO
     dekor = loadIcon("plavo.png")
     @btnSubmit = FXButton.new(btnFrame,
@@ -126,7 +204,7 @@ class CV5 < FXMainWindow
 
     FXLabel.new(parentFrame, "Company:", :opts => LAYOUT_CENTER_X)
     descFrame = FXHorizontalFrame.new(parentFrame, :opts => LAYOUT_CENTER_X)
-    @company.insert(-1, FXTextField.new(descFrame,  50))
+    @company.insert(-1, FXTextField.new(descFrame,  52))
     @company[-1].width = 450
 
     FXHorizontalSeparator.new(parentFrame)
@@ -178,6 +256,50 @@ class CV5 < FXMainWindow
     FXHorizontalSeparator.new(parentFrame)
   end
 
+  # profesionalne vestine, polja
+  def makeLayoutTech()
+    parentFrame = FXVerticalFrame.new(@techSpace, :opts => LAYOUT_FILL)
+    matrix = FXMatrix.new(parentFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
+
+    FXLabel.new(matrix, "Skill:", :opts => LAYOUT_CENTER_X)
+    FXLabel.new(matrix, "Level:", :opts=> LAYOUT_CENTER_X)
+
+    skFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+    lvlFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+    @skills.insert(-1, FXTextField.new(skFrame,  25))
+    @level.insert(-1, FXTextField.new(lvlFrame, 25))
+
+    FXHorizontalSeparator.new(parentFrame)
+  end
+
+  # licne osobine, polja
+  def makeLayoutPers()
+    parentFrame = FXVerticalFrame.new(@persSpace, :opts => LAYOUT_FILL)
+    matrix = FXMatrix.new(parentFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
+
+    FXLabel.new(matrix, "Description:", :opts => LAYOUT_CENTER_X)
+    skFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+    @persSkills.insert(-1, FXTextField.new(skFrame,  35))
+
+    FXHorizontalSeparator.new(parentFrame)
+  end
+
+  # Jezici, polja
+  def makeLayoutLang()
+    parentFrame = FXVerticalFrame.new(@langSpace, :opts => LAYOUT_FILL)
+    matrix = FXMatrix.new(parentFrame, n=2, :opts => LAYOUT_FILL_X|MATRIX_BY_COLUMNS)
+
+    FXLabel.new(matrix, "Language:", :opts => LAYOUT_CENTER_X)
+    FXLabel.new(matrix, "Level:", :opts=> LAYOUT_CENTER_X)
+
+    lFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+    lvlFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
+    @languages.insert(-1, FXTextField.new(lFrame,  25))
+    @lvl.insert(-1, FXTextField.new(lvlFrame, 25))
+
+    FXHorizontalSeparator.new(parentFrame)
+  end
+
 
   def onSubmit(sender, sel, event)
     system("cp ./CV5/cv5.tex '#{@tfName}.tex'")
@@ -200,6 +322,14 @@ class CV5 < FXMainWindow
     file_edit("#{@tfName}.tex", 'volonterskiRadIliProjekat', @str3)
 
     #TODO
+    CatchTech()
+    file_edit("#{@tfName}.tex", 'profVestina', @str4)
+
+    CatchPers()
+    file_edit("#{@tfName}.tex", 'licneOsobine', @str5)
+
+    CatchLang()
+    file_edit("#{@tfName}.tex", 'jezici', @str6)
 
     system("pdflatex '#{@tfName}.tex'")
     system("pdflatex '#{@tfName}.tex'")
@@ -251,6 +381,7 @@ class CV5 < FXMainWindow
     end
   end
 
+  # Obrada obrazovanja
   def CatchEdu()
     @str2 = "\\section{Education}
             "
@@ -274,6 +405,7 @@ class CV5 < FXMainWindow
     end
   end
 
+  # Obrada projekata i volontiranja
   def CatchProj()
     @str3 = "\\section{Acheived Projects or volunteer work}
             "
@@ -295,10 +427,74 @@ class CV5 < FXMainWindow
     end
   end
 
+  # Obrada vestina
+  def CatchTech()
+    @str4 = "\\subsection{Technical skills}
+            "
+    @count7 = 0
+    @count8 = 0
+    while @count7 < @skills.length
+      if @skills[@count7].text.length > 0 &&
+          @level[@count7].text.length > 0
+        @str4 << "\\cvitem{}{#{@skills[@count7]}, \\textit{#{@level[@count7]}}}
+                 "
+        @count8 += 1
+      end
+      @count7 += 1
+    end
+    if @count8 == 0
+      @str4 = ""
+    end
+  end
+
+  # Obrada osobina
+  def CatchPers()
+    @str5 = "\\subsection{Personal skills}
+            "
+    @count9 = 0
+    @count10 = 0
+
+    while @count9 < @persSkills.length
+      if @persSkills[@count9].text.length > 0
+        @str5 << "\\cvitem{}{#{@persSkills[@count9]}}
+                 "
+        @count10 += 1
+      end
+      @count9 += 1
+    end
+    if @count10 == 0
+      @str5 = ""
+    end
+  end
+
+  def CatchLang()
+    @str6 = "\\section{Languages}
+            "
+    @count11 = 0
+    @count12 = 0
+
+    while @count11 < @languages.length
+      if @languages[@count11].text.length > 0 &&
+         @lvl[@count11].text.length > 0
+        @str6 << "\\cvitem{}{#{@languages[@count11]}, \\textit{#{@lvl[@count11]}}}{}
+                 "
+        @count12 += 1
+      end
+      @count11 += 1
+    end
+    if @count12 == 0
+      @str6 = ""
+    end
+  end
 
   # Metod za gasenje aplikacije pomocu iksica
   def onClose(sender, sel, event)
     $app.exit(0)
+  end
+
+  # Putanja do slike
+  def openJpgFile(filename)
+    @pictuPath = "#{filename}"
   end
 
   # Ucitava sliku iz fajla
