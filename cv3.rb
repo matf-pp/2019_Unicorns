@@ -160,6 +160,25 @@ class CV3 < FXMainWindow
     end
 
 
+    groupbox = FXGroupBox.new(frame, "Color:", :opts => GROUPBOX_NORMAL|FRAME_GROOVE|LAYOUT_FILL_X|LAYOUT_FILL_Y)
+
+    radio1 = FXRadioButton.new(groupbox, "Blue",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION)
+    radio2 = FXRadioButton.new(groupbox, "Orange",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+1)
+    radio3 = FXRadioButton.new(groupbox, "Green",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+2)
+    radio4 = FXRadioButton.new(groupbox, "Red",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+3)
+    radio5 = FXRadioButton.new(groupbox, "Purple",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+4)
+    radio6 = FXRadioButton.new(groupbox, "Grey",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+5)
+
+    radio7 = FXRadioButton.new(groupbox, "Black",
+                               :target => @choice, :selector => FXDataTarget::ID_OPTION+6)
+
+
     buttonFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_FILL)
 
     @submitButton = FXButton.new(buttonFrame,
@@ -179,6 +198,7 @@ class CV3 < FXMainWindow
         openJpgFile(dialog.filename)
       end
     end
+
 
   end
 
