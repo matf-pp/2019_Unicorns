@@ -159,6 +159,7 @@ class CV3 < FXMainWindow
       @hobbyMatrix.recalc
     end
 
+    @choice = FXDataTarget.new(0)
 
     groupbox = FXGroupBox.new(frame, "Color:", :opts => GROUPBOX_NORMAL|FRAME_GROOVE|LAYOUT_FILL_X|LAYOUT_FILL_Y)
 
