@@ -1,11 +1,11 @@
 #!/usr/bin/env ruby
-# GUI za drugi CV
+# GUI za peti CV
 require 'fox16'
 require 'tempfile'
 require 'thread'
 include Fox
 
-class CV2 < FXMainWindow
+class CV5 < FXMainWindow
 
   def initialize()
     super($app, "CV express", :opts => DECOR_ALL, :width => 570, :height => 600)
@@ -18,7 +18,7 @@ class CV2 < FXMainWindow
 
     infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     lblInfo = FXLabel.new(infoFrame, "About:", :opts => LAYOUT_CENTER_X)
-    lblInfo.textColor = Fox.FXRGB(25, 170, 10)
+    lblInfo.textColor = Fox.FXRGB(30, 75, 210)
     lblInfo.font = FXFont.new(app, "Geneva", 12)
 
     info = FXHorizontalFrame.new(infoFrame, :opts => LAYOUT_CENTER_X)
@@ -28,40 +28,17 @@ class CV2 < FXMainWindow
     @tfName = FXTextField.new(matrixInfo, 30)
     lblLastName = FXLabel.new(matrixInfo, "Last name:  ")
     @tfLastName = FXTextField.new(matrixInfo, 30)
+    lblDateOfBirth = FXLabel.new(matrixInfo, "Date of Birth: ")
+    @tfDateOfBirth = FXTextField.new(matrixInfo, 30)
 
     lblAddress = FXLabel.new(matrixInfo, "Address:  ")
     @tfAddress = FXTextField.new(matrixInfo, 30)
-    lblCity = FXLabel.new(matrixInfo, "City, State 0000-0000:  ")
-    @tfCity = FXTextField.new(matrixInfo, 30)
-    lblCountry = FXLabel.new(matrixInfo, "Country:  ")
-    @tfCountry = FXTextField.new(matrixInfo, 30)
-
-    lblPhone = FXLabel.new(matrixInfo, "Phone number:  ")
+    lblPhone = FXLabel.new(matrixInfo, "Phone: ")
     @tfPhone = FXTextField.new(matrixInfo, 30)
     lblMail = FXLabel.new(matrixInfo, "E-mail:  ")
     @tfMail = FXTextField.new(matrixInfo, 30)
-    lblWeb = FXLabel.new(matrixInfo, "Website:  ")
-    @tfWeb = FXTextField.new(matrixInfo, 30)
 
     FXHorizontalSeparator.new(infoFrame)
-
-    # Nova celina, radno iskustvo
-    expFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL_X)
-    lblExp = FXLabel.new(expFrame, "Experience:", :opts => LAYOUT_FILL_X)
-    lblExp.textColor = Fox.FXRGB(230, 30, 5)
-    lblExp.font = FXFont.new(app, "Geneva", 12)
-
-    btnExp = FXButton.new(expFrame, "Add fields", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
-    @expSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
-    @start = []
-    @end = []
-    @position = []
-    @jobDesc = []
-    btnExp.connect(SEL_COMMAND) do
-      makeLayoutExp()
-      @expSpace.create
-      @expSpace.recalc
-    end
 
     # Nova celina, obrazovanje
     eduFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
@@ -81,38 +58,23 @@ class CV2 < FXMainWindow
       @eduSpace.recalc
     end
 
-    # Nova celina, interesovanja
-    intFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
-    @lblInt = FXLabel.new(intFrame, "Interests:", :opts => LAYOUT_CENTER_X)
-    @lblInt.textColor = Fox.FXRGB(234, 184,  35)
-    @lblInt.font = FXFont.new(app, "Geneva", 12)
+    # Nova celina, radno iskustvo
+    expFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL_X)
+    lblExp = FXLabel.new(expFrame, "Experience:", :opts => LAYOUT_FILL_X)
+    lblExp.textColor = Fox.FXRGB(30, 75, 210)
+    lblExp.font = FXFont.new(app, "Geneva", 12)
 
-    interests = FXHorizontalFrame.new(intFrame, :opts => LAYOUT_CENTER_X)
-    matrixInt = FXMatrix.new(interests, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
-
-    lblProf = FXLabel.new(matrixInt, "Professional:  ")
-    pomocni1 = FXHorizontalFrame.new(matrixInt, :opts => LAYOUT_CENTER_X|FRAME_THICK)
-    @taProf = FXText.new(pomocni1, :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH)
-    @taProf.width = 350
-
-    lblPersonal = FXLabel.new(matrixInt, "Personal:  ")
-    pomocni2 = FXHorizontalFrame.new(matrixInt, :opts => LAYOUT_CENTER_X|FRAME_THICK)
-    @taPersonal = FXText.new(pomocni2, :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH)
-    @taPersonal.width = 350
-
-    FXHorizontalSeparator.new(intFrame)
-
-    # Nova celina, profesionalne vestine
-    skillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
-    lblSkills = FXLabel.new(skillsFrame, "Skills:", :opts => LAYOUT_CENTER_X)
-    lblSkills.textColor = Fox.FXRGB(170, 5, 170)
-    lblSkills.font = FXFont.new(app, "Geneva", 12)
-
-    pomocni3 = FXHorizontalFrame.new(skillsFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
-    @taDescription = FXText.new(pomocni3, :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH)
-    @taDescription.width = 450
-
-    FXHorizontalSeparator.new(skillsFrame)
+    btnExp = FXButton.new(expFrame, "Add fields", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    @expSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
+    @start = []
+    @end = []
+    @position = []
+    @company = []
+    btnExp.connect(SEL_COMMAND) do
+      makeLayoutExp()
+      @expSpace.create
+      @expSpace.recalc
+    end
 
     # Nova celina, dugmici
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
@@ -145,10 +107,10 @@ class CV2 < FXMainWindow
     @end.insert(-1, FXTextField.new(yearFrame, 5))
     @position.insert(-1, FXTextField.new(positionFrame, 38))
 
-    FXLabel.new(parentFrame, "Job description:", :opts => LAYOUT_CENTER_X)
-    descFrame = FXHorizontalFrame.new(parentFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
-    @jobDesc.insert(-1, FXText.new(descFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
-    @jobDesc[-1].width = 450
+    FXLabel.new(parentFrame, "Company:", :opts => LAYOUT_CENTER_X)
+    descFrame = FXHorizontalFrame.new(parentFrame, :opts => LAYOUT_CENTER_X)
+    @company.insert(-1, FXTextField.new(descFrame,  50))
+    @company[-1].width = 450
 
     FXHorizontalSeparator.new(parentFrame)
   end
@@ -169,7 +131,7 @@ class CV2 < FXMainWindow
     @endYear.insert(-1, FXTextField.new(yearFrame, 5))
     @eduLvl.insert(-1, FXTextField.new(eduLvlFrame, 38))
 
-    FXLabel.new(parentFrame, "Studies description: ", :opts => LAYOUT_CENTER_X)
+    FXLabel.new(parentFrame, "Description: ", :opts => LAYOUT_CENTER_X)
     descFrame = FXHorizontalFrame.new(parentFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
     @desc.insert(-1, FXText.new(descFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
     @desc[-1].width = 450
@@ -179,30 +141,27 @@ class CV2 < FXMainWindow
 
 
   def onSubmit(sender, sel, event)
-    system("cp ./CV2/cv2.tex '#{@tfName}.tex'")
+    system("cp ./CV5/cv5.tex '#{@tfName}.tex'")
 
-    file_edit("#{@tfName}.tex", 'ImeKorisnika', @tfName.text)
-    file_edit("#{@tfName}.tex", 'PrezimeKorisnika', @tfLastName.text)
+    file_edit("#{@tfName}.tex", 'Ime', @tfName.text)
+    file_edit("#{@tfName}.tex", 'Prezime', @tfLastName.text)
+    file_edit("#{@tfName}.tex", 'datum', @tfDateOfBirth.text)
     file_edit("#{@tfName}.tex", 'brojTelefona', @tfPhone.text)
-    file_edit("#{@tfName}.tex", 'mejlKorisnika', @tfMail.text)
-    file_edit("#{@tfName}.tex", 'linkVebsajta', @tfWeb.text)
-    file_edit("#{@tfName}.tex", 'UlicaIBroj', @tfAddress.text)
-    file_edit("#{@tfName}.tex", 'mestoBoravka', @tfCity.text)
-    file_edit("#{@tfName}.tex", 'Drzava', @tfCountry.text)
+    file_edit("#{@tfName}.tex", 'mejl', @tfMail.text)
+    file_edit("#{@tfName}.tex", 'Adresa', @tfAddress.text)
 
     # Fja koja obradjuje uneto iskustvo
     Catch1()
     file_edit("#{@tfName}.tex", 'RadnoIskustvoKorisnika', @str1)
     # Fja koja obradjuje uneto obrazovanje
     Catch2()
-    file_edit("#{@tfName}.tex", 'ObrazovanjeKorisnika', @str3)
+    file_edit("#{@tfName}.tex", 'ObrazovanjeKorisnika', @str2)
 
-    file_edit("#{@tfName}.tex", 'profesionalnaInteresovanja', @taProf.text)
-    file_edit("#{@tfName}.tex", 'privatnaInteresovanja', @taPersonal.text)
-    file_edit("#{@tfName}.tex", 'Nagrade', @taDescription.text)
+    #TODO
 
-    system("xelatex '#{@tfName}.tex'")
-    system("xelatex '#{@tfName}.tex'")
+
+    system("pdflatex '#{@tfName}.tex'")
+    system("pdflatex '#{@tfName}.tex'")
 
     system("mv '#{@tfName}.pdf' ~/Desktop")
     system("rm '#{@tfName}'.* ")
@@ -228,12 +187,8 @@ class CV2 < FXMainWindow
 
   # Obrada radnog iskustva
   def Catch1()
-    @str1 = "    \\LARGE
-             \\noindent\\colorbox{materialRed}
-             {\\parbox[c][25pt][c]{\\textwidth}{\\hspace{15pt}\\textcolor{white}{Experience}}}
-             \\large
-             \\vspace*{10pt}
-             "
+    @str1 = "\\section{Work Experience}
+            "
     @count1 = 0
     @count2 = 0
 
@@ -241,43 +196,40 @@ class CV2 < FXMainWindow
       if @start[@count1].text.length > 0 &&
           @end[@count1].text.length > 0 &&
           @position[@count1].text.length > 0 &&
-          @jobDesc[@count1].text.length > 0
-        @str1 << "\\ExperienceEntry{#{@start[@count1]}}{#{@end[@count1]}}{#{@position[@count1]}}{#{@jobDesc[@count1]}}{}\\break"
+          @company[@count1].text.length > 0
+        @str1 << "\\cvitem{#{@start[@count1]} -- #{@end[@count1]}}{\\textbf{#{@position[@count1]}} \\textit{#{@company[@count1]}} }
+                \\renewcommand{\\listitemsymbol}{\\textcolor{black}{-~}}
+                "
         @count2 += 1
       end
       @count1 += 1
     end
-    @str1 << "
-            \\vspace*{5pt}"
+
     if @count2 == 0
       @str1 = ""
     end
   end
 
   def Catch2()
-    @str3 = "    \\LARGE
-             \\noindent\\colorbox{materialBlue}
-             {\\parbox[c][25pt][c]{\\textwidth}{\\hspace{15pt}\\textcolor{white}{Education}}}
-             \\large
-             \\vspace*{10pt}
-             "
-    @count5 = 0
-    @count6 = 0
+    @str2 = "\\section{Education}
+            "
+    @count3 = 0
+    @count4 = 0
 
-    while @count5 < @startYear.length
-      if @startYear[@count5].text.length > 0 &&
-          @endYear[@count5].text.length > 0 &&
-          @eduLvl[@count5].text.length > 0 &&
-          @desc[@count5].text.length > 0
-        @str3 << "\\EducationEntry{#{@startYear[@count5]}}{#{@endYear[@count5]}}{#{@eduLvl[@count5]}}{#{@desc[@count5]}}{}\\break"
-        @count6 += 1
+    while @count3 < @startYear.length
+      if @startYear[@count3].text.length > 0 &&
+          @endYear[@count3].text.length > 0 &&
+          @eduLvl[@count3].text.length > 0 &&
+          @desc[@count3].text.length > 0
+        @str2 << "\\cvitem{#{@startYear[@count3]} -- #{@endYear[@count3]}}{\\textbf{#{@eduLvl[@count3]} } \\textit{}
+                  \\newline #{@desc[@count3]}}
+                 "
+        @count4 += 1
       end
-      @count5 += 1
+      @count3 += 1
     end
-    @str3 << "
-    \\vspace*{5pt}"
-    if @count6 == 0
-      @str3 = ""
+    if @count4 == 0
+      @str2 = ""
     end
   end
 
