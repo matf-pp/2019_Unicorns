@@ -76,6 +76,23 @@ class CV5 < FXMainWindow
       @expSpace.recalc
     end
 
+    # Nova celina, projekti / volontiranja
+    projFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
+    lblProj = FXLabel.new(projFrame, "Volunteer work / projects:", :opts => LAYOUT_CENTER_X)
+    lblProj.textColor = Fox.FXRGB(30, 75, 210)
+    lblProj.font = FXFont.new(app, "Geneva", 12)
+
+    btnProj = FXButton.new(projFrame, "Add fields", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    @projSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
+    @yearS = []
+    @name = []
+    @description = []
+    btnEdu.connect(SEL_COMMAND) do
+      makeLayoutProj()
+      @projSpace.create
+      @projSpace.recalc
+    end
+
     # Nova celina, dugmici
     btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
     # TODO
@@ -139,6 +156,28 @@ class CV5 < FXMainWindow
     FXHorizontalSeparator.new(parentFrame)
   end
 
+  #Projekti, volontiranja, polja
+  def makeLayoutProj()
+    parentFrame = FXVerticalFrame.new(@projSpace, :opts => LAYOUT_CENTER_X)
+    matrix = FXMatrix.new(parentFrame, n=2, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
+
+    FXLabel.new(matrix, "Year:", :opts => LAYOUT_CENTER_X)
+    FXLabel.new(matrix, "Volunteer work / projects : ", :opts=> LAYOUT_CENTER_X)
+
+    yearFrame = FXHorizontalFrame.new(matrix, LAYOUT_CENTER_X)
+    nameFrame = FXHorizontalFrame.new(matrix, LAYOUT_CENTER_X)
+    @yearS.insert(-1, FXTextField.new(yearFrame,  5))
+
+    @name.insert(-1, FXTextField.new(nameFrame, 45))
+
+    FXLabel.new(parentFrame, "Description: ", :opts => LAYOUT_CENTER_X)
+    descFrame = FXHorizontalFrame.new(parentFrame, :opts => LAYOUT_CENTER_X|FRAME_THICK)
+    @description.insert(-1, FXText.new(descFrame,  :opts => TEXT_WORDWRAP|LAYOUT_FIX_WIDTH))
+    @description[-1].width = 450
+
+    FXHorizontalSeparator.new(parentFrame)
+  end
+
 
   def onSubmit(sender, sel, event)
     system("cp ./CV5/cv5.tex '#{@tfName}.tex'")
@@ -151,14 +190,16 @@ class CV5 < FXMainWindow
     file_edit("#{@tfName}.tex", 'Adresa', @tfAddress.text)
 
     # Fja koja obradjuje uneto iskustvo
-    Catch1()
+    CatchExp()
     file_edit("#{@tfName}.tex", 'RadnoIskustvoKorisnika', @str1)
     # Fja koja obradjuje uneto obrazovanje
-    Catch2()
+    CatchEdu()
     file_edit("#{@tfName}.tex", 'ObrazovanjeKorisnika', @str2)
 
-    #TODO
+    CatchProj()
+    file_edit("#{@tfName}.tex", 'volonterskiRadIliProjekat', @str3)
 
+    #TODO
 
     system("pdflatex '#{@tfName}.tex'")
     system("pdflatex '#{@tfName}.tex'")
@@ -186,7 +227,7 @@ class CV5 < FXMainWindow
   end
 
   # Obrada radnog iskustva
-  def Catch1()
+  def CatchExp()
     @str1 = "\\section{Work Experience}
             "
     @count1 = 0
@@ -210,7 +251,7 @@ class CV5 < FXMainWindow
     end
   end
 
-  def Catch2()
+  def CatchEdu()
     @str2 = "\\section{Education}
             "
     @count3 = 0
@@ -230,6 +271,27 @@ class CV5 < FXMainWindow
     end
     if @count4 == 0
       @str2 = ""
+    end
+  end
+
+  def CatchProj()
+    @str3 = "\\section{Acheived Projects or volunteer work}
+            "
+    @count5 = 0
+    @count6 = 0
+
+    while @count5 < @yearS.length
+      if @yearS[@count5].text.length > 0 &&
+          @name[@count5].text.length > 0 &&
+          @description[@count5].text.length > 0
+        @str3 << "\\cvitem{#{@yearS[@count5]}}{\\textbf{#{@name[@count5]}} \\textit{} \\newline #{@description[@count5]}}
+                 "
+        @count6 += 1
+      end
+      @count5 += 1
+    end
+    if @count6 == 0
+      @str3 = ""
     end
   end
 
