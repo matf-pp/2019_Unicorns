@@ -39,15 +39,18 @@ class CV3 < FXMainWindow
     FXLabel.new(infoMatrix, "Mail: ")
     @tfMail = FXTextField.new(infoMatrix, 35)
 
+    @checkSite = FXCheckButton.new(infoMatrix, "Have a site?")
+    FXLabel.new(infoMatrix, "")
+
     FXLabel.new(infoMatrix, "Site: ")
     @tfSite = FXTextField.new(infoMatrix, 35)
-    @checkSite = FXCheckButton.new(infoMatrix, "Have a site?")
 
+    @checkQuote = FXCheckButton.new(infoMatrix, "Have a quote?")
     FXLabel.new(infoMatrix, "")
 
     FXLabel.new(infoMatrix, "Quote: ")
     @tfQuote = FXTextField.new(infoMatrix, 35)
-    @checkQuote = FXCheckButton.new(infoMatrix, "Have a quote?")
+
 
     FXHorizontalSeparator.new(infoFrame)
 
@@ -66,7 +69,11 @@ class CV3 < FXMainWindow
     @eduDesc = []
 
     FXHorizontalSeparator.new(eduFrame)
+
+    @edu = false
+
     @eduButton.connect(SEL_COMMAND) do
+      @edu = true
       makeLayoutEdu()
       @eduMatrix.create
       @eduMatrix.recalc
@@ -111,7 +118,10 @@ class CV3 < FXMainWindow
     @expCity = []
     @expDesc = []
 
+    @exp = false
+
     @expButton.connect(SEL_COMMAND) do
+      @exp = true
       makeLayoutExp()
       @expMatrix.create
       @expMatrix.recalc
@@ -129,7 +139,10 @@ class CV3 < FXMainWindow
     @langSkill = []
     @langComment = []
 
+    @langs = false
+
     @langButton.connect(SEL_COMMAND) do
+      @langs = true
       makeLayoutLang()
       @langMatrix.create
       @langMatrix.recalc
@@ -145,8 +158,10 @@ class CV3 < FXMainWindow
     @hobbyName = []
     @hobbyDesc = []
 
+    @hobby = false
 
     @hobbyButton.connect(SEL_COMMAND) do
+      @hobby = true
       FXLabel.new(@hobbyMatrix, "Name: ")
       FXLabel.new(@hobbyMatrix, "Description: ")
       @hobbyName.insert(-1, FXTextField.new(@hobbyMatrix, 20))
@@ -160,32 +175,36 @@ class CV3 < FXMainWindow
     end
 
     @choice = FXDataTarget.new(0)
-    radio = []
+    @radio = []
     groupbox = FXGroupBox.new(frame, "Color:", :opts => GROUPBOX_NORMAL|FRAME_GROOVE|LAYOUT_FILL_X|LAYOUT_FILL_Y)
 
-    radio.insert(-1, FXRadioButton.new(groupbox, "blue",
+    @radio.insert(-1, FXRadioButton.new(groupbox, "blue",
                                :target => @choice, :selector => FXDataTarget::ID_OPTION))
-    radio.insert(-1, FXRadioButton.new(groupbox, "orange",
+    @radio.insert(-1, FXRadioButton.new(groupbox, "orange",
                                :target => @choice, :selector => FXDataTarget::ID_OPTION+1))
-    radio.insert(-1, FXRadioButton.new(groupbox, "green",
+    @radio.insert(-1, FXRadioButton.new(groupbox, "green",
                                :target => @choice, :selector => FXDataTarget::ID_OPTION+2))
-    radio.insert(-1, FXRadioButton.new(groupbox, "red",
+    @radio.insert(-1, FXRadioButton.new(groupbox, "red",
                                        :target => @choice, :selector => FXDataTarget::ID_OPTION+3))
-    radio.insert(-1, FXRadioButton.new(groupbox, "purple",
+    @radio.insert(-1, FXRadioButton.new(groupbox, "purple",
                                        :target => @choice, :selector => FXDataTarget::ID_OPTION+4))
-    radio.insert(-1, FXRadioButton.new(groupbox, "grey",
+    @radio.insert(-1, FXRadioButton.new(groupbox, "grey",
                                        :target => @choice, :selector => FXDataTarget::ID_OPTION+5))
-    radio.insert(-1, FXRadioButton.new(groupbox, "black",
+    @radio.insert(-1, FXRadioButton.new(groupbox, "black",
                                        :target => @choice, :selector => FXDataTarget::ID_OPTION+6))
 
 
     buttonFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_FILL)
 
-    @submitButton = FXButton.new(buttonFrame,
-                                 "Submit",
-                                 :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_RIGHT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
-                                 :width => 65, :height => 25)
-    @submitButton.connect(SEL_COMMAND, method(:onSubmit))
+    dekor = loadIcon("bez1.png")
+    @btnSubmit = FXButton.new(buttonFrame,
+                              "",
+                              dekor,
+                              :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_RIGHT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
+                              :width => 55, :height => 55)
+    @btnSubmit.font = FXFont.new(app, "Geneva", 9)
+    @btnSubmit.textColor = Fox.FXRGB(250, 250, 250)
+    @btnSubmit.connect(SEL_COMMAND, method(:onSubmit))
 
     @picButton = FXButton.new(buttonFrame, "Picture")
     @picButton.connect(SEL_COMMAND) do
@@ -230,7 +249,7 @@ class CV3 < FXMainWindow
       FXLabel.new(@expMatrix, "City")
       @expCity.insert(-1, FXTextField.new(@expMatrix, 20))
       FXLabel.new(@expMatrix, "Description")
-      @expDesc = FXText.new(FXHorizontalFrame.new(@expMatrix, :opts =>LAYOUT_FILL | FRAME_THICK), :opts => LAYOUT_FILL)
+      @expDesc.insert(-1, FXText.new(FXHorizontalFrame.new(@expMatrix, :opts =>LAYOUT_FILL | FRAME_THICK), :opts => LAYOUT_FILL))
 
       FXHorizontalFrame.new(@expMatrix)
       FXHorizontalFrame.new(@expMatrix)
@@ -239,11 +258,11 @@ class CV3 < FXMainWindow
 
   def makeLayoutLang()
     FXLabel.new(@langMatrix, "Language")
-    @langName = FXTextField.new(@langMatrix, 20)
+    @langName.insert(-1, FXTextField.new(@langMatrix, 20))
     FXLabel.new(@langMatrix, "Skill level")
-    @langSkill = FXTextField.new(@langMatrix, 20)
+    @langSkill.insert(-1, FXTextField.new(@langMatrix, 20))
     FXLabel.new(@langMatrix, "Comment")
-    @langComment = FXTextField.new(@langMatrix, 20)
+    @langComment.insert(-1,FXTextField.new(@langMatrix, 20))
 
     FXHorizontalSeparator.new(@langMatrix)
     FXHorizontalSeparator.new(@langMatrix)
@@ -255,6 +274,60 @@ class CV3 < FXMainWindow
   def onSubmit(sender, sel, event)
 
     system("cp ./CV3/cv3.tex '#{@tfName}.tex'")
+
+    file_edit("#{@tfName}.tex", 'ImePrezime', @tfName.text)
+    file_edit("#{@tfName}.tex", 'adresa', @tfAdress.text)
+    file_edit("#{@tfName}.tex", 'drzava', @tfCountry.text)
+    file_edit("#{@tfName}.tex", 'mobBr', @tfPhone.text)
+    file_edit("#{@tfName}.tex", 'mejl', @tfMail.text)
+
+    @sajtString = ""
+    @quoteString = ""
+
+    if(@checkSite.checked?)
+      @sajtString = "\\homepage{#{@tfSite.text}}"
+    end
+
+    if(@checkQuote.checked?)
+      @quoteString = "\\quote{#{@tfQuote.text}}"
+    end
+
+    file_edit("#{@tfName}.tex", 'sajt', @sajtString)
+    file_edit("#{@tfName}.tex", 'quote123', @quoteString)
+
+    @masterNiska = ""
+
+    if(@masterThesis)
+      @masterNiska = "\\section{Master thesis}\n"
+      @masterNiska <<="\\cvitem{title}{\\emph{#{@masterTitle.text}}}\n"
+      @masterNiska <<="\\cvitem{supervisors}{#{@masterSuperVisor.text}}\n"
+      @masterNiska <<="\\cvitem{description}{#{@masterDesc.text}}\n"
+    end
+
+    file_edit("#{@tfName}.tex", 'masterTeza', @masterNiska)
+
+    @experienceString = ""
+    @languagesString = ""
+    @hobbyString = ""
+    @eduString = ""
+
+    catchExp
+    catchEdu
+    catchLangs
+    catchInterests
+
+    file_edit("#{@tfName}.tex", 'obrazovanje', @eduString)
+    file_edit("#{@tfName}.tex", 'radnoIskustvo', @experienceString)
+    file_edit("#{@tfName}.tex", 'jeziciLangs', @languagesString)
+    file_edit("#{@tfName}.tex", 'licnaInteresovanja', @hobbyString)
+
+    file_edit("#{@tfName}.tex", 'bojaCV', @radio[@choice.value].text)
+
+    if(@picPath.length == 0)
+      @picPath = "/home/unicorns/RubymineProjects/CVExpress/Unicorns/pictures/picture"
+    end
+
+    file_edit("#{@tfName}.tex", 'slikaProf', @picPath)
 
     system("mv '#{@tfName}.tex' CV3")
 
@@ -287,10 +360,51 @@ class CV3 < FXMainWindow
   end
 
   def catchEdu()
+    if(@edu)
+      @eduString = "\\section{Education}\n"
+    end
+    i = 0
 
+    while(i < @eduPeriod.length)
+      @eduString << "\\cventry{#{@eduPeriod[i].text}}{#{@eduDegree[i].text}}{#{@eduSchool[i].text}}{#{@eduCity[i].text}}{\\textit{#{@eduGrade[i].text}}}{#{@eduDesc[i].text}}\n"
+      i+=1
+    end
   end
 
   def catchExp()
+    if(@exp)
+      @experienceString = "\\section{Experience}\n"
+    end
+    i = 0
+
+    while(i < @expPeriod.length)
+      @experienceString << "\\cventry{#{@expPeriod[i].text}}{#{@expJobTitle[i].text}}{#{@expEmpl[i].text}}{#{@expCity[i].text}}{}{#{@expDesc[i].text}}\n"
+      i+=1
+    end
+  end
+
+  def catchLangs()
+    if(@langs)
+      @languagesString = "\\section{Languages}\n"
+    end
+    i = 0
+
+    while(i < @langSkill.length)
+      @languagesString << "\\cvitemwithcomment{#{@langName[i].text}}{#{@langSkill[i].text}}{#{@langComment[i].text}}\n"
+      i+=1
+    end
+  end
+
+  def catchInterests()
+    if(@hobby)
+      @hobbyString = "\\section{Interests}\n"
+    end
+    i = 0
+
+    while(i < @hobbyName.length)
+      @hobbyString << "\\cvitem{#{@hobbyName[i].text}}{#{@hobbyDesc[i].text}}\n"
+      i+=1
+    end
 
   end
 

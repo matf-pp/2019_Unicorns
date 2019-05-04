@@ -157,13 +157,7 @@
 
 		%------------------------------------------------
 
-		\profilesection{Skills}
-
-		\skills
-		\skillstext
-		\scriptsize
-		(*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
-			
+	
 		%------------------------------------------------
 			
 	\end{textblock}
