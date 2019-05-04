@@ -214,6 +214,8 @@ class CV7 < FXMainWindow
 
     system("cp ./CV7/cv7.tex '#{@tfName}.tex'")
 
+    @picPath = @picPath.gsub(/\.jpg|\.jpeg/, '')
+
     file_edit("#{@tfName}.tex", 'pokusajSlike', @picPath)
 
 

@@ -202,6 +202,8 @@ class CV6 < FXMainWindow
     file_edit("#{@nameText}.tex", 'EdukejsnLista', @expString)
     file_edit("#{@nameText}.tex", 'SkulLista', @schoolString)
 
+    @picPath = @picPath.gsub(/\.jpg|\.jpeg/, '')
+
     file_edit("#{@nameText}.tex", 'pokusajSlike', @picPath)
 
 

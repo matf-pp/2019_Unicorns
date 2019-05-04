@@ -340,6 +340,9 @@ class CV5 < FXMainWindow
     if(@picturePath.length == 0)
       @picturePath = "./pictures/picture.jpg"
     end
+
+    @picturePath = @picturePath.gsub(/\.jpg|\.jpeg/, '')
+
     file_edit("#{@tfName}.tex", 'slika', @picturePath)
 
     system("pdflatex '#{@tfName}.tex'")

@@ -221,8 +221,6 @@ class CV3 < FXMainWindow
         openJpgFile(dialog.filename)
       end
     end
-
-
   end
 
   def makeLayoutEdu()
@@ -328,8 +326,10 @@ class CV3 < FXMainWindow
     file_edit("#{@tfName}.tex", 'bojaCV', @radio[@choice.value].text)
 
     if(@picPath.length == 0)
-      @picPath = "/home/unicorns/RubymineProjects/CVExpress/Unicorns/pictures/picture"
+      @picPath = ".pictures/picture"
     end
+
+    @picPath = @picPath.gsub(/\.jpg|\.jpeg/, '')
 
     file_edit("#{@tfName}.tex", 'slikaProf', @picPath)
 
