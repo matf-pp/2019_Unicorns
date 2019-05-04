@@ -27,7 +27,7 @@ class CV3 < FXMainWindow
     FXLabel.new(infoMatrix, "First and Last name: ")
     @tfName = FXTextField.new(infoMatrix, 35)
 
-    FXLabel.new(infoMatrix, "Adress: ")
+    FXLabel.new(infoMatrix, "Address: ")
     @tfAdress = FXTextField.new(infoMatrix, 35)
 
     FXLabel.new(infoMatrix, "Country: ")
@@ -189,7 +189,7 @@ class CV3 < FXMainWindow
 
     @picButton = FXButton.new(buttonFrame, "Picture")
     @picButton.connect(SEL_COMMAND) do
-      dialog = FXFileDialog.new(self, "Chose picture")
+      dialog = FXFileDialog.new(self, "Choose picture")
       dialog.patternList = [
           "JPEG Files (*.jpg, *.jpeg)"
       ]
