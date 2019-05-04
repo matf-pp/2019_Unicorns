@@ -115,14 +115,14 @@ class CV2 < FXMainWindow
     FXHorizontalSeparator.new(skillsFrame)
 
     # Nova celina, dugmici
-    btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
+    btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT)
     # TODO
-    dekor = loadIcon("plavo.png")
+    dekor = loadIcon("bez1.png")
     @btnSubmit = FXButton.new(btnFrame,
-                              "Submit",
+                              "",
                               dekor,
                               :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_RIGHT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
-                              :width => 65, :height => 25)
+                              :width => 55, :height => 55)
     @btnSubmit.font = FXFont.new(app, "Geneva", 9)
     @btnSubmit.textColor = Fox.FXRGB(250, 250, 250)
     @btnSubmit.connect(SEL_COMMAND, method(:onSubmit))

@@ -104,7 +104,7 @@ class CV4 < FXMainWindow
     expLabel.font = FXFont.new(app, "Geneva", 12)
 
     # Frame za dugmice
-    expButton = FXButton.new(expFrame, "Add new row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    expButton = FXButton.new(expFrame, "Add a new row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
     @expSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
     @startYear = []
     @endYear = []
@@ -124,7 +124,7 @@ class CV4 < FXMainWindow
     appLabel.font = FXFont.new(app, "Geneva", 12)
 
     # Frame za dugmice
-    appButton = FXButton.new(appFrame, "Add new row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
+    appButton = FXButton.new(appFrame, "Add a new row", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
     @appSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
     @year = []
     @name = []
@@ -136,15 +136,15 @@ class CV4 < FXMainWindow
     end
 
 
-    btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
+    btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT)
 
     # TODO
-    dekor = loadIcon("plavo.png")
+    dekor = loadIcon("bez1.png")
     @btnSubmit = FXButton.new(btnFrame,
-                              "Submit",
+                              "",
                               dekor,
                               :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_RIGHT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
-                              :width => 65, :height => 25)
+                              :width => 55, :height => 55)
     @btnSubmit.font = FXFont.new(app, "Geneva", 9)
     @btnSubmit.textColor = Fox.FXRGB(250, 250, 250)
     @btnSubmit.connect(SEL_COMMAND, method(:onSubmit))

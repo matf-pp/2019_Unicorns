@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5479d56e-b065-48c8-a863-300bd72bae48" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CV5/cv5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/CV5/cv5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv2.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv2.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv4.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cv5.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv5.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/s.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/sub.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/subm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/submit.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +20,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Unicorns@main.rcov" NAME="main Coverage Results" MODIFIED="1555795272101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
-    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556890476476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
+    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1556968676187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -30,29 +36,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_window.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
+            <state relative-caret-position="1545">
               <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv5.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="473" column="16" lean-forward="true" selection-start-line="473" selection-start-column="16" selection-end-line="473" selection-end-column="16" />
-              <folding>
-                <element signature="e#4158#5067#0" />
-                <element signature="e#5094#6058#0" />
-                <element signature="e#6095#6993#0" />
-                <element signature="e#9584#10493#0" />
-                <element signature="e#10523#11432#0" />
-                <element signature="e#8093#8478#0" />
-                <element signature="e#8509#9156#0" />
-                <element signature="e#9160#9767#0" />
-                <element signature="e#9771#10313#0" />
-                <element signature="e#14601#14627#0" />
-              </folding>
+            <state relative-caret-position="145">
+              <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cv2.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cv4.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="138" column="65" lean-forward="true" selection-start-line="138" selection-start-column="65" selection-end-line="138" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -87,12 +99,12 @@
         <option value="$PROJECT_DIR$/CV2/cv2.tex" />
         <option value="$PROJECT_DIR$/CV4/cv4.tex" />
         <option value="$PROJECT_DIR$/cv6.rb" />
-        <option value="$PROJECT_DIR$/cv4.rb" />
         <option value="$PROJECT_DIR$/cv1.rb" />
-        <option value="$PROJECT_DIR$/cv2.rb" />
         <option value="$PROJECT_DIR$/main_window.rb" />
         <option value="$PROJECT_DIR$/CV5/cv5.tex" />
         <option value="$PROJECT_DIR$/cv5.rb" />
+        <option value="$PROJECT_DIR$/cv2.rb" />
+        <option value="$PROJECT_DIR$/cv4.rb" />
       </list>
     </option>
   </component>
@@ -108,7 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,6 +131,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,7 +246,8 @@
       <workItem from="1556364237041" duration="308000" />
       <workItem from="1556374241231" duration="3685000" />
       <workItem from="1556868885489" duration="4819000" />
-      <workItem from="1556886067880" duration="4438000" />
+      <workItem from="1556886067880" duration="4783000" />
+      <workItem from="1556967977036" duration="1268000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1555791842120</created>
@@ -299,17 +312,24 @@
       <option name="project" value="LOCAL" />
       <updated>1556378389926</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="CV5 skoro gotov">
+      <created>1556890672641</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1556890672641</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75583000" />
+    <option name="totallyTimeSpent" value="77196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-2" width="1364" height="740" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23024316" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23404256" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -348,7 +368,8 @@
     <MESSAGE value="Male izmene" />
     <MESSAGE value="Izmenjena polja" />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="CV5 skoro gotov" />
+    <option name="LAST_COMMIT_MESSAGE" value="CV5 skoro gotov" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.tex" />
@@ -408,36 +429,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cv4.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="231" column="116" selection-start-line="231" selection-start-column="4" selection-end-line="231" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_window.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CV3/cv3.tex">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cv2.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="104" column="40" selection-start-line="104" selection-start-column="40" selection-end-line="104" selection-end-column="40" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cv3.rb">
       <provider selected="true" editor-type-id="text-editor">
@@ -458,22 +451,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_window.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cv5.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="473" column="16" lean-forward="true" selection-start-line="473" selection-start-column="16" selection-end-line="473" selection-end-column="16" />
-          <folding>
-            <element signature="e#4158#5067#0" />
-            <element signature="e#5094#6058#0" />
-            <element signature="e#6095#6993#0" />
-            <element signature="e#9584#10493#0" />
-            <element signature="e#10523#11432#0" />
-            <element signature="e#8093#8478#0" />
-            <element signature="e#8509#9156#0" />
-            <element signature="e#9160#9767#0" />
-            <element signature="e#9771#10313#0" />
-            <element signature="e#14601#14627#0" />
-          </folding>
+        <state relative-caret-position="145">
+          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv2.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv4.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="138" column="65" lean-forward="true" selection-start-line="138" selection-start-column="65" selection-end-line="138" selection-end-column="65" />
         </state>
       </provider>
     </entry>
