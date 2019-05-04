@@ -206,7 +206,11 @@ class CV3 < FXMainWindow
     @btnSubmit.textColor = Fox.FXRGB(250, 250, 250)
     @btnSubmit.connect(SEL_COMMAND, method(:onSubmit))
 
-    @picButton = FXButton.new(buttonFrame, "Picture")
+    dekoracija  = loadIcon("drugi.png")
+    @picButton = FXButton.new(buttonFrame, "",
+                              dekoracija,
+                              :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_LEFT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
+                              :width => 55, :height => 55)
     @picButton.connect(SEL_COMMAND) do
       dialog = FXFileDialog.new(self, "Choose picture")
       dialog.patternList = [

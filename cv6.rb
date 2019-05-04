@@ -104,7 +104,11 @@ class CV6 < FXMainWindow
 
 
     buttonFrame = FXHorizontalFrame.new(frame, :opts=>LAYOUT_CENTER_X)
-    @picButton = FXButton.new(buttonFrame, "Picture")
+    dekoracija  = loadIcon("drugi.png")
+    @picButton = FXButton.new(buttonFrame, "",
+                              dekoracija,
+                              :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_LEFT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
+                              :width => 55, :height => 55)
     @picButton.connect(SEL_COMMAND) do
       dialog = FXFileDialog.new(self, "Open JPEG File")
       dialog.patternList = [

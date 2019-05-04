@@ -161,9 +161,13 @@ class CV5 < FXMainWindow
                                         :target => @choice, :selector => FXDataTarget::ID_OPTION+6))
 
     # Nova celina, dugmici
-    btnFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_RIGHT)
+    btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT)
 
-    @btnPicture = FXButton.new(btnFrame, "Picture")
+    dekoracija  = loadIcon("drugi.png")
+    @btnPicture = FXButton.new(btnFrame, "",
+                               dekoracija,
+                               :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_LEFT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
+                               :width => 55, :height => 55)
     @btnPicture.connect(SEL_COMMAND) do
       dialog = FXFileDialog.new(self, "Choose picture")
       dialog.patternList = [
@@ -175,7 +179,6 @@ class CV5 < FXMainWindow
       end
     end
 
-    # TODO
     dekor = loadIcon("bez1.png")
     @btnSubmit = FXButton.new(btnFrame,
                               "",
@@ -332,6 +335,13 @@ class CV5 < FXMainWindow
 
     CatchLang()
     file_edit("#{@tfName}.tex", 'jezici', @str6)
+
+    file_edit("#{@tfName}.tex", 'boja', @radio[@choice.value].text)
+
+    if(@picturePath.length == 0)
+      @picturePath = "./pictures/picture.jpg"
+    end
+    file_edit("#{@tfName}.tex", 'slika', @picturePath)
 
     system("pdflatex '#{@tfName}.tex'")
     system("pdflatex '#{@tfName}.tex'")

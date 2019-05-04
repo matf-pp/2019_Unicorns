@@ -70,16 +70,14 @@ class MainWindow < FXMainWindow
                             :opts => COMBOBOX_STATIC|FRAME_SUNKEN|FRAME_THICK)
     #pravimo padajuci meni za listu cv template-a i ubacujemo ga u controls frame
 
-    nextButton = FXButton.new(controls, " Next ",
-                              :opts => BUTTON_NORMAL|LAYOUT_RIGHT)
+    dekoracija = loadIcon("prvi.png")
+    nextButton = FXButton.new(controls, "",
+                              dekoracija,
+                              :opts => BUTTON_NORMAL|LAYOUT_RIGHT,
+                              :width => 55, :height => 55)
     #postavljamo nextButton i ubacujemo ga u controlFrame, smestamo ga krajnje desno
 
     nextButton.connect(SEL_COMMAND, method(:onClick))
-
-    exitButton = FXButton.new(exitFrame, "  Exit  ",
-                              nil, app,FXApp::ID_QUIT,
-                              :opts => BUTTON_NORMAL|LAYOUT_CENTER_X)
-
 
     @cvlist.numVisible = 7
     CVlist.keys.each do |key|
@@ -109,6 +107,14 @@ class MainWindow < FXMainWindow
     elsif (@cvlist.to_s == 'CV7')
       CV7.new().create
       self.destroy
+    end
+  end
+
+  # Ucitava sliku iz fajla
+  def loadIcon(filename)
+    filename = File.expand_path("../slike/#{filename}", __FILE__)
+    File.open(filename, "rb") do |f|
+      FXPNGIcon.new(getApp(), f.read)
     end
   end
 

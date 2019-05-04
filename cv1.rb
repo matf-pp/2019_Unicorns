@@ -125,13 +125,13 @@ class CV1 < FXMainWindow
     end
 
     # Frame za dugmice
-    btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT|FRAME_THICK)
+    btnFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_RIGHT)
 
     dekor = loadIcon("bez1.png")
     @btnSubmit = FXButton.new(btnFrame,
                               "",
                               dekor,
-                              :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_RIGHT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
+                              :opts => FRAME_RAISED|LAYOUT_RIGHT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
                               :width => 55, :height => 55)
     @btnSubmit.font = FXFont.new(app, "Geneva", 9)
     @btnSubmit.textColor = Fox.FXRGB(250, 250, 250)
