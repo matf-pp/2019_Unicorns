@@ -326,7 +326,6 @@ class CV5 < FXMainWindow
     CatchProj()
     file_edit("#{@tfName}.tex", 'volonterskiRadIliProjekat', @str3)
 
-    #TODO
     CatchTech()
     file_edit("#{@tfName}.tex", 'profVestina', @str4)
 
