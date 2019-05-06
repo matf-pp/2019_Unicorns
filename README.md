@@ -7,7 +7,7 @@ isporučivao pdf fajl.
 ### Članovi tima
 - [Bojana Ristanović](https://github.com/BokalinaR) 
 - [Lea Petković](https://github.com/leic25)
-- [Nikola Stamenić](https://github.com/leic25)
+- [Nikola Stamenić](https://github.com/stuckey10)
 
 
 #### Instalacija i pokretanja
@@ -16,3 +16,6 @@ Da bi se program CV Expres uspešno izvršavao neophodno je posedovati Latex ins
 Naredno što treba odraditi je folder texmf, iz foldera projekta, prekopirati u home direktorijum i zatim pokrenuti komandu
 "sudo texhash".
 Uz sve to potrebno je imati mogućnost pokretanja Ruby programa uz dodatak FXRuby za grafičko okruženje. 
+
+Da bi se program pokrenuo, posle preuzimanja fajlova, pozicionirati se u direktorijum gde se fajlovi nalaze. 
+Narednom "./main.rb" pokrećete program u kom dalje pravite svoj cv.

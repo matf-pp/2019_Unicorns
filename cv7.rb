@@ -24,7 +24,7 @@ class CV7 < FXMainWindow
 
     @picPath = ""
 
-    FXLabel.new(matrica, "First and last nema:")
+    FXLabel.new(matrica, "First and last name:")
     @tfName = FXTextField.new(matrica, 40)
     FXLabel.new(matrica, "Profession:")
     @tfProfession = FXTextField.new(matrica, 40)
