@@ -18,4 +18,4 @@ Naredno što treba odraditi je folder texmf, iz foldera projekta, prekopirati u 
 Uz sve to potrebno je imati mogućnost pokretanja Ruby programa uz dodatak FXRuby za grafičko okruženje. 
 
 Da bi se program pokrenuo, posle preuzimanja fajlova, pozicionirati se u direktorijum gde se fajlovi nalaze. 
-Narednom "./main.rb" pokrećete program u kom dalje pravite svoj cv.
+Naredbom "./main.rb" pokrećete program u kom dalje pravite svoj cv.
