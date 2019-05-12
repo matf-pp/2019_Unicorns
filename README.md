@@ -12,13 +12,18 @@ isporučivao pdf fajl.
 
 #### Instalacija i pokretanje
 
-Da bi se program CV Expres uspešno izvršavao neophodno je posedovati Latex instaliran (sudo apt-get install latex-full).
-Naredno što treba odraditi je folder texmf, iz foldera projekta, prekopirati u home direktorijum i zatim pokrenuti komandu
-"sudo texhash".
+Da bi se program CV Expres uspešno izvršavao neophodno je posedovati Latex instaliran 
+```
+sudo apt-get install latex-full
+```
+Naredno što treba odraditi je folder texmf, iz foldera projekta, prekopirati u home direktorijum i zatim pokrenuti komandu:
+```
+sudo texhash
+```
 Uz sve to potrebno je imati mogućnost pokretanja Ruby programa uz dodatak FXRuby za grafičko okruženje. 
 
 Da bi se program pokrenuo, posle preuzimanja fajlova, pozicionirati se u direktorijum gde se fajlovi nalaze. 
-Naredbom "./main.rb" pokrećete program u kom dalje pravite svoj cv.
+Naredbom  ``` ./main.rb ``` pokrećete program u kom dalje pravite svoj CV.
 
 #### Uputstvo za upotrebu
 
