@@ -17,14 +17,14 @@ class CV1 < FXMainWindow
     # Osnovni frame, u kome se sadrze svi drugi, roditeljski
     frame = FXVerticalFrame.new(@scroll, :width => 480,:opts => LAYOUT_FILL_X|LAYOUT_FIX_WIDTH)
 
-    infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
+    infoFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     lblInfo = FXLabel.new(infoFrame, "Information:", :opts => LAYOUT_CENTER_X)
     #lblInfo.textColor = Fox.FXRGB(255, 0, 5)
     lblInfo.textColor = Fox.FXRGB(120, 5, 120)
     lblInfo.font = FXFont.new(app, "Geneva", 12)
 
     # Osnovne informacije o korisniku
-    info = FXHorizontalFrame.new(frame, :opts => LAYOUT_FILL_X)
+    info = FXHorizontalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     matrixInfo = FXMatrix.new(info, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
 
     lblName = FXLabel.new(matrixInfo, "First and last name:  ")
@@ -41,7 +41,7 @@ class CV1 < FXMainWindow
     # FXHorizontalSeparator.new(info)
 
     # Nova celina, steceno obrazovanje, eduFrame
-    eduFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
+    eduFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     lblEdu = FXLabel.new(eduFrame, "Education: ", :opts => LAYOUT_CENTER_X)
     lblEdu.textColor = Fox.FXRGB(0, 80, 150)
     lblEdu.font = FXFont.new(app, "Geneva", 12)
@@ -60,12 +60,12 @@ class CV1 < FXMainWindow
 
 
     # Nova celina, vestine za komunikaciju
-    comSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
+    comSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     @lblComSkills = FXLabel.new(comSkillsFrame, "Communication skills: ", :opts => LAYOUT_CENTER_X)
     @lblComSkills.textColor = Fox.FXRGB(120, 5, 120)
     @lblComSkills.font = FXFont.new(app, "Geneva", 12)
 
-    comHFrame = FXHorizontalFrame.new(comSkillsFrame, :opts => LAYOUT_FILL_X)
+    comHFrame = FXHorizontalFrame.new(comSkillsFrame, :opts => LAYOUT_CENTER_X)
     matrixComSkills = FXMatrix.new(comHFrame, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
 
     lblNS =  FXLabel.new(matrixComSkills, "Native speaker: ")
@@ -79,12 +79,12 @@ class CV1 < FXMainWindow
 
 
     # Nova celina, profesionalne vestine
-    profSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_FILL)
+    profSkillsFrame = FXVerticalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     lblProfSkills = FXLabel.new(profSkillsFrame, "Skills: ", :opts => LAYOUT_CENTER_X)
     lblProfSkills.textColor = Fox.FXRGB(0, 80, 150)
     lblProfSkills.font = FXFont.new(app, "Geneva", 12)
 
-    profSkillsHFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_FILL_X)
+    profSkillsHFrame = FXHorizontalFrame.new(frame, :opts => LAYOUT_CENTER_X)
     matrixSkills = FXMatrix.new(profSkillsHFrame, n=2, :opts => MATRIX_BY_COLUMNS | LAYOUT_FILL_X)
 
     lblGoodLvl =  FXLabel.new(matrixSkills, "Good level: ")
@@ -261,7 +261,7 @@ class CV1 < FXMainWindow
 
   # Ucitava sliku iz fajla
   def loadIcon(filename)
-    filename = File.expand_path("../slike/#{filename}", __FILE__)
+    filename = File.expand_path("../images/#{filename}", __FILE__)
     File.open(filename, "rb") do |f|
       FXPNGIcon.new(getApp(), f.read)
     end

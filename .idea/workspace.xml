@@ -2,7 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5479d56e-b065-48c8-a863-300bd72bae48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CV5/cv5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/CV5/cv5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv1.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv1.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv2.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv2.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv3.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv3.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv4.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv4.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cv5.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv5.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv6.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv6.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv7.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cv7.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_window.rb" beforeDir="false" afterPath="$PROJECT_DIR$/main_window.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/picture.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/bez1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/cv1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/cv1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/cv2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/cv3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/cv4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/cv5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/cv6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/cv7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/drugi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/plavo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slike/prvi.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,24 +35,15 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Unicorns@cv3.rcov" NAME="cv3 Coverage Results" MODIFIED="1556999445354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
     <SUITE FILE_PATH="coverage/Unicorns@main.rcov" NAME="main Coverage Results" MODIFIED="1555795272101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
-    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1557001708671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
+    <SUITE FILE_PATH="coverage/Unicorns@main__1_.rcov" NAME="main (1) Coverage Results" MODIFIED="1557674485986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Unicorns" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_window.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -38,17 +51,51 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cv5.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="508" column="5" lean-forward="true" selection-start-line="508" selection-start-column="5" selection-end-line="508" selection-end-column="5" />
+            <state relative-caret-position="-1491">
+              <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cv2.rb">
+        <entry file="file://$PROJECT_DIR$/cv3.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
+            <state relative-caret-position="199">
+              <caret line="331" column="24" lean-forward="true" selection-start-line="331" selection-start-column="24" selection-end-line="331" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CV3/cv3.tex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-215" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CV5/cv5.tex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="82" column="43" selection-start-line="82" selection-start-column="43" selection-end-line="82" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_window.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
               <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/photo_view.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -66,6 +113,9 @@
     <findStrings>
       <find>matr</find>
       <find>sepa</find>
+      <find>pictures</find>
+      <find>images</find>
+      <find>Background</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,17 +129,17 @@
         <option value="$PROJECT_DIR$/cv4.tex" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CV2/info_education.tex" />
-        <option value="$PROJECT_DIR$/cv7.rb" />
         <option value="$PROJECT_DIR$/CV2/cv2.tex" />
         <option value="$PROJECT_DIR$/CV4/cv4.tex" />
+        <option value="$PROJECT_DIR$/main_window.rb" />
         <option value="$PROJECT_DIR$/cv2.rb" />
         <option value="$PROJECT_DIR$/cv4.rb" />
-        <option value="$PROJECT_DIR$/cv3.rb" />
-        <option value="$PROJECT_DIR$/cv1.rb" />
         <option value="$PROJECT_DIR$/cv6.rb" />
-        <option value="$PROJECT_DIR$/main_window.rb" />
-        <option value="$PROJECT_DIR$/CV5/cv5.tex" />
+        <option value="$PROJECT_DIR$/cv7.rb" />
+        <option value="$PROJECT_DIR$/cv1.rb" />
         <option value="$PROJECT_DIR$/cv5.rb" />
+        <option value="$PROJECT_DIR$/CV5/cv5.tex" />
+        <option value="$PROJECT_DIR$/cv3.rb" />
       </list>
     </option>
   </component>
@@ -105,7 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -116,17 +165,13 @@
             <path>
               <item name="Unicorns" type="b2602c69:ProjectViewProjectNode" />
               <item name="Unicorns" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Unicorns" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Unicorns" type="462c0819:PsiDirectoryNode" />
-              <item name="slike" type="462c0819:PsiDirectoryNode" />
+              <item name="CV3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -263,6 +308,7 @@
       <workItem from="1556886067880" duration="4783000" />
       <workItem from="1556967977036" duration="3626000" />
       <workItem from="1556999354582" duration="2425000" />
+      <workItem from="1557672356370" duration="2040000" />
     </task>
     <task id="LOCAL-00001" summary="...">
       <created>1555791842120</created>
@@ -345,17 +391,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81979000" />
+    <option name="totallyTimeSpent" value="84043000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-2" width="1364" height="740" extended-state="6" />
+    <frame x="-2" y="-2" width="1364" height="740" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23784195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24544074" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32833335" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31333333" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.275" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -430,48 +477,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CV3/cv3.tex">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/album_view.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/album.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photo_view.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv2.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="291" column="42" selection-start-line="291" selection-start-column="42" selection-end-line="291" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cv4.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="141" column="21" lean-forward="true" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cv7.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1600">
-          <caret line="270" column="32" lean-forward="true" selection-start-line="270" selection-start-column="32" selection-end-line="270" selection-end-column="32" />
+        <state relative-caret-position="54">
+          <caret line="315" column="42" selection-start-line="315" selection-start-column="42" selection-end-line="315" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cv6.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
+        <state relative-caret-position="54">
+          <caret line="266" column="42" selection-start-line="266" selection-start-column="42" selection-end-line="266" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cv7.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="318" column="24" lean-forward="true" selection-start-line="318" selection-start-column="24" selection-end-line="318" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cv1.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="134" column="57" lean-forward="true" selection-start-line="134" selection-start-column="30" selection-end-line="134" selection-end-column="57" />
+        <state relative-caret-position="354">
+          <caret line="183" column="16" selection-start-line="183" selection-start-column="16" selection-end-line="183" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_window.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+        <state relative-caret-position="114">
+          <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -484,22 +556,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cv5.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="508" column="5" lean-forward="true" selection-start-line="508" selection-start-column="5" selection-end-line="508" selection-end-column="5" />
+        <state relative-caret-position="-1491">
+          <caret line="110" column="13" selection-start-line="110" selection-start-column="13" selection-end-line="110" selection-end-column="13" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CV3/cv3.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cv3.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="369" column="9" lean-forward="true" selection-start-line="369" selection-start-column="9" selection-end-line="369" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cv2.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="114" column="42" selection-start-line="114" selection-start-column="42" selection-end-line="114" selection-end-column="42" />
+        <state relative-caret-position="199">
+          <caret line="331" column="24" lean-forward="true" selection-start-line="331" selection-start-column="24" selection-end-line="331" selection-end-column="24" />
         </state>
       </provider>
     </entry>

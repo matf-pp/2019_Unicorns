@@ -289,7 +289,7 @@ class CV2 < FXMainWindow
 
   # Ucitava sliku iz fajla
   def loadIcon(filename)
-    filename = File.expand_path("../slike/#{filename}", __FILE__)
+    filename = File.expand_path("../images/#{filename}", __FILE__)
     File.open(filename, "rb") do |f|
       FXPNGIcon.new(getApp(), f.read)
     end

@@ -48,13 +48,13 @@ class MainWindow < FXMainWindow
     #postavljena labela kao "placeholder" koja ce kasnije postati album, sa slikama cv template-a
     image_frame = FXHorizontalFrame.new(@frame, LAYOUT_FILL_X|LAYOUT_FILL_Y)
     @album = Album.new("CV Templates")
-    @album.add_photo(Photo.new("./slike/cv1.jpg"))
-    @album.add_photo(Photo.new("./slike/cv2.jpg"))
-    @album.add_photo(Photo.new("./slike/cv3.jpg"))
-    @album.add_photo(Photo.new("./slike/cv4.jpg"))
-    @album.add_photo(Photo.new("./slike/cv5.jpg"))
-    @album.add_photo(Photo.new("./slike/cv6.jpg"))
-    @album.add_photo(Photo.new("./slike/cv7.jpg"))
+    @album.add_photo(Photo.new("./images/cv1.jpg"))
+    @album.add_photo(Photo.new("./images/cv2.jpg"))
+    @album.add_photo(Photo.new("./images/cv3.jpg"))
+    @album.add_photo(Photo.new("./images/cv4.jpg"))
+    @album.add_photo(Photo.new("./images/cv5.jpg"))
+    @album.add_photo(Photo.new("./images/cv6.jpg"))
+    @album.add_photo(Photo.new("./images/cv7.jpg"))
     @album_view = AlbumView.new(image_frame, @album)
 
     choseFrame = FXHorizontalFrame.new(@frame)
@@ -112,7 +112,7 @@ class MainWindow < FXMainWindow
 
   # Ucitava sliku iz fajla
   def loadIcon(filename)
-    filename = File.expand_path("../slike/#{filename}", __FILE__)
+    filename = File.expand_path("../images/#{filename}", __FILE__)
     File.open(filename, "rb") do |f|
       FXPNGIcon.new(getApp(), f.read)
     end

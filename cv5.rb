@@ -338,7 +338,7 @@ class CV5 < FXMainWindow
     file_edit("#{@tfName}.tex", 'boja', @radio[@choice.value].text)
 
     if(@picturePath.length == 0)
-      @picturePath = "./pictures/picture.jpg"
+      @picturePath = "./images/white.jpg"
     end
 
     @picturePath = @picturePath.gsub(/\.jpg|\.jpeg/, '')
@@ -513,7 +513,7 @@ class CV5 < FXMainWindow
 
   # Ucitava sliku iz fajla
   def loadIcon(filename)
-    filename = File.expand_path("../slike/#{filename}", __FILE__)
+    filename = File.expand_path("../images/#{filename}", __FILE__)
     File.open(filename, "rb") do |f|
       FXPNGIcon.new(getApp(), f.read)
     end
