@@ -10,7 +10,7 @@ isporučivao pdf fajl.
 - [Nikola Stamenić](https://github.com/stuckey10)
 
 
-#### Instalacija i pokretanja
+#### Instalacija i pokretanje
 
 Da bi se program CV Expres uspešno izvršavao neophodno je posedovati Latex instaliran (sudo apt-get install latex-full).
 Naredno što treba odraditi je folder texmf, iz foldera projekta, prekopirati u home direktorijum i zatim pokrenuti komandu
@@ -19,3 +19,8 @@ Uz sve to potrebno je imati mogućnost pokretanja Ruby programa uz dodatak FXRub
 
 Da bi se program pokrenuo, posle preuzimanja fajlova, pozicionirati se u direktorijum gde se fajlovi nalaze. 
 Naredbom "./main.rb" pokrećete program u kom dalje pravite svoj cv.
+
+#### Uputstvo za upotrebu
+
+Nakon pokretanja programa, korisnik ima uvid u album sa slikama CV-eva, tj. kako mogu da izgledaju. Na osnovu slika bira dizajn svog CV-a, i kreće u izradu. Korisniku se nudi odgovarajući GUI,  u odnosu na načinjeni izbor, gde upisuje neophodne i željene informacije. Na kraju svih se nalazi SUBMIT dugme, koje označava početak izrade CV-a, a u nekim postoji i dugme za dodavanje odgovarajuće fotografije.
+
