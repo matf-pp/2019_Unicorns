@@ -4,7 +4,7 @@ CV Express program ima za cilj da u programskom jeziku Ruby, na osnovu podataka 
 Program bi u pozadini generisao latex fajl, kao i korisniku nudio razumljiv grafički korisnički interfejs pomoću kog bi unosio neophodne podatke. Korisniku bi se na kraju
 isporučivao pdf fajl.
 
-### Članovi tima
+### Članovi tima :rainbow:
 - [Bojana Ristanović](https://github.com/BokalinaR) 
 - [Lea Petković](https://github.com/leic25)
 - [Nikola Stamenić](https://github.com/stuckey10)
@@ -12,7 +12,7 @@ isporučivao pdf fajl.
 
 #### Instalacija i pokretanje
 
-Da bi se program CV Expres uspešno izvršavao neophodno je posedovati Latex instaliran <br/>
+Da bi se program CV Express uspešno izvršavao neophodno je posedovati Latex instaliran <br/>
 ``` sudo apt-get install latex-full ``` <br/>
 Naredno što treba odraditi je folder texmf, iz foldera projekta, prekopirati u home direktorijum i zatim pokrenuti komandu: <br/>
 ``` sudo texhash ``` <br/>
