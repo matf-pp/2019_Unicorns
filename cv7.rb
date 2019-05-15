@@ -76,6 +76,7 @@ class CV7 < FXMainWindow
     FXLabel.new(@eduMatrix, "Period", :opts => LAYOUT_CENTER_X)
     FXLabel.new(@eduMatrix, "Description and School", :opts => LAYOUT_CENTER_X)
     FXLabel.new(@eduMatrix, "Place", :opts => LAYOUT_CENTER_X)
+
     eduHelper1 = FXVerticalFrame.new(@eduMatrix)
     @eduPeriod1 = FXTextField.new(eduHelper1, 10)
     eduHelper2 = FXVerticalFrame.new(@eduMatrix)
@@ -159,7 +160,11 @@ class CV7 < FXMainWindow
     FXHorizontalSeparator.new(otherFrame)
 
     buttonFrame = FXHorizontalFrame.new(frame, :opts=>LAYOUT_CENTER_X)
-    @picButton = FXButton.new(buttonFrame, "Picture")
+    dekoracija  = loadIcon("drugi.png")
+    @picButton = FXButton.new(buttonFrame, "",
+                              dekoracija,
+                              :opts => FRAME_RAISED|FRAME_THICK|LAYOUT_LEFT|LAYOUT_FIX_WIDTH|LAYOUT_FIX_HEIGHT,
+                              :width => 55, :height => 55)
     @picButton.connect(SEL_COMMAND) do
       dialog = FXFileDialog.new(self, "Pic must be NxN")
       dialog.patternList = [
@@ -261,7 +266,7 @@ class CV7 < FXMainWindow
     file_edit("#{@tfName}.tex", 'listaSkolovanja', @eduString)
     file_edit("#{@tfName}.tex", 'listaIskustava', @expString)
 
-    file_edit("#{@tfName}.tex", 'josNestoOMeni', @aboutMeText.text)
+    file_edit("#{@tfName}.tex", 'josNestoOMeni', @otherText.text)
 
     system("mv '#{@tfName}.tex' CV7")
 
