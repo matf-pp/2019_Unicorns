@@ -25,7 +25,7 @@ class CV6 < FXMainWindow
     infoMatrix = FXMatrix.new(infoFrame, 2, :opts => MATRIX_BY_COLUMNS|LAYOUT_FILL)
     FXLabel.new(infoMatrix, "First and last name: ")
     @nameText = FXTextField.new(infoMatrix, 35)
-    FXLabel.new(infoMatrix, "Adress")
+    FXLabel.new(infoMatrix, "Address")
     @adressText = FXTextField.new(infoMatrix, 35)
     FXLabel.new(infoMatrix, "Profession: ")
     @professionText = FXTextField.new(infoMatrix, 35)
