@@ -44,8 +44,9 @@ class MainWindow < FXMainWindow
     #okvir za "cv templates"
     title = FXLabel.new(titleFrame,"CV templates", :opts => LAYOUT_FILL_X)
     #cv templates labela, ubacena u titleFrame
-    #album = FXLabel.new(@frame,"", :opts=>LAYOUT_FILL_Y)
-    #postavljena labela kao "placeholder" koja ce kasnije postati album, sa slikama cv template-a
+    title.textColor = Fox.FXRGB(0, 80, 150)
+    title.font = FXFont.new(app, "Geneva", 12)
+
     image_frame = FXHorizontalFrame.new(@frame, LAYOUT_FILL_X|LAYOUT_FILL_Y)
     @album = Album.new("CV Templates")
     @album.add_photo(Photo.new("./images/cv1.jpg"))
@@ -64,8 +65,9 @@ class MainWindow < FXMainWindow
     exitFrame = FXHorizontalFrame.new(@frame, :opts => LAYOUT_FILL_X)
     #horizontalni frame za "exit" button
 
-    FXLabel.new(choseFrame, "Chose template:")
+    chose = FXLabel.new(choseFrame, "Chose template:")
     #labela "Chose template" ubacena u choseFrame
+    chose.textColor = Fox.FXRGB(0, 80, 150)
     @cvlist = FXComboBox.new(controls, 7,
                             :opts => COMBOBOX_STATIC|FRAME_SUNKEN|FRAME_THICK)
     #pravimo padajuci meni za listu cv template-a i ubacujemo ga u controls frame
@@ -86,25 +88,25 @@ class MainWindow < FXMainWindow
   end
 
   def onClick(sender, sel, ptr)
-    if(@cvlist.to_s == 'CV1')
+    if(CVlist[@cvlist.to_s] == 'cv1')
       CV1.new().create
       self.destroy()
-    elsif (@cvlist.to_s == 'CV2')
+    elsif (CVlist[@cvlist.to_s] == 'cv2')
       CV2.new().create
       self.destroy()
-    elsif (@cvlist.to_s == 'CV3')
+    elsif (CVlist[@cvlist.to_s] == 'cv3')
       CV3.new().create
       self.destroy
-    elsif (@cvlist.to_s == 'CV4')
+    elsif (CVlist[@cvlist.to_s] == 'cv4')
       CV4.new().create
       self.destroy()
-    elsif (@cvlist.to_s == 'CV5')
+    elsif (CVlist[@cvlist.to_s] == 'cv5')
       CV5.new().create
       self.destroy()
-    elsif (@cvlist.to_s == 'CV6')
+    elsif (CVlist[@cvlist.to_s] == 'cv6')
       CV6.new().create
       self.destroy
-    elsif (@cvlist.to_s == 'CV7')
+    elsif (CVlist[@cvlist.to_s] == 'cv7')
       CV7.new().create
       self.destroy
     end
