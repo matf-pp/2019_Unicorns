@@ -67,7 +67,7 @@ class CV5 < FXMainWindow
     btnExp = FXButton.new(expFrame, "Add fields", :opts => FRAME_RAISED |FRAME_THICK |LAYOUT_CENTER_X)
     @expSpace = FXMatrix.new(frame, n=1, :opts => LAYOUT_CENTER_X|MATRIX_BY_COLUMNS)
     @start = []
-    @end = []
+    # @end = []
     @position = []
     @company = []
     btnExp.connect(SEL_COMMAND) do
@@ -201,10 +201,10 @@ class CV5 < FXMainWindow
 
     yearFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
     positionFrame = FXHorizontalFrame.new(matrix, LAYOUT_FILL_X)
-    @start.insert(-1, FXTextField.new(yearFrame,  5))
+    @start.insert(-1, FXTextField.new(yearFrame,  12))
 
-    FXLabel.new(yearFrame, " - ")
-    @end.insert(-1, FXTextField.new(yearFrame, 5))
+    #FXLabel.new(yearFrame, " - ")
+    #@end.insert(-1, FXTextField.new(yearFrame, 5))
     @position.insert(-1, FXTextField.new(positionFrame, 38))
 
     FXLabel.new(parentFrame, "Company:", :opts => LAYOUT_CENTER_X)
@@ -379,10 +379,9 @@ class CV5 < FXMainWindow
 
     while @count1 < @start.length
       if @start[@count1].text.length > 0 &&
-          @end[@count1].text.length > 0 &&
           @position[@count1].text.length > 0 &&
           @company[@count1].text.length > 0
-        @str1 << "\\cvitem{#{@start[@count1]} -- #{@end[@count1]}}{\\textbf{#{@position[@count1]}} \\textit{#{@company[@count1]}} }
+        @str1 << "\\cvitem{#{@start[@count1]}}{\\textbf{#{@position[@count1]}} \\textit{#{@company[@count1]}} }
                 \\renewcommand{\\listitemsymbol}{\\textcolor{black}{-~}}
                 "
         @count2 += 1
