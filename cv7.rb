@@ -287,6 +287,7 @@ class CV7 < FXMainWindow
       Tempfile.open(".#{File.basename(filename)}", File.dirname(filename)) do |tempfile|
         File.open(filename).each do |line|
           tempfile.puts line.gsub(regexp, replacement)
+          puts line
         end
         tempfile.close
         FileUtils.mv tempfile.path, filename

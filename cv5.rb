@@ -171,7 +171,7 @@ class CV5 < FXMainWindow
     @btnPicture.connect(SEL_COMMAND) do
       dialog = FXFileDialog.new(self, "Choose picture")
       dialog.patternList = [
-          "JPEG Files (*.jpg, *.jpeg)"
+          "JPEG Files (*.jpg, *.jpeg)",
       ]
       dialog.selectMode = SELECTFILE_EXISTING
       if dialog.execute != 0
@@ -366,7 +366,6 @@ class CV5 < FXMainWindow
         tempfile.close
         FileUtils.mv tempfile.path, filename
       end
-
     end
   end
 

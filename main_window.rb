@@ -25,9 +25,7 @@ class MainWindow < FXMainWindow
       "CV6" => "cv6",
       "CV7" => "cv7"
   }
-  $mainFrame, @cVframe, @frame = nil
-
-
+   @cVframe, @frame = nil
 
   def initialize()
     super($app, "CV Express", :opts => DECOR_ALL, :width => 570, :height => 600)
@@ -37,8 +35,8 @@ class MainWindow < FXMainWindow
     # Lavanda
     $app.baseColor = Fox.FXRGB(238, 224, 229)
 
-    $mainFrame = FXVerticalFrame.new(self, :opts => LAYOUT_FILL)
-    @frame = FXVerticalFrame.new($mainFrame, :opts => LAYOUT_FILL)
+    mainFrame = FXVerticalFrame.new(self, :opts => LAYOUT_FILL)
+    @frame = FXVerticalFrame.new(mainFrame, :opts => LAYOUT_FILL)
     #celokupni okvir
     titleFrame = FXHorizontalFrame.new(@frame, LAYOUT_FILL_X)
     #okvir za "cv templates"
@@ -58,15 +56,15 @@ class MainWindow < FXMainWindow
     @album.add_photo(Photo.new("./images/cv7.jpg"))
     @album_view = AlbumView.new(image_frame, @album)
 
-    choseFrame = FXHorizontalFrame.new(@frame)
+    chooseFrame = FXHorizontalFrame.new(@frame)
     #horizontalni frame za "chose template" labelu
     controls = FXHorizontalFrame.new(@frame, :opts => LAYOUT_FILL_X)
     #horizontalni frame za "next" button i odabir template-a
     exitFrame = FXHorizontalFrame.new(@frame, :opts => LAYOUT_FILL_X)
     #horizontalni frame za "exit" button
 
-    chose = FXLabel.new(choseFrame, "Chose template:")
-    #labela "Chose template" ubacena u choseFrame
+    chose = FXLabel.new(chooseFrame, "Choose template:")
+    #labela "Chose template" ubacena u chooseFrame
     chose.textColor = Fox.FXRGB(0, 80, 150)
     @cvlist = FXComboBox.new(controls, 7,
                             :opts => COMBOBOX_STATIC|FRAME_SUNKEN|FRAME_THICK)
