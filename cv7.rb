@@ -30,7 +30,7 @@ class CV7 < FXMainWindow
     @tfProfession = FXTextField.new(matrica, 40)
     FXLabel.new(matrica, "Date of birth:")
     @tfBirth = FXTextField.new(matrica, 40)
-    FXLabel.new(matrica, "Adress:")
+    FXLabel.new(matrica, "Address:")
     @tfAdress = FXTextField.new(matrica, 40)
     FXLabel.new(matrica, "Phone:")
     @tfPhone = FXTextField.new(matrica, 40)

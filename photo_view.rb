@@ -10,7 +10,7 @@ class PhotoView < FXImageFrame
   end
 
   def load_image(path)
-    File.open(path, "rb") do |io|
+     File.open(path, "rb") do |io|
 
       self.image = FXJPGImage.new(app, io.read)
 
