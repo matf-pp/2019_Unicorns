@@ -11,7 +11,7 @@ Program je napisan u programskom jeziku [Ruby](https://www.ruby-lang.org/en/), n
 - [Lea Petković](https://github.com/leic25) 🦄
 - [Nikola Stamenić](https://github.com/stuckey10) 🦄
 
-<br/>
+
 ### Instalacija i pokretanje :computer:
 
 Da bi se program CV Express uspešno izvršavao neophodno je posedovati [Latex](https://www.latex-project.org/) instaliran: <br/>
