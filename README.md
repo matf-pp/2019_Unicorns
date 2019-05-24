@@ -4,15 +4,16 @@
 Program ima za cilj da na osnovu podataka i želja vezanim za sam dizajn, kreira odgovarajući CV korisniku. 
 Program nudi razumljiv grafički korisnički interfejs pomoću kog korisnik unosi neophodne podatke, u pozadini generiše Latex fajl, ali isporučuje PDF fajl.
 
-Program je napisan u programskom jeziku Ruby, na operativnom sistemu Ubuntu. Koristi biblioteku fxruby, kako bi kreirao odgovarajući GUI.
+Program je napisan u programskom jeziku [Ruby](https://www.ruby-lang.org/en/), na operativnom sistemu Ubuntu. Koristi biblioteku [FXRuby](https://www.sitepoint.com/an-introduction-to-fxruby/), kako bi kreirao odgovarajući GUI.
 
 ### Članovi tima :rainbow:
 - [Bojana Ristanović](https://github.com/BokalinaR) 🦄
 - [Lea Petković](https://github.com/leic25) 🦄
 - [Nikola Stamenić](https://github.com/stuckey10) 🦄
 
+<br>
 
-#### Instalacija i pokretanje :computer:
+### Instalacija i pokretanje :computer:
 
 Da bi se program CV Express uspešno izvršavao neophodno je posedovati Latex instaliran: <br/>
 ``` sudo apt-get install latex-full ``` <br/>
@@ -23,7 +24,7 @@ Uz sve to potrebno je imati mogućnost pokretanja Ruby programa uz dodatak FXRub
 Da bi se program pokrenuo, posle preuzimanja fajlova, pozicionirati se u direktorijum gde se fajlovi nalaze. 
 Naredbom  ``` ./main.rb ``` pokrećete program u kom dalje pravite svoj CV.
 
-#### Uputstvo za upotrebu :page_with_curl:
+### Uputstvo za upotrebu :page_with_curl:
 
-Nakon pokretanja programa, korisnik ima uvid u album sa slikama CV-eva, tj. kako mogu da izgledaju. Na osnovu slika bira dizajn svog CV-a, i kreće u izradu. Korisniku se nudi odgovarajući GUI,  u odnosu na načinjeni izbor, gde upisuje neophodne i željene informacije. Na kraju svih se nalazi SUBMIT dugme, koje označava početak izrade CV-a, a u nekim postoji i dugme za dodavanje odgovarajuće fotografije.
+Nakon pokretanja programa, korisnik ima uvid u album sa slikama CV-eva, tj. kako mogu da izgledaju. Na osnovu slika bira dizajn svog CV-a i kreće u izradu. Korisniku se nudi odgovarajući GUI,  u odnosu na načinjeni izbor, gde upisuje neophodne i željene informacije. Na kraju svih se nalazi _submit_ dugme, koje označava početak izrade CV-a, a u nekim postoji i dugme za dodavanje odgovarajuće fotografije.
 
