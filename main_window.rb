@@ -28,7 +28,7 @@ class MainWindow < FXMainWindow
    @cVframe, @frame = nil
 
   def initialize()
-    super($app, "CV Express", :opts => DECOR_ALL, :width => 570, :height => 600)
+    super($app, "CV Express", :opts => DECOR_ALL, :width => 600, :height => 680)
     $app.backColor = Fox.FXRGB(255, 255, 255)
     # Plava
     #$app.baseColor = Fox.FXRGB(176, 196, 225)

@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 class PhotoView < FXImageFrame
 
-  MAX_WIDTH  = 400
-  MAX_HEIGHT = 400
+  MAX_WIDTH  = 475
+  MAX_HEIGHT = 475
 
   def initialize(p, photo)
     super(p, nil)
