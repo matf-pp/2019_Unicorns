@@ -11,20 +11,19 @@ Program je napisan u programskom jeziku [Ruby](https://www.ruby-lang.org/en/), n
 - [Lea Petković](https://github.com/leic25) 🦄
 - [Nikola Stamenić](https://github.com/stuckey10) 🦄
 
-<br>
-
+<br/>
 ### Instalacija i pokretanje :computer:
 
-Da bi se program CV Express uspešno izvršavao neophodno je posedovati Latex instaliran: <br/>
+Da bi se program CV Express uspešno izvršavao neophodno je posedovati [Latex](https://www.latex-project.org/) instaliran: <br/>
 ``` sudo apt-get install latex-full ``` <br/>
-Naredno što treba odraditi jeste folder _texmf_, iz foldera projekta, prekopirati u home direktorijum i zatim pokrenuti komandu: <br/>
+Naredno što treba uraditi jeste folder _texmf_, iz foldera projekta, kopirati u _home_ direktorijum i pokrenuti komandu: <br/>
 ``` sudo texhash ``` <br/>
-Uz sve to potrebno je imati mogućnost pokretanja Ruby programa uz dodatak FXRuby za grafičko okruženje. 
+Uz sve to potrebno je imati mogućnost pokretanja [Ruby](https://www.ruby-lang.org/en/) programa, uz dodatak [FXRuby](https://www.sitepoint.com/an-introduction-to-fxruby/) za grafičko okruženje. 
 
-Da bi se program pokrenuo, posle preuzimanja fajlova, pozicionirati se u direktorijum gde se fajlovi nalaze. 
+Da bi se program pokrenuo, nakon preuzimanja fajlova, pozicionirati se u direktorijum gde se fajlovi nalaze.  <br/>
 Naredbom  ``` ./main.rb ``` pokrećete program u kom dalje pravite svoj CV.
 
 ### Uputstvo za upotrebu :page_with_curl:
 
-Nakon pokretanja programa, korisnik ima uvid u album sa slikama CV-eva, tj. kako mogu da izgledaju. Na osnovu slika bira dizajn svog CV-a i kreće u izradu. Korisniku se nudi odgovarajući GUI,  u odnosu na načinjeni izbor, gde upisuje neophodne i željene informacije. Na kraju svih se nalazi _submit_ dugme, koje označava početak izrade CV-a, a u nekim postoji i dugme za dodavanje odgovarajuće fotografije.
+Nakon pokretanja programa, korisnik ima uvid u album sa slikama CV-eva, tj. kako mogu da izgledaju. Na osnovu slika bira dizajn svog CV-a i kreće u izradu. Korisniku se nudi odgovarajući GUI,  u odnosu na načinjeni izbor, gde upisuje neophodne i željene informacije. Na kraju svakog grafičkog korisničkog interfejsa nalazi se _submit_ dugme koje označava početak izrade CV-a, a u odredjenim postoji i dugme za dodavanje odgovarajuće fotografije.
 
