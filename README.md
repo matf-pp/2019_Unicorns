@@ -2,7 +2,7 @@
 
 >CV Express nastao je kao projekat u okviru kursa Programske paradigme. <br>
 Program ima za cilj da na osnovu podataka i želja, vezanim za sam dizajn, kreira odgovarajući CV korisniku. 
-Program nudi razumljiv grafički korisnički interfejs pomoću kog korisnik unosi neophodne podatke, u pozadini generiše Latex fajl, ali isporučuje PDF fajl.
+Program nudi razumljiv grafički korisnički interfejs pomoću kog korisnik unosi neophodne podatke, u pozadini generiše Latex fajl i isporučuje PDF fajl.
 
 Program je napisan u programskom jeziku [Ruby](https://www.ruby-lang.org/en/), na operativnom sistemu Ubuntu. Koristi biblioteku [FXRuby](https://www.sitepoint.com/an-introduction-to-fxruby/), kako bi kreirao odgovarajući GUI.
 
