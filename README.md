@@ -6,10 +6,10 @@ Program nudi razumljiv grafički korisnički interfejs pomoću kog korisnik unos
 
 Program je napisan u programskom jeziku [Ruby](https://www.ruby-lang.org/en/), na operativnom sistemu Ubuntu. Koristi biblioteku [FXRuby](https://www.sitepoint.com/an-introduction-to-fxruby/), kako bi kreirao odgovarajući GUI.
 
-### Članovi tima :rainbow:
-- [Bojana Ristanović](https://github.com/BokalinaR) 🦄
-- [Lea Petković](https://github.com/leic25) 🦄
-- [Nikola Stamenić](https://github.com/stuckey10) 🦄
+### Članovi tima 🦄
+- [Bojana Ristanović](https://github.com/BokalinaR)
+- [Lea Petković](https://github.com/leic25)
+- [Nikola Stamenić](https://github.com/stuckey10)
 
 
 ### Instalacija i pokretanje :computer:
