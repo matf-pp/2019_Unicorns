@@ -1,4 +1,4 @@
-# CV express :gem:
+# CVexpress :gem:
 
 >CV Express nastao je kao projekat u okviru kursa Programske paradigme. <br>
 Program ima za cilj da na osnovu podataka i želja, vezanih za sam dizajn, kreira odgovarajući CV korisniku. 
