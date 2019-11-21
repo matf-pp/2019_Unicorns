@@ -1,6 +1,6 @@
-# CVexpress :gem:
+# CvExpress :gem:
 
->CV Express nastao je kao projekat u okviru kursa Programske paradigme. <br>
+>CvExpress nastao je kao projekat u okviru kursa Programske paradigme. <br>
 Program ima za cilj da na osnovu podataka i želja, vezanih za sam dizajn, kreira odgovarajući CV korisniku. 
 Program nudi razumljiv grafički korisnički interfejs pomoću kog korisnik unosi neophodne podatke, u pozadini generiše Latex fajl i isporučuje PDF fajl.
 
@@ -14,7 +14,7 @@ Program je napisan u programskom jeziku [Ruby](https://www.ruby-lang.org/en/), n
 
 ### Instalacija i pokretanje :computer:
 
-Da bi se program CV Express uspešno izvršavao neophodno je posedovati [Latex](https://www.latex-project.org/) instaliran: <br/>
+Da bi se program CvExpress uspešno izvršavao neophodno je posedovati [Latex](https://www.latex-project.org/) instaliran: <br/>
 ``` sudo apt-get install latex-full ``` <br/>
 Naredno što treba uraditi jeste folder _texmf_, iz foldera projekta, kopirati u _home_ direktorijum i pokrenuti komandu: <br/>
 ``` sudo texhash ``` <br/>
